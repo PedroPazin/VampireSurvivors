@@ -6,6 +6,8 @@ public class PlayerAttack : MonoBehaviour
 {
     EntityStats entityStats;
     public GameObject projectile;
+    public GameObject[] enemies;
+
 
     bool canAttack = true;
 
@@ -20,7 +22,13 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
+        //Guardando todos os inimigos da cena em um array
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        if(enemies.Length != 0)
+        {
+            Attack();
+        }
     }
 
     void CooldownCount()
@@ -39,28 +47,35 @@ public class PlayerAttack : MonoBehaviour
 
     void Attack()
     {
-        GameObject targetEnemy = FindNearestEnemy();
+        GameObject targetEnemy = FindNearestEnemy(enemies);
 
         if(canAttack)
-        {
+        {   
+            //Instanciando o projetil e pegando seu RigidBody2D
             GameObject projectileInstance = Instantiate(projectile, transform.position, Quaternion.identity);
             Rigidbody2D projectRb = projectileInstance.GetComponent<Rigidbody2D>();
 
+            //Pegando a direcao para onde o projetil vai e adicionando força nele
             Vector2 direction = targetEnemy.transform.position - transform.position;
             direction.Normalize();
 
-            projectRb.AddForce(direction, ForceMode2D.Impulse);
+            projectRb.AddForce(direction * entityStats.attackRange, ForceMode2D.Impulse);
             canAttack = false;
+
+            //Colocando informaçoes do dano que serao enviadas para o ProjectileDamage
+            projectileInstance.GetComponent<ProjectileDamage>().damage = entityStats.attackDamage;
+            projectileInstance.GetComponent<ProjectileDamage>().lifeTime = entityStats.projectileLifeSpan;
         }
 
         CooldownCount();
     }
 
-    GameObject FindNearestEnemy()
+    GameObject FindNearestEnemy(GameObject[] enemies)
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        //fazendo o targetEnemy ser o primeiro index de enemies
         GameObject targetEnemy = enemies[0];
 
+        //Vendo qual inimigo esta mais proximo do jogador e fazendo com que ele seja o targetEnemy
         foreach(GameObject enemy in enemies)
         {
             float dis = Vector2.Distance(transform.position, enemy.transform.position);
