@@ -12,6 +12,10 @@ public class HUD : MonoBehaviour
 
     EntityStats playerStats;
 
+    public string stats;
+
+    public GameObject levelUpScreen;
+
     void Awake()
     {
         if(Instance != null && Instance != this)
@@ -46,6 +50,30 @@ public class HUD : MonoBehaviour
     void XpSliderChange()
     {
         xpSlider.maxValue = playerStats.level*100;
-        xpSlider.value = playerStats.xp;
+        xpSlider.value = playerStats.exp;
+    }
+
+    public void SelectedStat(string stat)
+    {
+        if(stat == "atkDamage")
+        {
+            playerStats.attackDamage += 2;
+        }
+        if(stat == "atkSpeed")
+        {
+            playerStats.attackSpeed -= 0.2f;
+        }
+        if(stat == "atkRange")
+        {
+            
+        }
+
+        Time.timeScale = 1;
+        levelUpScreen.SetActive(false);
+    }
+
+    public void SetupLevelScreen()
+    {
+        levelUpScreen.SetActive(true);
     }
 }

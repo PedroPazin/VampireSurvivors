@@ -11,7 +11,7 @@ public class EntityStats : MonoBehaviour
     public float attackSpeed;
     public float attackRange;
     public float projectileLifeSpan;
-    public float xp;
+    public float exp;
 
     //Apenas do player(por enquanto)
     public float level = 1;
@@ -44,21 +44,22 @@ public class EntityStats : MonoBehaviour
             //Checa se o objeto morte é diferente do jogador, se for, adiciona xp ao jogador
             if(this.gameObject.tag != "Player")
             {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>().AddExp(xp);
+                GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>().AddExp(exp);
             }
         }
     }
 
-    void AddExp(float xp_)
+    void AddExp(float xp)
     {
-
-        //Arrumar bug: nao esta somando o xp
-        xp += xp_;
+        exp += xp;
         
-        if(xp >= level*100)
+        if(exp >= level*100)
         {
             level += 1;
-            xp = 0;
+            exp = 0;
+            HUD.Instance.SetupLevelScreen();
+
+            Time.timeScale = 0;
         }
 
     }
