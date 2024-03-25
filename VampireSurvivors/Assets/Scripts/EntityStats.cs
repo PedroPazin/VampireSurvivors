@@ -15,7 +15,9 @@ public class EntityStats : MonoBehaviour
 
     //Apenas do player(por enquanto)
     public float level = 1;
-    
+    public float criticalChance;
+    public int pierce;
+    public float expMult;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,20 @@ public class EntityStats : MonoBehaviour
         CheckDeath();
     }
 
+    public void AddHp(float health)
+    {
+        hp += health;
+        CheckOverHealth();
+    }
+
+    void CheckOverHealth()
+    {
+        if(hp > maxHp)
+        {
+            hp = maxHp;
+        }
+    }
+
     public void CheckDeath()
     {
         if(hp <= 0)
@@ -51,7 +67,7 @@ public class EntityStats : MonoBehaviour
 
     void AddExp(float xp)
     {
-        exp += xp;
+        exp += xp + (xp * (expMult/100));
         
         if(exp >= level*100)
         {

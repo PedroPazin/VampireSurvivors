@@ -1,1 +1,170 @@
-elta"in n?-n.wheelDelta:0},deltaZ:null,deltaMode:null};r.augmentClass(i,u);t.exports=i},{97:97}],101:[function(n,t){"use strict";var r=n(133),u={reinitializeTransaction:function(){this.transactionWrappers=this.getTransactionWrappers();this.wrapperInitData?this.wrapperInitData.length=0:this.wrapperInitData=[];this._isInTransaction=!1},_isInTransaction:!1,getTransactionWrappers:null,isInTransaction:function(){return!!this._isInTransaction},perform:function(n,t,i,u,f,e,o,s){r(!this.isInTransaction());var h,c;try{this._isInTransaction=!0;h=!0;this.initializeAll(0);c=n.call(t,i,u,f,e,o,s);h=!1}finally{try{if(h)try{this.closeAll(0)}catch(l){}else this.closeAll(0)}finally{this._isInTransaction=!1}}return c},initializeAll:function(n){for(var r,u=this.transactionWrappers,t=n;t<u.length;t++){r=u[t];try{this.wrapperInitData[t]=i.OBSERVED_ERROR;this.wrapperInitData[t]=r.initialize?r.initialize.call(this):null}finally{if(this.wrapperInitData[t]===i.OBSERVED_ERROR)try{this.initializeAll(t+1)}catch(f){}}}},closeAll:function(n){var u,t,f,e,o;for(r(this.isInTransaction()),u=this.transactionWrappers,t=n;t<u.length;t++){e=u[t];o=this.wrapperInitData[t];try{f=!0;o!==i.OBSERVED_ERROR&&e.close&&e.close.call(this,o);f=!1}finally{if(f)try{this.closeAll(t+1)}catch(s){}}}this.wrapperInitData.length=0}},i={Mixin:u,OBSERVED_ERROR:{}};t.exports=i},{133:133}],102:[function(n,t){"use strict";var i={currentScrollLeft:0,currentScrollTop:0,refreshScrollValues:function(n){i.currentScrollLeft=n.x;i.currentScrollTop=n.y}};t.exports=i},{}],103:[function(n,t){"use strict";function i(n,t){if(r(null!=t),null==n)return t;var i=Array.isArray(n),u=Array.isArray(t);return i&&u?(n.push.apply(n,t),n):i?(n.push(t),n):u?[n].concat(t):[n,t]}var r=n(133);t.exports=i},{133:133}],104:[function(n,t){"use strict";function r(n){for(var t=1,r=0,u=0;u<n.length;u++)t=(t+n.charCodeAt(u))%i,r=(r+t)%i;return t|r<<16}var i=65521;t.exports=r},{}],105:[function(n,t){function i(n){return n.replace(r,function(n,t){return t.toUpperCase()})}var r=/-(.)/g;t.exports=i},{}],106:[function(n,t){"use strict";function i(n){return r(n.replace(u,"ms-"))}var r=n(105),u=/^-ms-/;t.exports=i},{105:105}],107:[function(n,t){function i(n,t){return n&&t?n===t?!0:r(n)?!1:r(t)?i(n,t.parentNode):n.contains?n.contains(t):n.compareDocumentPosition?!!(16&n.compareDocumentPosition(t)):!1:!1}var r=n(137);t.exports=i},{137:137}],108:[function(n,t){function i(n){return!!n&&("object"==typeof n||"function"==typeof n)&&"length"in n&&!("setInterval"in n)&&"number"!=typeof n.nodeType&&(Array.isArray(n)||"callee"in n||"item"in n)}function r(n){return i(n)?Array.isArray(n)?n.slice():u(n):[n]}var u=n(148);t.exports=r},{148:148}],109:[function(n,t){"use strict";function i(n){var t=u.createFactory(n);return r.createClass({tagName:n.toUpperCase(),displayName:"ReactFullPageComponent"+n,componentWillUnmount:function(){f(!1)},render:function(){return t(this.props)}})}var r=n(33),u=n(55),f=n(133);t.exports=i},{133:133,33:33,55:55}],110:[function(n,t){function f(n){var t=n.match(h);return t&&t[1].toLowerCase()}function e(n,t){var e=u,h,o,l,c,a;if(r(!!u),h=f(n),o=h&&s(h),o)for(e.innerHTML=o[1]+n+o[2],l=o[0];l--;)e=e.lastChild;else e.innerHTML=n;for(c=e.getElementsByTagName("script"),c.length&&(r(t),i(c).forEach(t)),a=i(e.childNodes);e.lastChild;)e.removeChild(e.lastChild);return a}var o=n(21),i=n(108),s=n(125),r=n(133),u=o.canUseDOM?document.createElement("div"):null,h=/^\s*<(\w+)/;t.exports=e},{108:108,125:125,133:133,21:21}],111:[function(n,t){"use strict";function r(n,t){var u=null==t||"boolean"==typeof t||""===t,r;return u?"":(r=isNaN(t),r||0===t||i.hasOwnProperty(n)&&i[n]?""+t:("string"==typeof t&&(t=t.trim()),t+"px"))}var u=n(4),i=u.isUnitlessNumber;t.exports=r},{4:4}],112:[function(n,t){function r(n){return function(){return n}}function i(){}i.thatReturns=r;i.thatReturnsFalse=r(!1);i.thatReturnsTrue=r(!0);i.thatReturnsNull=r(null);i.thatReturnsThis=function(){return this};i.thatReturnsArgument=function(n){return n};t.exports=i},{}],113:[function(n,t){"use strict";t.exports={}},{}],114:[function(n,t){"use strict";function i(n){return u[n]}function r(n){return(""+n).replace(f,i)}var u={"&":"&amp;",">":"&gt;","<":"&lt;",'"':"&quot;","'":"&#x27;"},f=/[&><"']/g;t.exports=r},{}],115:[function(n,t){"use strict";function r(n){return null==n?null:e(n)?n:u.has(n)?f.getNodeFromInstance(n):(i(null==n.render||"function"!=typeof n.render),void i(!1))}var u=(n(39),n(65)),f=n(68),i=n(133),e=n(135);n(150);t.exports=r},{133:133,135:135,150:150,39:39,65:65,68:68}],116:[function(n,t){"use strict";function i(n,t,i){var r=n,u=!r.hasOwnProperty(i);u&&null!=t&&(r[i]=t)}function r(n){if(null==n)return n;var t={};return u(n,i,t),t}var u=n(149);n(150);t.exports=r},{149:149,150:150}],117:[function(n,t){"use strict";function i(n){try{n.focus()}catch(t){}}t.exports=i},{}],118:[function(n,t){"use strict";var i=function(n,t,i){Array.isArray(n)?n.forEach(t,i):n&&t.call(i,n)};t.exports=i},{}],119:[function(n,t){function i(){try{return document.activeElement||document.body}catch(n){return document.body}}t.exports=i},{}],120:[function(n,t){"use strict";function i(n){var t,i=n.keyCode;return"charCode"in n?(t=n.charCode,0===t&&13===i&&(t=13)):t=i,t>=32||13===t?t:0}t.exports=i},{}],121:[function(n,t){"use strict";function i(n){var t,i;return n.key&&(t=u[n.key]||n.key,"Unidentified"!==t)?t:"keypress"===n.type?(i=r(n),13===i?"Enter":String.fromCharCode(i)):"keydown"===n.type||"keyup"===n.type?f[n.keyCode]||"Unidentified":""}var r=n(120),u={Esc:"Escape",Spacebar:" ",Left:"ArrowLeft",Up:"ArrowUp",Right:"ArrowRight",Down:"ArrowDown",Del:"Delete",Win:"OS",Menu:"ContextMenu",Apps:"ContextMenu",Scroll:"ScrollLock",MozPrintableKey:"Unidentified"},f={8:"Backspace",9:"Tab",12:"Clear",13:"Enter",16:"Shift",17:"Control",18:"Alt",19:"Pause",20:"CapsLock",27:"Escape",32:" ",33:"PageUp",34:"PageDown",35:"End",36:"Home",37:"ArrowLeft",38:"ArrowUp",39:"ArrowRight",40:"ArrowDown",45:"Insert",46:"Delete",112:"F1",113:"F2",114:"F3",115:"F4",116:"F5",117:"F6",118:"F7",119:"F8",120:"F9",121:"F10",122:"F11",123:"F12",144:"NumLock",145:"ScrollLock",224:"Meta"};t.exports=i},{120:120}],122:[function(n,t){"use strict";function i(n){var r=this,t=r.nativeEvent,i;return t.getModifierState?t.getModifierState(n):(i=u[n],i?!!t[i]:!1)}function r(){return i}var u={Alt:"altKey",Control:"ctrlKey",Meta:"metaKey",Shift:"shiftKey"};t.exports=r},{}],123:[function(n,t){"use strict";function i(n){var t=n.target||n.srcElement||window;return 3===t.nodeType?t.parentNode:t}t.exports=i},{}],124:[function(n,t){"use strict";function r(n){var t=n&&(i&&n[i]||n[u]);if("function"==typeof t)return t}var i="function"==typeof Symbol&&Symbol.iterator,u="@@iterator";t.exports=r},{}],125:[function(n,t
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.Build;
+using UnityEditor.Build.Reporting;
+using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
+
+namespace UnityEditor.Timeline.Analytics
+{
+    class TimelineSceneInfo
+    {
+        public Dictionary<string, int> trackCount = new Dictionary<string, int>
+        {
+            {"ActivationTrack", 0},
+            {"AnimationTrack", 0},
+            {"AudioTrack", 0},
+            {"ControlTrack", 0},
+            {"PlayableTrack", 0},
+            {"UserType", 0},
+            {"Other", 0}
+        };
+
+        public Dictionary<string, int> userTrackTypesCount = new Dictionary<string, int>();
+        public HashSet<TimelineAsset> uniqueDirectors = new HashSet<TimelineAsset>();
+        public int numTracks = 0;
+        public int minDuration = int.MaxValue;
+        public int maxDuration = int.MinValue;
+        public int minNumTracks = int.MaxValue;
+        public int maxNumTracks = int.MinValue;
+        public int numRecorded = 0;
+    }
+
+    [Serializable]
+    struct TrackInfo
+    {
+        public string name;
+        public double percent;
+    }
+
+    [Serializable]
+    class TimelineEventInfo
+    {
+        public int num_timelines;
+        public int min_duration, max_duration;
+        public int min_num_tracks, max_num_tracks;
+        public double recorded_percent;
+        public List<TrackInfo> track_info = new List<TrackInfo>();
+        public string most_popular_user_track = string.Empty;
+
+        public TimelineEventInfo(TimelineSceneInfo sceneInfo)
+        {
+            num_timelines = sceneInfo.uniqueDirectors.Count;
+            min_duration = sceneInfo.minDuration;
+            max_duration = sceneInfo.maxDuration;
+            min_num_tracks = sceneInfo.minNumTracks;
+            max_num_tracks = sceneInfo.maxNumTracks;
+            recorded_percent = Math.Round(100.0 * sceneInfo.numRecorded / sceneInfo.numTracks, 1);
+
+            foreach (KeyValuePair<string, int> kv in sceneInfo.trackCount.Where(x => x.Value > 0))
+            {
+                track_info.Add(new TrackInfo()
+                {
+                    name = kv.Key,
+                    percent = Math.Round(100.0 * kv.Value / sceneInfo.numTracks, 1)
+                });
+            }
+
+            if (sceneInfo.userTrackTypesCount.Any())
+            {
+                most_popular_user_track = sceneInfo.userTrackTypesCount
+                    .First(x => x.Value == sceneInfo.userTrackTypesCount.Values.Max()).Key;
+            }
+        }
+
+        public static bool IsUserType(Type t)
+        {
+            string nameSpace = t.Namespace;
+            return string.IsNullOrEmpty(nameSpace) || !nameSpace.StartsWith("UnityEngine.Timeline");
+        }
+    }
+
+
+    static class TimelineAnalytics
+    {
+        static TimelineSceneInfo _timelineSceneInfo = new TimelineSceneInfo();
+
+        class TimelineAnalyticsPreProcess : IPreprocessBuildWithReport
+        {
+            public int callbackOrder { get { return 0; } }
+            public void OnPreprocessBuild(BuildReport report)
+            {
+                _timelineSceneInfo = new TimelineSceneInfo();
+            }
+        }
+
+        class TimelineAnalyticsProcess : IProcessSceneWithReport
+        {
+            public int callbackOrder
+            {
+                get { return 0; }
+            }
+
+            public void OnProcessScene(Scene scene, BuildReport report)
+            {
+                var timelines = UnityEngine.Object.FindObjectsOfType<PlayableDirector>().Select(pd => pd.playableAsset).OfType<TimelineAsset>().Distinct();
+
+                foreach (var timeline in timelines)
+                {
+                    if (_timelineSceneInfo.uniqueDirectors.Add(timeline))
+                    {
+                        _timelineSceneInfo.numTracks += timeline.flattenedTracks.Count();
+                        _timelineSceneInfo.minDuration = Math.Min(_timelineSceneInfo.minDuration, (int)(timeline.duration * 1000));
+                        _timelineSceneInfo.maxDuration = Math.Max(_timelineSceneInfo.maxDuration, (int)(timeline.duration * 1000));
+                        _timelineSceneInfo.minNumTracks = Math.Min(_timelineSceneInfo.minNumTracks, timeline.flattenedTracks.Count());
+                        _timelineSceneInfo.maxNumTracks = Math.Max(_timelineSceneInfo.maxNumTracks, timeline.flattenedTracks.Count());
+
+                        foreach (var track in timeline.flattenedTracks)
+                        {
+                            string key = track.GetType().Name;
+                            if (_timelineSceneInfo.trackCount.ContainsKey(key))
+                            {
+                                _timelineSceneInfo.trackCount[key]++;
+                            }
+                            else
+                            {
+                                if (TimelineEventInfo.IsUserType(track.GetType()))
+                                {
+                                    _timelineSceneInfo.trackCount["UserType"]++;
+                                    if (_timelineSceneInfo.userTrackTypesCount.ContainsKey(key))
+                                        _timelineSceneInfo.userTrackTypesCount[key]++;
+                                    else
+                                        _timelineSceneInfo.userTrackTypesCount[key] = 1;
+                                }
+                                else
+                                    _timelineSceneInfo.trackCount["Other"]++;
+                            }
+
+                            if (track.clips.Any(x => x.recordable))
+                                _timelineSceneInfo.numRecorded++;
+                            else
+                            {
+                                var animationTrack = track as AnimationTrack;
+                                if (animationTrack != null)
+                                {
+                                    if (animationTrack.CanConvertToClipMode())
+                                        _timelineSceneInfo.numRecorded++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        class TimelineAnalyticsPostProcess : IPostprocessBuildWithReport
+        {
+            public int callbackOrder { get { return 0; } }
+            public void OnPostprocessBuild(BuildReport report)
+            {
+                if (_timelineSceneInfo.uniqueDirectors.Count > 0)
+                {
+                    var timelineEvent = new TimelineEventInfo(_timelineSceneInfo);
+                    EditorAnalytics.SendEventTimelineInfo(timelineEvent);
+                }
+            }
+        }
+    }
+}

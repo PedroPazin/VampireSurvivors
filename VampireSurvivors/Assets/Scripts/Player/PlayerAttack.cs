@@ -65,6 +65,14 @@ public class PlayerAttack : MonoBehaviour
             //Colocando informaçoes do dano que serao enviadas para o ProjectileDamage
             projectileInstance.GetComponent<ProjectileDamage>().damage = entityStats.attackDamage;
             projectileInstance.GetComponent<ProjectileDamage>().lifeTime = entityStats.projectileLifeSpan;
+
+            //Chance de critico
+            float numRandom = Random.Range(0f, 100f);
+            if(numRandom <= entityStats.criticalChance)
+            {
+                projectileInstance.GetComponent<ProjectileDamage>().damage += entityStats.attackDamage;
+            }
+            
         }
 
         CooldownCount();

@@ -32,6 +32,7 @@ public class HUD : MonoBehaviour
     void Start()
     {
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>();
+        levelUpScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -65,7 +66,24 @@ public class HUD : MonoBehaviour
         }
         if(stat == "atkRange")
         {
-            
+            playerStats.attackRange += 0.2f;
+        }
+        if(stat == "maxHp")
+        {
+            playerStats.maxHp += 5;
+            playerStats.AddHp(5);
+        }
+        if(stat == "criticalChance")
+        {
+            playerStats.criticalChance += 1.5f;
+        }
+        if(stat == "pierce")
+        {
+            playerStats.pierce += 1;
+        }
+        if(stat == "expMult")
+        {
+            playerStats.expMult += 8;
         }
 
         Time.timeScale = 1;
