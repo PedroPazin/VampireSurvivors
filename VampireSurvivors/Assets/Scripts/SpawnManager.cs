@@ -15,6 +15,9 @@ public class SpawnManager : MonoBehaviour
     //Timer para aumentar a dificuldade
     float timer;
 
+    //Player
+    GameObject player;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,19 +27,21 @@ public class SpawnManager : MonoBehaviour
 
         //Status base do inimigo padrao
         enemyStats.maxHp = 3;
+
+        //Player
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
         spawns = GameObject.FindGameObjectsWithTag("SpawnEnemy");
-        if(spawns != null)
+        if(spawns != null && player != null)
         {
             Spawn();
         }
 
         timer += Mathf.CeilToInt(Time.deltaTime*1000);
-        print(timer);
     }
 
     void FixedUpdate()
@@ -47,11 +52,6 @@ public class SpawnManager : MonoBehaviour
 
     void Spawn()
     {
-        //Aumentando status do inimigo com o passar do tempo
-        if(timer == 5)
-        {
-            enemyStats.maxHp += 5;
-        }
 
         if(canSpawn)
         {

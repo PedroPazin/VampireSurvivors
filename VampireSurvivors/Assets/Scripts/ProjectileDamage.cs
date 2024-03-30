@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class ProjectileDamage : MonoBehaviour
 {   
@@ -14,10 +15,10 @@ public class ProjectileDamage : MonoBehaviour
 
     GameObject player;
 
-
     // Start is called before the first frame update
     void Start()
     {
+        
         Destroy(this.gameObject, lifeTime);
         player = GameObject.FindGameObjectWithTag("Player");
     }
@@ -41,6 +42,13 @@ public class ProjectileDamage : MonoBehaviour
                 if(piercedEnemies >= player.GetComponent<EntityStats>().pierce)
                 {
                     Destroy(this.gameObject);
+                }
+
+                //Fazendo o tiro do player explodir quando ativer um inimigo e quando ele tiver o UP
+                if(HUD.Instance.explosion)
+                {
+                    GameObject explosionInstance = Instantiate(player.GetComponent<PlayerAttack>().explosion, this.gameObject.transform.position, Quaternion.identity);
+                    Destroy(explosionInstance, 1.5f);
                 }
             }
             else

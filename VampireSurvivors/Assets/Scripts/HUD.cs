@@ -16,6 +16,18 @@ public class HUD : MonoBehaviour
 
     public GameObject levelUpScreen;
 
+    public GameObject upgradeScreen;
+
+    public GameObject damagePopup;
+
+    //Verifica se o player possui os upgrades: true or false
+    public bool explosion = false;
+    public bool multProjectile = false;
+    public bool deathArea = false;
+
+    //PlayerAttack
+    PlayerAttack playerAttack;
+
     void Awake()
     {
         if(Instance != null && Instance != this)
@@ -31,8 +43,15 @@ public class HUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Pegando os stats do player
         playerStats = GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>();
+
+        //Ativando as screens
         levelUpScreen.SetActive(false);
+        upgradeScreen.SetActive(false);
+
+        //Pegando o script PlayerAttack
+        playerAttack = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAttack>();
     }
 
     // Update is called once per frame
@@ -54,11 +73,13 @@ public class HUD : MonoBehaviour
         xpSlider.value = playerStats.exp;
     }
 
+
+    //Funçoes de LevelUp
     public void SelectedStat(string stat)
     {
         if(stat == "atkDamage")
         {
-            playerStats.attackDamage += 2;
+            playerStats.attackDamage += 1;
         }
         if(stat == "atkSpeed")
         {
@@ -66,7 +87,7 @@ public class HUD : MonoBehaviour
         }
         if(stat == "atkRange")
         {
-            playerStats.attackRange += 0.2f;
+            playerStats.attackRange += 0.1f;
         }
         if(stat == "maxHp")
         {
@@ -93,5 +114,54 @@ public class HUD : MonoBehaviour
     public void SetupLevelScreen()
     {
         levelUpScreen.SetActive(true);
+    }
+
+    //Funçoes de Upgrade
+    public void SelectedUpgrade(string upgrade)
+    {
+        if(upgrade == "explosion")
+        {
+            if(explosion)
+            {
+                playerStats.explosionDamage += 0.2f;
+            }
+
+            explosion = true;
+        }
+
+        if(upgrade == "multProjectile")
+        {
+            multProjectile = true;
+        }
+
+        if(upgrade == "deathArea")
+        {
+            if(deathArea)
+            {
+                //Aumentando o dano do DeathArea
+                playerStats.deathAreaDamage += 0.2f;
+
+                //Pegando a escala X do DeathArea
+                float scaleX = playerAttack.deathArea.transform.localScale.x;
+
+                //Criando novas variaveis para serem as novas escalas
+                float newScaleX = scaleX + 0.2f;
+                float newScaleY = newScaleX/2;
+
+                //Adicionando as novas variaveis nos valores da escala do DeathArea
+                playerAttack.deathArea.transform.localScale = new Vector2(newScaleX, newScaleY); 
+            }
+
+            deathArea = true;
+        }
+
+        //Desativa a tela e volta o tempo do jogo
+        upgradeScreen.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    public void SetupUpgradeScreen()
+    {
+        upgradeScreen.SetActive(true);
     }
 }

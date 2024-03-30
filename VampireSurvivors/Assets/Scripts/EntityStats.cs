@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EntityStats : MonoBehaviour
 {
@@ -19,10 +20,19 @@ public class EntityStats : MonoBehaviour
     public int pierce;
     public float expMult;
 
+    //Stats dos UPS do player
+    public float explosionDamage;
+    public float deathAreaDamage;
+
+
+    //Apenas do inimigo
+    public bool targeted;
+
     // Start is called before the first frame update
     void Start()
     {
         hp = maxHp;
+
     }
 
     // Update is called once per frame
@@ -33,6 +43,15 @@ public class EntityStats : MonoBehaviour
 
     public void ReduceHp(float damage)
     {
+        //Fazer a aparecer o DamagePopup com o dano recebido
+        GameObject newDamagePopup = Instantiate(HUD.Instance.damagePopup, this.transform.position, Quaternion.identity);
+        
+        newDamagePopup.GetComponentInChildren<Text>().text = damage.ToString();
+        newDamagePopup.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-2f, 2f), 5), ForceMode2D.Impulse);
+        
+        Destroy(newDamagePopup, 1);
+
+        //Reduz da vida o dano tomado
         hp -= damage;
         CheckDeath();
     }
@@ -62,6 +81,9 @@ public class EntityStats : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>().AddExp(exp);
             }
+
+            
+
         }
     }
 
@@ -73,8 +95,18 @@ public class EntityStats : MonoBehaviour
         {
             level += 1;
             exp = 0;
-            HUD.Instance.SetupLevelScreen();
 
+            //Checa se o level for par, entao mostrara a tela de Upgrade, se for impar mostrara a tela de LevelUp
+            if(level % 2 == 0)
+            {
+                HUD.Instance.SetupUpgradeScreen();
+            }
+            else
+            {
+                HUD.Instance.SetupLevelScreen();
+            }
+            
+            //Parando o tempo do jogo
             Time.timeScale = 0;
         }
 
