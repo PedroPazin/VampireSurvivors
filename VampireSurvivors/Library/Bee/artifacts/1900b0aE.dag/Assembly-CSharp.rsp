@@ -376,12 +376,17 @@
 "Assets/Scripts/Camera/CameraFollowPlayer.cs"
 "Assets/Scripts/Enemy/EnemyDamage.cs"
 "Assets/Scripts/Enemy/EnemyMovement.cs"
+"Assets/Scripts/EnemyHpBar.cs"
 "Assets/Scripts/EntityStats.cs"
 "Assets/Scripts/HUD.cs"
+"Assets/Scripts/MakeItDifficult.cs"
 "Assets/Scripts/Player/PlayerAttack.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
+"Assets/Scripts/Player/PowerUps/DeathArea.cs"
+"Assets/Scripts/Player/PowerUps/ExplosionDamage.cs"
 "Assets/Scripts/ProjectileDamage.cs"
 "Assets/Scripts/SpawnManager.cs"
+"Assets/Scripts/Timer.cs"
 -langversion:9.0
 
 /deterministic

@@ -1,24 +1,6 @@
-using System;
-using System.Runtime.CompilerServices;
+ack"></div>
+<h1>Mesh data</h1>
+<!--BeginSwitchLink--><!--EndSwitchLink-->
+<div class="clear"></div>
 
-[assembly: InternalsVisibleTo("Unity.Collections")]
-
-namespace Unity.Collections.LowLevel.Unsafe
-{
-    internal unsafe static class ILSupport
-    {
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void* AddressOf<T>(in T thing)
-            where T : struct
-        {
-            throw new NotImplementedException();
-        }
-
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static ref T AsRef<T>(in T thing)
-            where T : struct
-        {
-            throw new NotImplementedException();
-        }
-    }
-}
+<p>This page contains information on the data that a mesh contains, and how Unity stores that data in the <span class="tooltip"><a class="tooltipMoreInfoLink" href="../ScriptReference/Mesh.html">Mesh</a><span class="tooltiptext">The main graphics primitive of Unity. Meshes make up a large part of your 3D worlds. Unity supports triangulated or Quadrangulated polygon meshes. Nurbs, Nurms, Subdiv surfaces must be converted to polygons. <a href="comp-MeshGroup.html">More info</a><br/><span class="tooltipGlossaryLink">Se

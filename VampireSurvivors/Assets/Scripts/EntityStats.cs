@@ -81,9 +81,6 @@ public class EntityStats : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<EntityStats>().AddExp(exp);
             }
-
-            
-
         }
     }
 
@@ -110,5 +107,18 @@ public class EntityStats : MonoBehaviour
             Time.timeScale = 0;
         }
 
+    }
+
+    public void EnemyLevelUp(int levelUp)
+    {
+        for (int i = 0; i < levelUp; i++)
+        {
+            level += 1;
+
+            maxHp += 1;
+            attackDamage += 1.5f;
+            attackSpeed -= 0.3f;
+            exp += 20;
+        }
     }
 }
