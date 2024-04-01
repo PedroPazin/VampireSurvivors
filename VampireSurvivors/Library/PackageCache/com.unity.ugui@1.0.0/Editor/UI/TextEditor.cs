@@ -1,37 +1,28 @@
-using UnityEngine;
-using UnityEngine.UI;
-
-namespace UnityEditor.UI
-{
-    [CustomEditor(typeof(Text), true)]
-    [CanEditMultipleObjects]
-    /// <summary>
-    /// Custom Editor for the Text Component.
-    /// Extend this class to write a custom editor for a component derived from Text.
-    /// </summary>
-    public class TextEditor : GraphicEditor
-    {
-        SerializedProperty m_Text;
-        SerializedProperty m_FontData;
-
-        protected override void OnEnable()
-        {
-            base.OnEnable();
-            m_Text = serializedObject.FindProperty("m_Text");
-            m_FontData = serializedObject.FindProperty("m_FontData");
-        }
-
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-
-            EditorGUILayout.PropertyField(m_Text);
-            EditorGUILayout.PropertyField(m_FontData);
-
-            AppearanceControlsGUI();
-            RaycastControlsGUI();
-            MaskableControlsGUI();
-            serializedObject.ApplyModifiedProperties();
-        }
-    }
-}
+e008b58bb968729775fa5') in 0.005991 seconds
+Refreshing native plugins compatible for Editor in 1.86 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.384 seconds
+Domain Reload Profiling: 2172ms
+	BeginReloadAssembly (148ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (26ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (563ms)
+		LoadAssemblies (475ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (166ms)
+			TypeCache.Refresh (130ms)
+				TypeCache.ScanAssembly (117ms)
+			ScanForSourceGeneratedMonoScriptInfo (19ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1384ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1261ms)
+			LogAssemblyErro

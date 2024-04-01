@@ -1,12 +1,11 @@
-# Event Trigger
-
-The Event Trigger receives events from the Event System and calls registered functions for each event.
-
-The Event Trigger can be used to specify functions you wish to be called for each Event System event. You can assign multiple functions to a single event and whenever the Event Trigger receives that event it will call those functions.
-
-Note that attaching an Event Trigger component to a GameObject will make that object intercept all events, and no event bubbling will occur from this object!
-
-
-## Events
-
-Each of the [Supported Events](SupportedEvents.md) can optionally be included in the Event Trigger by clicking the Add New Event Type button.
+ion/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Aseprite.Editor.dll, with 117 defines and 229 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProc

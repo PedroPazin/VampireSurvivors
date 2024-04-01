@@ -1,122 +1,23 @@
-using System;
-using UnityEngine;
-using UnityEngine.EventSystems;
-
-namespace UnityEditor.EventSystems
-{
-    [CustomEditor(typeof(EventTrigger), true)]
-    public class EventTriggerEditor : Editor
-    {
-        SerializedProperty m_DelegatesProperty;
-
-        GUIContent m_IconToolbarMinus;
-        GUIContent m_EventIDName;
-        GUIContent[] m_EventTypes;
-        GUIContent m_AddButonContent;
-
-        protected virtual void OnEnable()
-        {
-            m_DelegatesProperty = serializedObject.FindProperty("m_Delegates");
-            m_AddButonContent = EditorGUIUtility.TrTextContent("Add New Event Type");
-            m_EventIDName = new GUIContent("");
-            // Have to create a copy since otherwise the tooltip will be overwritten.
-            m_IconToolbarMinus = new GUIContent(EditorGUIUtility.IconContent("Toolbar Minus"));
-            m_IconToolbarMinus.tooltip = "Remove all events in this list.";
-
-            string[] eventNames = Enum.GetNames(typeof(EventTriggerType));
-            m_EventTypes = new GUIContent[eventNames.Length];
-            for (int i = 0; i < eventNames.Length; ++i)
-            {
-                m_EventTypes[i] = new GUIContent(eventNames[i]);
-            }
-        }
-
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-            int toBeRemovedEntry = -1;
-
-            EditorGUILayout.Space();
-
-            Vector2 removeButtonSize = GUIStyle.none.CalcSize(m_IconToolbarMinus);
-
-            for (int i = 0; i < m_DelegatesProperty.arraySize; ++i)
-            {
-                SerializedProperty delegateProperty = m_DelegatesProperty.GetArrayElementAtIndex(i);
-                SerializedProperty eventProperty = delegateProperty.FindPropertyRelative("eventID");
-                SerializedProperty callbacksProperty = delegateProperty.FindPropertyRelative("callback");
-                m_EventIDName.text = eventProperty.enumDisplayNames[eventProperty.enumValueIndex];
-
-                EditorGUILayout.PropertyField(callbacksProperty, m_EventIDName);
-                Rect callbackRect = GUILayoutUtility.GetLastRect();
-
-                Rect removeButtonPos = new Rect(callbackRect.xMax - removeButtonSize.x - 8, callbackRect.y + 1, removeButtonSize.x, removeButtonSize.y);
-                if (GUI.Button(removeButtonPos, m_IconToolbarMinus, GUIStyle.none))
-                {
-                    toBeRemovedEntry = i;
-                }
-
-                EditorGUILayout.Space();
-            }
-
-            if (toBeRemovedEntry > -1)
-            {
-                RemoveEntry(toBeRemovedEntry);
-            }
-
-            Rect btPosition = GUILayoutUtility.GetRect(m_AddButonContent, GUI.skin.button);
-            const float addButonWidth = 200f;
-            btPosition.x = btPosition.x + (btPosition.width - addButonWidth) / 2;
-            btPosition.width = addButonWidth;
-            if (GUI.Button(btPosition, m_AddButonContent))
-            {
-                ShowAddTriggermenu();
-            }
-
-            serializedObject.ApplyModifiedProperties();
-        }
-
-        private void RemoveEntry(int toBeRemovedEntry)
-        {
-            m_DelegatesProperty.DeleteArrayElementAtIndex(toBeRemovedEntry);
-        }
-
-        void ShowAddTriggermenu()
-        {
-            // Now create the menu, add items and show it
-            GenericMenu menu = new GenericMenu();
-            for (int i = 0; i < m_EventTypes.Length; ++i)
-            {
-                bool active = true;
-
-                // Check if we already have a Entry for the current eventType, if so, disable it
-                for (int p = 0; p < m_DelegatesProperty.arraySize; ++p)
-                {
-                    SerializedProperty delegateEntry = m_DelegatesProperty.GetArrayElementAtIndex(p);
-                    SerializedProperty eventProperty = delegateEntry.FindPropertyRelative("eventID");
-                    if (eventProperty.enumValueIndex == i)
-                    {
-                        active = false;
-                    }
-                }
-                if (active)
-                    menu.AddItem(m_EventTypes[i], false, OnAddNewSelected, i);
-                else
-                    menu.AddDisabledItem(m_EventTypes[i]);
-            }
-            menu.ShowAsContext();
-            Event.current.Use();
-        }
-
-        private void OnAddNewSelected(object index)
-        {
-            int selected = (int)index;
-
-            m_DelegatesProperty.arraySize += 1;
-            SerializedProperty delegateEntry = m_DelegatesProperty.GetArrayElementAtIndex(m_DelegatesProperty.arraySize - 1);
-            SerializedProperty eventProperty = delegateEntry.FindPropertyRelative("eventID");
-            eventProperty.enumValueIndex = selected;
-            serializedObject.ApplyModifiedProperties();
-        }
-    }
-}
+n 0.003159 seconds
+Start importing Assets/Sprites/flame4/flame4.kra using Guid(85a7bc7a9fafe834b89c936dded68726) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '369e5061f75d875765f3a00a95500c59') in 0.001955 seconds
+Start importing Assets/Sprites/flame9/flame9.ai using Guid(95328e03ecd59694ca532de69e4adbde) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '3a5c5999939eb8f2b59f06f0f64dd220') in 0.005219 seconds
+Start importing Assets/Sprites/flame6/flame6.spine using Guid(95f9e137bd1c80540ad53e2a6fde9290) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'd3196b458ce234013274d08eea2d4210') in 0.002029 seconds
+Start importing Assets/Sprites/flame1/flame1.moho using Guid(57bb5dddc5de00d43ab801515bdce367) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'b2cd89656ce5308a54eb6df0542eef12') in 0.002050 seconds
+Start importing Assets/Sprites/flame9/flame9.spine using Guid(d71d1af7dbf452a4eb95d6764741db05) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'e703dc2be9be3be6f1fcdfc0dbedff25') in 0.002145 seconds
+Start importing Assets/Sprites/flame3/flame3.spine using Guid(194629a48a67ed5449db5e5b51f21d2b) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a60734caa7b5be6f6ccc4c319a4878af') in 0.002110 seconds
+Start importing Assets/Sprites/flame5/flame5.spine using Guid(1aee5695a30d882428e8c395c8a05250) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'f6adce62666eb7aedabf1d234d8e359a') in 0.002018 seconds
+Start importing Assets/Sprites/flame6/flame6.ai using Guid(2ba455161bd52e3449fd34f3c3e18f58) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'f53d2148e63443fed669ed9be65a1c8e') in 0.002202 seconds
+Start importing Assets/Sprites/flame10/flame10.spine using Guid(3c7061489c1111049901585a02f1c371) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '63920b06ef8f4c50ed2784e75e966bc7') in 0.002234 seconds
+Start importing Assets/Sprites/flame2/flame2.spine using Guid(3c9d66be6616e9c49a65441a1c793429) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'de3564a4967fa35363455355627c3e7e') in 0.002169 seconds
+Start importing Assets/Sprites/flame1/flame1.spine using Guid(bcac993cf4d9f7d4d9ccc22e197234d6) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8445dc77fb6ae501909223751cb05807') in 0.002163 seconds
+Start importing Assets/Sprites/flame7/IMAGES1/SEK1.spine using Guid(2561fe452d1f2424cb6644c00f7a37db) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'acdf19c0740440c67477ac81b784a181') in 0.001985 seconds
+Start importing Assets/Sprites/flame6/png/png_11.png using Guid(00035c7511a1185498e9d143305ace41) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8f5c926bc274885b4deec203f994ab5d') in 0.026041 seconds
+Start importing Assets/Sprites/flame8/png/png_32.png using Guid(004f35279f7ce2e429a050170e6be9b0) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '2774801ac73a13557489d93e222b52c3') in 0.044922 seconds
+Start importing Assets/Sprites/flame6/png/png_04.png using Guid(10a20066f6488e9459b741b94fdb834d) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '9f7de105d0c1dc64852189ea33c1a708') in 0.023730 seconds
+Start importing Assets/Sprites/flame4/flame4.psd using Guid(10651278b108ba449b71f4054a174995) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '2aa72c450b9d87ea332fee429b6a3487') in 0.037580 seconds
+Start importing Assets/Sprites/flame2/images/light1.png using Guid(104bcc63f5c2a5b45a6d84786fb44bd3) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'f18b707c33888b2cd3ddb45f714fc754') in 0.012979 seconds
+Start importing Assets/Sprites/flame1/images/Sek_00008.png using Guid(103e11b4b39440b429f47fd9aa63af60) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'bf37cead4ae41cc2149ebb95e6bf789d') in 0.010196 seconds
+Start importing Assets/Sprites/flame9/png/25.png using Guid(205b03531f8cd634fa5c9d4d3c9e6710) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'd2d0d3f986c69f87d1fbc735268a475c') in 0.102687 seconds
+Start importing Assets/Sprites/flame10/SPINE/flame103.png using Guid(3031d8e659db8c44fa8fa6cb67b50ef1) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'b8e8e885de6a0246bb8df9b0514689bf') in 0.185458 seconds
+Start importing Assets/Sprites/flame4/image/Me_VFX0020.png using Guid(3024ca6159ac31441b59b41ce9a50635) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '35f6f1e89631283d027bf0cd627c8922') in 0.011428 seconds
+Start importing Assets/Sprites/flame7/IMAGES2/SEK2_00014.png using Guid(3078adbb9f0702c458a1a464d0d8e710) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'e6f330439959b214e59c457008c

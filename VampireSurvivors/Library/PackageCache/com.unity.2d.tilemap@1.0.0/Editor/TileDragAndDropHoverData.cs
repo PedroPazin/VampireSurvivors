@@ -1,27 +1,4 @@
-using UnityEngine;
-using Object = UnityEngine.Object;
-
-namespace UnityEditor.Tilemaps
-{
-    internal struct TileDragAndDropHoverData
-    {
-        public Object hoverObject;
-        public Vector3 positionOffset;
-        public Vector3 scaleFactor;
-        public bool hasOffset;
-
-        public TileDragAndDropHoverData(Object hoverObject) : this(hoverObject, Vector3.zero, Vector3.one, false)
-        {
-        }
-
-        public TileDragAndDropHoverData(Object hoverObject, Vector3 positionOffset, Vector3 scaleFactor, bool hasOffset = true)
-        {
-            this.hoverObject = hoverObject;
-            this.positionOffset = positionOffset;
-            if (scaleFactor.z <= 0.0f)
-                scaleFactor.z = 1.0f;
-            this.scaleFactor = scaleFactor;
-            this.hasOffset = hasOffset;
-        }
-    }
-}
+g Guid(d3b7c342dcc762f41952a67f3c4b68e1) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'bc455891e522c39de677446d6664d0ec') in 0.023801 seconds
+Start importing Assets/Sprites/flame3/image/4_00005.png using Guid(d37f55c7040d7974eaa7d0049d584748) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'dc26808aeb8101fbc65187973f0f9852') in 0.015025 seconds
+Start importing Assets/Sprites/flame5/image/Me_VFX0047.png using Guid(e303f2661531bd64b9ad93e8f5b3e897) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ce53afc2f678ed62eefb451383447e37') in 0.016033 seconds
+Start importing Assets/Sprites/flame5/image/Me_VFX0010.png using Guid(e3859432d782d54488a5dc1a2076031a) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '0a6cf19acfec6192c3c2cfbd9a580ec5') in 0.010226 se

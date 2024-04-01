@@ -13,9 +13,10 @@ public class EntityStats : MonoBehaviour
     public float attackRange;
     public float projectileLifeSpan;
     public float exp;
+    public float level = 1;
 
     //Apenas do player(por enquanto)
-    public float level = 1;
+    public string text = "Apenas do player";
     public float criticalChance;
     public int pierce;
     public float expMult;
@@ -109,16 +110,33 @@ public class EntityStats : MonoBehaviour
 
     }
 
-    public void EnemyLevelUp(int levelUp)
+
+    //=-=--=-=-=-=-=-=--=- LevelUP dos inimigos =-=--=-=-=-=-=-=--=-
+    
+    // -=-=-=-=-=- DEFAULT -=-=-=-=-
+    //level up do inimigo default
+    public void EnemyDefaultLevelUp(int levelUp)
     {
         for (int i = 0; i < levelUp; i++)
         {
             level += 1;
 
             maxHp += 1;
-            attackDamage += 1.5f;
-            attackSpeed -= 0.3f;
             exp += 20;
         }
+    }
+
+    //Stats iniciais do inimigo default
+    public void EnemyDefaultLevelZero()
+    {
+        baseSpeed = 1.5f;
+        maxHp = 3;
+        hp = 0;
+        attackDamage = 3;
+        attackSpeed = 0;
+        attackRange = 0;
+        projectileLifeSpan = 0;
+        exp = 20;
+        level = 1;
     }
 }

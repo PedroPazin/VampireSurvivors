@@ -1,38 +1,30 @@
-using UnityEngine;
-using UnityEngine.UI;
+es
 
-namespace UnityEditor.UI
-{
-    /// <summary>
-    /// Base class for custom editors that are for components that implement the SelfControllerEditor interface.
-    /// </summary>
-    public class SelfControllerEditor : Editor
-    {
-        static string s_Warning = "Parent has a type of layout group component. A child of a layout group should not have a {0} component, since it should be driven by the layout group.";
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
 
-        public override void OnInspectorGUI()
-        {
-            bool anyHaveLayoutParent = false;
-            for (int i = 0; i < targets.Length; i++)
-            {
-                Component comp = (targets[i] as Component);
-                ILayoutIgnorer ignorer = comp.GetComponent(typeof(ILayoutIgnorer)) as ILayoutIgnorer;
-                if (ignorer != null && ignorer.ignoreLayout)
-                    continue;
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[516/623    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.2D.Common.Runtime.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Common.Runtime.dll, with 119 defines and 219 references
 
-                RectTransform parent = comp.transform.parent as RectTransform;
-                if (parent != null)
-                {
-                    Behaviour layoutGroup = parent.GetComponent(typeof(ILayoutGroup)) as Behaviour;
-                    if (layoutGroup != null && layoutGroup.enabled)
-                    {
-                        anyHaveLayoutParent = true;
-                        break;
-                    }
-                }
-            }
-            if (anyHaveLayoutParent)
-                EditorGUILayout.HelpBox(string.Format(s_Warning, ObjectNames.NicifyVariableName(target.GetType().Name)), MessageType.Warning);
-        }
-    }
-}
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[517/623    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.Burst.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.Burst.dll, with 119 defines and 210 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[518/623    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.InternalAPIEditorBridge.005.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.InternalAPIEditorBridge.005.dll, with 117 defines and 226 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[519/623    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.InternalAPIEditorBridge.001.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.InternalAPIEditorBridge.001.dll, with 117 defines and 226 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[520

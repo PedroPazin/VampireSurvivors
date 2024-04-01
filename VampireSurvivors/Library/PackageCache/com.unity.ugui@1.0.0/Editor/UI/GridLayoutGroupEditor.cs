@@ -1,56 +1,11 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEditorInternal;
-using UnityEditor.AnimatedValues;
-
-namespace UnityEditor.UI
-{
-    [CustomEditor(typeof(GridLayoutGroup), true)]
-    [CanEditMultipleObjects]
-    /// <summary>
-    /// Custom Editor for the GridLayout Component.
-    /// Extend this class to write a custom editor for a component derived from GridLayout.
-    /// </summary>
-    public class GridLayoutGroupEditor : Editor
-    {
-        SerializedProperty m_Padding;
-        SerializedProperty m_CellSize;
-        SerializedProperty m_Spacing;
-        SerializedProperty m_StartCorner;
-        SerializedProperty m_StartAxis;
-        SerializedProperty m_ChildAlignment;
-        SerializedProperty m_Constraint;
-        SerializedProperty m_ConstraintCount;
-
-        protected virtual void OnEnable()
-        {
-            m_Padding = serializedObject.FindProperty("m_Padding");
-            m_CellSize = serializedObject.FindProperty("m_CellSize");
-            m_Spacing = serializedObject.FindProperty("m_Spacing");
-            m_StartCorner = serializedObject.FindProperty("m_StartCorner");
-            m_StartAxis = serializedObject.FindProperty("m_StartAxis");
-            m_ChildAlignment = serializedObject.FindProperty("m_ChildAlignment");
-            m_Constraint = serializedObject.FindProperty("m_Constraint");
-            m_ConstraintCount = serializedObject.FindProperty("m_ConstraintCount");
-        }
-
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-            EditorGUILayout.PropertyField(m_Padding, true);
-            EditorGUILayout.PropertyField(m_CellSize, true);
-            EditorGUILayout.PropertyField(m_Spacing, true);
-            EditorGUILayout.PropertyField(m_StartCorner, true);
-            EditorGUILayout.PropertyField(m_StartAxis, true);
-            EditorGUILayout.PropertyField(m_ChildAlignment, true);
-            EditorGUILayout.PropertyField(m_Constraint, true);
-            if (m_Constraint.enumValueIndex > 0)
-            {
-                EditorGUI.indentLevel++;
-                EditorGUILayout.PropertyField(m_ConstraintCount, true);
-                EditorGUI.indentLevel--;
-            }
-            serializedObject.ApplyModifiedProperties();
-        }
-    }
-}
+a5c0b36e60b3f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '37643e2b0ab21b39191ce8178252b278') in 0.048464 seconds
+Start importing Assets/Sprites/flame10/PNG/37.png using Guid(53b505abb0f3f7a49a4acb4511f2426b) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '94536542dee5f796536378c1357cf940') in 0.089900 seconds
+Start importing Assets/Sprites/flame4/image/2Me_VFX0029.png using Guid(53765611411f1544dbbf25a1e5b124f1) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '9eb2291e989a198d285ce375ef7dff03') in 0.015376 seconds
+Start importing Assets/Sprites/flame5/png/png_75.png using Guid(53965c34c319fed4492d45ad6361c124) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '5307e8f86f00212bcd320adb9753601a') in 0.023922 seconds
+Start importing Assets/Sprites/flame3/image/4_00021.png using Guid(5309195bff6b02e4a9a6c4784865b8c1) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '729be49693f9f750321a37ccb8a638a8') in 0.015585 seconds
+Start importing Assets/Sprites/flame7/png4/png_21.png using Guid(53eb6b7ea9c4c1640bd5247bcfa53a8c) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ca335390347dbf865abec26316d699dd') in 0.091878 seconds
+Start importing Assets/Sprites/flame5/png/png_78.png using Guid(532cb20f6c312414f8d212d04f52beda) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '3b830ee5ad87b1a57c6092334eb39aa5') in 0.022532 seconds
+Start importing Assets/Sprites/flame3/image/4_00019.png using Guid(63152910a88ef6b438aa2cce763f9a4e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '0d51fd6ae91ed2257a186f0dd0f95c5f') in 0.016074 seconds
+Start importing Assets/Sprites/flame7/IMAGES2/SEK2_00016.png using Guid(63d5a2b84154c4947b231013a3ca2bd4) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'd6f346608dd327e40ee17400714aa611') in 0.017271 seconds
+Start importing Assets/Sprites/flame9/png/16.png using Guid(633d315d69872b84f95c3c49ee697929) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a6c4620d7f70e1b4e4f647fb137883d6') in 0.110246 seconds
+Start importing Assets/Sprites/flame1/png/09.png using Guid(7343ec0f836b6d24e802d08c96ff6fa7) Importer(-1,00000000000000000000000000000000)  -> (a

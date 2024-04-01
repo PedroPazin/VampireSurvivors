@@ -1,21 +1,4 @@
-using UnityEngine;
-using UnityEngine.EventSystems;
-
-namespace UnityEditor.EventSystems
-{
-    [CustomEditor(typeof(Physics2DRaycaster), true)]
-    /// <summary>
-    /// Custom Editor for the EventSystem Component.
-    /// Extend this class to write a custom editor for a component derived from EventSystem.
-    /// </summary>
-    public class Physics2DRaycasterEditor : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-#if !PACKAGE_PHYSICS2D
-            EditorGUILayout.HelpBox("Physics2D module is not present. This Raycaster will have no effect", MessageType.Warning);
-#endif
-        }
-    }
-}
+0000000000)  -> (artifact id: '0dc3eb232bc71b74d4b7bdf3a6a2bec3') in 0.023405 seconds
+Start importing Assets/Sprites/flame3/image/fire_00011.png using Guid(d09990fd604734240a7faa0c9bba1677) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'f2c71ac96cf0030a8b22e9cdd48e07d7') in 0.012760 seconds
+Start importing Assets/Sprites/flame5/image/Me_VFX0032.png using Guid(e0f57c176830fb84da2b63d7b6fe2505) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '55fd5da55689b0302ba4673431cae750') in 0.017937 seconds
+Start importing Assets/Sprites/flame3/png/flame_24.png using Guid(f08150832be76814299badc5410e9689) Importer(-1,0

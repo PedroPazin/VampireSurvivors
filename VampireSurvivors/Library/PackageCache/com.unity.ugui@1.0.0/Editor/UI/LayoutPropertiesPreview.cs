@@ -1,127 +1,21 @@
-using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-using UnityEngine.UI;
-using System.Globalization;
-
-namespace UnityEditor.Events
-{
-    [CustomPreview(typeof(GameObject))]
-    /// <summary>
-    ///   Custom preview drawing that will draw the layout properties of a given object.
-    /// </summary>
-    class LayoutPropertiesPreview : ObjectPreview
-    {
-        private const float kLabelWidth = 110;
-        private const float kValueWidth = 100;
-
-        class Styles
-        {
-            public GUIStyle labelStyle = new GUIStyle(EditorStyles.label);
-            public GUIStyle headerStyle = new GUIStyle(EditorStyles.boldLabel);
-
-            public Styles()
-            {
-                labelStyle.padding.right += 4;
-                headerStyle.padding.right += 4;
-            }
-        }
-
-        private GUIContent m_Title;
-        private Styles m_Styles;
-
-        public override void Initialize(UnityEngine.Object[] targets)
-        {
-            base.Initialize(targets);
-        }
-
-        public override GUIContent GetPreviewTitle()
-        {
-            if (m_Title == null)
-            {
-                m_Title = EditorGUIUtility.TrTextContent("Layout Properties");
-            }
-            return m_Title;
-        }
-
-        public override bool HasPreviewGUI()
-        {
-            GameObject go = target as GameObject;
-            if (!go)
-                return false;
-
-            // Prevent allocations in the editor by using TryGetComponent
-            ILayoutElement layoutElement;
-            return go.TryGetComponent(out layoutElement);
-        }
-
-        public override void OnPreviewGUI(Rect r, GUIStyle background)
-        {
-            if (Event.current.type != EventType.Repaint)
-                return;
-
-            if (m_Styles == null)
-                m_Styles = new Styles();
-
-            GameObject go = target as GameObject;
-            RectTransform rect = go.transform as RectTransform;
-            if (rect == null)
-                return;
-
-            // Apply padding
-            RectOffset previewPadding = new RectOffset(-5, -5, -5, -5);
-            r = previewPadding.Add(r);
-
-            // Prepare rects for columns
-            r.height = EditorGUIUtility.singleLineHeight;
-            Rect labelRect = r;
-            Rect valueRect = r;
-            Rect sourceRect = r;
-            labelRect.width = kLabelWidth;
-            valueRect.xMin += kLabelWidth;
-            valueRect.width = kValueWidth;
-            sourceRect.xMin += kLabelWidth + kValueWidth;
-
-            // Headers
-            GUI.Label(labelRect, "Property", m_Styles.headerStyle);
-            GUI.Label(valueRect, "Value", m_Styles.headerStyle);
-            GUI.Label(sourceRect, "Source", m_Styles.headerStyle);
-            labelRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-            valueRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-            sourceRect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-
-            // Prepare reusable variable for out argument
-            ILayoutElement source = null;
-
-            // Show properties
-
-            ShowProp(ref labelRect, ref valueRect, ref sourceRect, "Min Width", LayoutUtility.GetLayoutProperty(rect, e => e.minWidth, 0, out source).ToString(CultureInfo.InvariantCulture.NumberFormat), source);
-            ShowProp(ref labelRect, ref valueRect, ref sourceRect, "Min Height", LayoutUtility.GetLayoutProperty(rect, e => e.minHeight, 0, out source).ToString(CultureInfo.InvariantCulture.NumberFormat), source);
-            ShowProp(ref labelRect, ref valueRect, ref sourceRect, "Preferred Width", LayoutUtility.GetLayoutProperty(rect, e => e.preferredWidth, 0, out source).ToString(CultureInfo.InvariantCulture.NumberFormat), source);
-            ShowProp(ref labelRect, ref valueRect, ref sourceRect, "Preferred Height", LayoutUtility.GetLayoutProperty(rect, e => e.preferredHeight, 0, out source).ToString(CultureInfo.InvariantCulture.NumberFormat), source);
-
-            float flexible = 0;
-
-            flexible = LayoutUtility.GetLayoutProperty(rect, e => e.flexibleWidth, 0, out source);
-            ShowProp(ref labelRect, ref valueRect, ref sourceRect, "Flexible Width", flexible > 0 ? ("enabled (" + flexible.ToString(CultureInfo.InvariantCulture.NumberFormat) + ")") : "disabled", source);
-            flexible = LayoutUtility.GetLayoutProperty(rect, e => e.flexibleHeight, 0, out source);
-            ShowProp(ref labelRect, ref valueRect, ref sourceRect, "Flexible Height", flexible > 0 ? ("enabled (" + flexible.ToString(CultureInfo.InvariantCulture.NumberFormat) + ")") : "disabled", source);
-
-            if (!rect.GetComponent<LayoutElement>())
-            {
-                Rect noteRect = new Rect(labelRect.x, labelRect.y + 10, r.width, EditorGUIUtility.singleLineHeight);
-                GUI.Label(noteRect, "Add a LayoutElement to override values.", m_Styles.labelStyle);
-            }
-        }
-
-        private void ShowProp(ref Rect labelRect, ref Rect valueRect, ref Rect sourceRect, string label, string value, ILayoutElement source)
-        {
-            GUI.Label(labelRect, label, m_Styles.labelStyle);
-            GUI.Label(valueRect, value, m_Styles.labelStyle);
-            GUI.Label(sourceRect, source == null ? "none" : source.GetType().Name, m_Styles.labelStyle);
-            labelRect.y += EditorGUIUtility.singleLineHeight;
-            valueRect.y += EditorGUIUtility.singleLineHeight;
-            sourceRect.y += EditorGUIUtility.singleLineHeight;
-        }
-    }
-}
+com.unity.collab-proxy/Editor/PlasticSCM/Views/DownloadPlasticExeWindow.cs using Guid(08dbb8d51633f2f4bab9912fbce3e247) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '4eb2477b26ca5efe858717f8e8fb6f6c') in 0.002014 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/IncomingChanges/Developer/IncomingChangesViewMenu.cs using Guid(182343c61d477e2449cfbc9cb20dfb35) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '6a741703658170fcdb9b87175a43429a') in 0.002014 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/Diff/Dialogs/GetRestorePathDialog.cs using Guid(281456381b1a4c742b0efbe305328c7a) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '40c764dbb546814132f5e0c914d15200') in 0.001997 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/Progress/ProgressControlsForViews.cs using Guid(2837297e95f28c44eb67b93417fce9d0) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '2c5e49a6234b762792dedb7685a763d2') in 0.001928 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Inspector/DrawInspectorOperations.cs using Guid(28ce2dedf734c7c4e8ad114c00173d65) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '43eeefd61f06ee0bb9b191a81c3ad6cd') in 0.002071 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/Tree/TreeHeaderSettings.cs using Guid(38b05cc5af29cf844a31910eb512e92f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '0e0a0d1cbb9d78e1e4dc0e548cc592ca') in 0.001891 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Configuration/EncryptionConfigurationDialog.cs using Guid(68d5bb402c52edc48b494a59b8971758) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'f15d1c8a2fe5575dfe862b38ef6a3181') in 0.001939 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/CreateWorkspace/DrawCreateWorkspaceView.cs using Guid(788db2c7ca3c2804d912f447ffc19856) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '4ef8cd0a35e5b6391ce3a9eea3621a5b') in 0.001870 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Help/HelpData.cs using Guid(888ac39227622bd40b0b9956dc68b73d) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '80057b292811166db1ac7ad5e2a13190') in 0.001782 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/AutoRefresh.cs using Guid(a840d4787ba856c4dbaf61207189b00c) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'db4be3a2860f7a59ab41616ce4c878bf') in 0.001903 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/AssetMenu/ProjectViewAssetSelection.cs using Guid(b8a49294ba135a2408fd1b26bcda6f97) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '105c42422b8e4b8ec877866336fef34c') in 0.001861 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/Message/PlasticQuestionAlert.cs using Guid(b835f3512ad594c8587c02ae715fc919) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '32be88b68b7d092c6ff979cb20ec60c8') in 0.001812 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/BuildGetEventExtraInfoFunction.cs using Guid(e8b13064517f28443ac41883eb559c8f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '027ac316efcce99371d9ab43ff9bd711') in 0.002430 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/Diff/UnityDiffTree.cs using Guid(e89b1e9e9f1060b4f817977507831248) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '7a5deabd17dfcefa419a56d61d2d807c') in 0.002496 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Developer/UpdateReport/UpdateReportListView.cs using Guid(e8bf7425cfbdd094da5dc809a5eaa8ff) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'd631e4d9f7f92782d584e13127452f6b') in 0.001891 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/IncomingChanges/DrawIncomingChangesOverview.cs using Guid(f8686930677b1f44d9ad7deab4888955) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8a7ff677382196e9120bdcd3adc48a30') in 0.001912 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/IncomingChanges/Developer/DirectoryConflicts/ConflictResolutionState.cs using Guid(f88a4e9dbb5a07744954a86cbb61d54f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'd90ed0cf6f74b2c81cdcc13f670be770') in 0.001970 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/StatusBar/NotificationBar.cs using Guid(f8fb5a27b8554a74b8c566355a3c50f9) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'e9229b68dc0a6eaf0b3616371ef28ae1') in 0.001956 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Gluon/ProgressOperationHandler.cs using Guid(09b199e86de5d1944ab9106ca2c11f75) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'd2679dd9f05d82049bcbc5d0877558ab') in 0.001925 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/CreateWorkspace/PerformInitialCheckin.cs using Guid(29e0becc4ce852c439ff3e642f0375bd) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ae43f5be73b9df1b71df6c5437681907') in 0.001990 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/Tree/TreeViewItemIds.cs using Guid(2986eff1677c33345b223bdaaee2d284) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '7b15a3aad80a

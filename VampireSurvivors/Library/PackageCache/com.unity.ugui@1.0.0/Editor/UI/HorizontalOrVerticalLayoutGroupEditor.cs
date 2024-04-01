@@ -1,95 +1,67 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEditorInternal;
-using UnityEditor.AnimatedValues;
+ll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Common.Editor.dll, with 117 defines and 229 references
 
-namespace UnityEditor.UI
-{
-    [CustomEditor(typeof(HorizontalOrVerticalLayoutGroup), true)]
-    [CanEditMultipleObjects]
-    /// <summary>
-    /// Custom Editor for the HorizontalOrVerticalLayoutGroupEditor Component.
-    /// Extend this class to write a custom editor for a component derived from HorizontalOrVerticalLayoutGroupEditor.
-    /// </summary>
-    public class HorizontalOrVerticalLayoutGroupEditor : Editor
-    {
-        SerializedProperty m_Padding;
-        SerializedProperty m_Spacing;
-        SerializedProperty m_ChildAlignment;
-        SerializedProperty m_ChildControlWidth;
-        SerializedProperty m_ChildControlHeight;
-        SerializedProperty m_ChildScaleWidth;
-        SerializedProperty m_ChildScaleHeight;
-        SerializedProperty m_ChildForceExpandWidth;
-        SerializedProperty m_ChildForceExpandHeight;
-        SerializedProperty m_ReverseArrangement;
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
 
-        protected virtual void OnEnable()
-        {
-            m_Padding = serializedObject.FindProperty("m_Padding");
-            m_Spacing = serializedObject.FindProperty("m_Spacing");
-            m_ChildAlignment = serializedObject.FindProperty("m_ChildAlignment");
-            m_ChildControlWidth = serializedObject.FindProperty("m_ChildControlWidth");
-            m_ChildControlHeight = serializedObject.FindProperty("m_ChildControlHeight");
-            m_ChildScaleWidth = serializedObject.FindProperty("m_ChildScaleWidth");
-            m_ChildScaleHeight = serializedObject.FindProperty("m_ChildScaleHeight");
-            m_ChildForceExpandWidth = serializedObject.FindProperty("m_ChildForceExpandWidth");
-            m_ChildForceExpandHeight = serializedObject.FindProperty("m_ChildForceExpandHeight");
-            m_ReverseArrangement = serializedObject.FindProperty("m_ReverseArrangement");
-        }
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[511/623    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Shared.Editor.dll (+2 others) [CacheHit e0fe9aaa5e8163e66eac3b53b9c15ed500000000000000000000000000000003]
+[558/623   1709647499s] Csc Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Shared.Editor.dll (+2 others)
+[560/623    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.2D.Aseprite.Common.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Aseprite.Common.dll, with 117 defines and 228 references
 
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-            EditorGUILayout.PropertyField(m_Padding, true);
-            EditorGUILayout.PropertyField(m_Spacing, true);
-            EditorGUILayout.PropertyField(m_ChildAlignment, true);
-            EditorGUILayout.PropertyField(m_ReverseArrangement, true);
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
 
-            Rect rect = EditorGUILayout.GetControlRect();
-            rect = EditorGUI.PrefixLabel(rect, -1, EditorGUIUtility.TrTextContent("Control Child Size"));
-            rect.width = Mathf.Max(50, (rect.width - 4) / 3);
-            EditorGUIUtility.labelWidth = 50;
-            ToggleLeft(rect, m_ChildControlWidth, EditorGUIUtility.TrTextContent("Width"));
-            rect.x += rect.width + 2;
-            ToggleLeft(rect, m_ChildControlHeight, EditorGUIUtility.TrTextContent("Height"));
-            EditorGUIUtility.labelWidth = 0;
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[562/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll
+[563/623    0s] CopyFiles Library/ScriptAssemblies/Unity.Mathematics.dll
+[564/623    0s] CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.dll
+[565/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll
+[566/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll
+[567/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll
+[568/623    0s] CopyFiles Library/ScriptAssemblies/Unity.Collections.dll
+[569/623    0s] CopyFiles Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll
+[570/623    0s] CopyFiles Library/ScriptAssemblies/UnityEngine.UI.dll
+[571/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll
+[572/623    0s] CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.State.dll
+[573/623    0s] CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll
+[574/623    0s] CopyFiles Library/ScriptAssemblies/Unity.Timeline.dll
+[575/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll
+[576/623    0s] CopyFiles Library/ScriptAssemblies/Unity.VisualScripting.Core.dll
+[577/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Aseprite.Common.dll
+[578/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Aseprite.Common.pdb
+[579/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Common.Editor.dll
+[580/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Common.Editor.pdb
+[581/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Common.Path.Editor.dll
+[582/623    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.2D.Sprite.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Sprite.Editor.dll, with 117 defines and 225 references
 
-            rect = EditorGUILayout.GetControlRect();
-            rect = EditorGUI.PrefixLabel(rect, -1, EditorGUIUtility.TrTextContent("Use Child Scale"));
-            rect.width = Mathf.Max(50, (rect.width - 4) / 3);
-            EditorGUIUtility.labelWidth = 50;
-            ToggleLeft(rect, m_ChildScaleWidth, EditorGUIUtility.TrTextContent("Width"));
-            rect.x += rect.width + 2;
-            ToggleLeft(rect, m_ChildScaleHeight, EditorGUIUtility.TrTextContent("Height"));
-            EditorGUIUtility.labelWidth = 0;
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
 
-            rect = EditorGUILayout.GetControlRect();
-            rect = EditorGUI.PrefixLabel(rect, -1, EditorGUIUtility.TrTextContent("Child Force Expand"));
-            rect.width = Mathf.Max(50, (rect.width - 4) / 3);
-            EditorGUIUtility.labelWidth = 50;
-            ToggleLeft(rect, m_ChildForceExpandWidth, EditorGUIUtility.TrTextContent("Width"));
-            rect.x += rect.width + 2;
-            ToggleLeft(rect, m_ChildForceExpandHeight, EditorGUIUtility.TrTextContent("Height"));
-            EditorGUIUtility.labelWidth = 0;
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[583/623    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.Timeline.Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.dll, with 118 defines and 226 references
 
-            serializedObject.ApplyModifiedProperties();
-        }
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
 
-        void ToggleLeft(Rect position, SerializedProperty property, GUIContent label)
-        {
-            bool toggle = property.boolValue;
-            EditorGUI.BeginProperty(position, label, property);
-            EditorGUI.BeginChangeCheck();
-            int oldIndent = EditorGUI.indentLevel;
-            EditorGUI.indentLevel = 0;
-            toggle = EditorGUI.ToggleLeft(position, label, toggle);
-            EditorGUI.indentLevel = oldIndent;
-            if (EditorGUI.EndChangeCheck())
-            {
-                property.boolValue = property.hasMultipleDifferentValues ? true : !property.boolValue;
-            }
-            EditorGUI.EndProperty();
-        }
-    }
-}
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[584/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Common.Path.Editor.pdb
+[585/623    0s] CopyFiles Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.pdb
+[586/623    0s] CopyFiles Library/ScriptAssemblies/Unity.Collections.BurstCompatibilityGen.dll
+[587/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll
+[588/623    0s] CopyFiles Library/ScriptAssemblies/Unity.2D.Animation.Editor.pdb
+[589/623    0s] CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.Editor.pdb
+[590/623    0s] CopyFiles Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll
+[591/623    0s] CopyFiles Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.005.dll
+[592/623    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/PsdPlugin.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.dll, with 117 defines and 226 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running zzzUnity.Burst.CodeGen.BurstILPostProcessor
+[593/623    0s] CopyFiles Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.005.pdb
+[594/623    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Unity.Collections.DocCodeSamples.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.Collections.DocCodeSamples.dll, with 117 defines and 226 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+running zzzUnity.Burst.Co

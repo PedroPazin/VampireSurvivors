@@ -1,110 +1,37 @@
-using UnityEngine;
-using UnityEngine.UI;
-
-namespace UnityEditor.UI
-{
-    [CustomEditor(typeof(RawImage), true)]
-    [CanEditMultipleObjects]
-    /// <summary>
-    /// Custom editor for RawImage.
-    /// Extend this class to write a custom editor for a component derived from RawImage.
-    /// </summary>
-    public class RawImageEditor : GraphicEditor
-    {
-        SerializedProperty m_Texture;
-        SerializedProperty m_UVRect;
-        GUIContent m_UVRectContent;
-
-        protected override void OnEnable()
-        {
-            base.OnEnable();
-
-            // Note we have precedence for calling rectangle for just rect, even in the Inspector.
-            // For example in the Camera component's Viewport Rect.
-            // Hence sticking with Rect here to be consistent with corresponding property in the API.
-            m_UVRectContent     = EditorGUIUtility.TrTextContent("UV Rect");
-
-            m_Texture           = serializedObject.FindProperty("m_Texture");
-            m_UVRect            = serializedObject.FindProperty("m_UVRect");
-
-            SetShowNativeSize(true);
-        }
-
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-
-            EditorGUILayout.PropertyField(m_Texture);
-
-            AppearanceControlsGUI();
-            RaycastControlsGUI();
-            MaskableControlsGUI();
-            EditorGUILayout.PropertyField(m_UVRect, m_UVRectContent);
-            SetShowNativeSize(false);
-            NativeSizeButtonGUI();
-
-            serializedObject.ApplyModifiedProperties();
-        }
-
-        void SetShowNativeSize(bool instant)
-        {
-            base.SetShowNativeSize(m_Texture.objectReferenceValue != null, instant);
-        }
-
-        private static Rect Outer(RawImage rawImage)
-        {
-            Rect outer = rawImage.uvRect;
-            outer.xMin *= rawImage.rectTransform.rect.width;
-            outer.xMax *= rawImage.rectTransform.rect.width;
-            outer.yMin *= rawImage.rectTransform.rect.height;
-            outer.yMax *= rawImage.rectTransform.rect.height;
-            return outer;
-        }
-
-        /// <summary>
-        /// Allow the texture to be previewed.
-        /// </summary>
-
-        public override bool HasPreviewGUI()
-        {
-            RawImage rawImage = target as RawImage;
-            if (rawImage == null)
-                return false;
-
-            var outer = Outer(rawImage);
-            return outer.width > 0 && outer.height > 0;
-        }
-
-        /// <summary>
-        /// Draw the Image preview.
-        /// </summary>
-
-        public override void OnPreviewGUI(Rect rect, GUIStyle background)
-        {
-            RawImage rawImage = target as RawImage;
-            Texture tex = rawImage.mainTexture;
-
-            if (tex == null)
-                return;
-
-            var outer = Outer(rawImage);
-            SpriteDrawUtility.DrawSprite(tex, rect, outer, rawImage.uvRect, rawImage.canvasRenderer.GetColor());
-        }
-
-        /// <summary>
-        /// Info String drawn at the bottom of the Preview
-        /// </summary>
-
-        public override string GetInfoString()
-        {
-            RawImage rawImage = target as RawImage;
-
-            // Image size Text
-            string text = string.Format("RawImage Size: {0}x{1}",
-                Mathf.RoundToInt(Mathf.Abs(rawImage.rectTransform.rect.width)),
-                Mathf.RoundToInt(Mathf.Abs(rawImage.rectTransform.rect.height)));
-
-            return text;
-        }
-    }
-}
+2D.SpriteShape.Runtime.dll.mvfrm.rsp
+[209/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Extras.dll.mvfrm.rsp
+[210/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.dll.mvfrm.rsp
+[211/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Editor.dll.mvfrm.rsp
+[212/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.State.Editor.dll.mvfrm.rsp
+[213/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Extras.rsp
+[214/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.PixelPerfect.rsp
+[215/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.SpriteShape.Runtime.rsp
+[216/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.rsp
+[217/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.dll.mvfrm.rsp
+[218/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.rsp
+[219/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Common.Path.Editor.rsp
+[220/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.IK.Runtime.rsp
+[221/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.InternalAPIEditorBridge.005.rsp
+[222/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Aseprite.Common.rsp
+[223/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Editor.rsp
+[224/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.State.Editor.rsp
+[225/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.rsp
+[226/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.rsp2
+[227/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.dll.mvfrm.rsp
+[228/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.rsp
+[229/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Collections.DocCodeSamples.dll.mvfrm.rsp
+[230/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.Editor.dll.mvfrm.rsp
+[231/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Collections.BurstCompatibilityGen.dll.mvfrm.rsp
+[232/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Aseprite.Editor.dll.mvfrm.rsp
+[233/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.UnityAdditionalFile.txt
+[234/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Psdimporter.Editor.dll.mvfrm.rsp
+[235/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.PixelPerfect.Editor.dll.mvfrm.rsp
+[236/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Tilemap.Extras.Editor.dll.mvfrm.rsp
+[237/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.Shared.Editor.dll.mvfrm.rsp
+[238/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.dll.mvfrm.rsp
+[239/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.Timeline.Editor.dll.mvfrm.rsp
+[240/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.VisualScripting.SettingsProvider.Editor.dll.mvfrm.rsp
+[241/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.CollabProxy.Editor.dll.mvfrm.rsp
+[242/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.IK.Editor.dll.mvfrm.rsp
+[243/623    0s] WriteText Library/Bee/artifacts/1900b0aE.dag/Unity.2D.SpriteShape.Editor.dll.mvfrm.rsp
+[244/623    0s] WriteText Library/Bee/artifa

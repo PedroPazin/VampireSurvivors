@@ -1,201 +1,64 @@
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace UnityEditor.UI
-{
-    /// <summary>
-    /// PropertyDrawer for [[SpriteState]].
-    /// This is a PropertyDrawer for SpriteState it is implemented using the standard unity PropertyDrawer framework.
-    /// </summary>
-    internal class SpriteDrawUtility
-    {
-        static Texture2D s_ContrastTex;
-
-        // Returns a usable texture that looks like a high-contrast checker board.
-        static Texture2D contrastTexture
-        {
-            get
-            {
-                if (s_ContrastTex == null)
-                    s_ContrastTex = CreateCheckerTex(
-                        new Color(0f, 0.0f, 0f, 0.5f),
-                        new Color(1f, 1f, 1f, 0.5f));
-                return s_ContrastTex;
-            }
-        }
-
-        // Create a checker-background texture.
-        static Texture2D CreateCheckerTex(Color c0, Color c1)
-        {
-            Texture2D tex = new Texture2D(16, 16);
-            tex.name = "[Generated] Checker Texture";
-            tex.hideFlags = HideFlags.DontSave;
-
-            for (int y = 0; y < 8; ++y) for (int x = 0; x < 8; ++x) tex.SetPixel(x, y, c1);
-            for (int y = 8; y < 16; ++y) for (int x = 0; x < 8; ++x) tex.SetPixel(x, y, c0);
-            for (int y = 0; y < 8; ++y) for (int x = 8; x < 16; ++x) tex.SetPixel(x, y, c0);
-            for (int y = 8; y < 16; ++y) for (int x = 8; x < 16; ++x) tex.SetPixel(x, y, c1);
-
-            tex.Apply();
-            tex.filterMode = FilterMode.Point;
-            return tex;
-        }
-
-        // Create a gradient texture.
-        static Texture2D CreateGradientTex()
-        {
-            Texture2D tex = new Texture2D(1, 16);
-            tex.name = "[Generated] Gradient Texture";
-            tex.hideFlags = HideFlags.DontSave;
-
-            Color c0 = new Color(1f, 1f, 1f, 0f);
-            Color c1 = new Color(1f, 1f, 1f, 0.4f);
-
-            for (int i = 0; i < 16; ++i)
-            {
-                float f = Mathf.Abs((i / 15f) * 2f - 1f);
-                f *= f;
-                tex.SetPixel(0, i, Color.Lerp(c0, c1, f));
-            }
-
-            tex.Apply();
-            tex.filterMode = FilterMode.Bilinear;
-            return tex;
-        }
-
-        // Draws the tiled texture. Like GUI.DrawTexture() but tiled instead of stretched.
-        static void DrawTiledTexture(Rect rect, Texture tex)
-        {
-            float u = rect.width / tex.width;
-            float v = rect.height / tex.height;
-
-            Rect texCoords = new Rect(0, 0, u, v);
-            TextureWrapMode originalMode = tex.wrapMode;
-            tex.wrapMode = TextureWrapMode.Repeat;
-            GUI.DrawTextureWithTexCoords(rect, tex, texCoords);
-            tex.wrapMode = originalMode;
-        }
-
-        // Draw the specified Image.
-        public static void DrawSprite(Sprite sprite, Rect drawArea, Color color)
-        {
-            if (sprite == null)
-                return;
-
-            Texture2D tex = sprite.texture;
-            if (tex == null)
-                return;
-
-            Rect outer = sprite.rect;
-            Rect inner = outer;
-            inner.xMin += sprite.border.x;
-            inner.yMin += sprite.border.y;
-            inner.xMax -= sprite.border.z;
-            inner.yMax -= sprite.border.w;
-
-            Vector4 uv4 = UnityEngine.Sprites.DataUtility.GetOuterUV(sprite);
-            Rect uv = new Rect(uv4.x, uv4.y, uv4.z - uv4.x, uv4.w - uv4.y);
-            Vector4 padding = UnityEngine.Sprites.DataUtility.GetPadding(sprite);
-            padding.x /= outer.width;
-            padding.y /= outer.height;
-            padding.z /= outer.width;
-            padding.w /= outer.height;
-
-            DrawSprite(tex, drawArea, padding, outer, inner, uv, color, null);
-        }
-
-        // Draw the specified Image.
-        public static void DrawSprite(Texture tex, Rect drawArea, Rect outer, Rect uv, Color color)
-        {
-            DrawSprite(tex, drawArea, Vector4.zero, outer, outer, uv, color, null);
-        }
-
-        // Draw the specified Image.
-        private static void DrawSprite(Texture tex, Rect drawArea, Vector4 padding, Rect outer, Rect inner, Rect uv, Color color, Material mat)
-        {
-            // Create the texture rectangle that is centered inside rect.
-            Rect outerRect = drawArea;
-            outerRect.width = Mathf.Abs(outer.width);
-            outerRect.height = Mathf.Abs(outer.height);
-
-            if (outerRect.width > 0f)
-            {
-                float f = drawArea.width / outerRect.width;
-                outerRect.width *= f;
-                outerRect.height *= f;
-            }
-
-            if (drawArea.height > outerRect.height)
-            {
-                outerRect.y += (drawArea.height - outerRect.height) * 0.5f;
-            }
-            else if (outerRect.height > drawArea.height)
-            {
-                float f = drawArea.height / outerRect.height;
-                outerRect.width *= f;
-                outerRect.height *= f;
-            }
-
-            if (drawArea.width > outerRect.width)
-                outerRect.x += (drawArea.width - outerRect.width) * 0.5f;
-
-            // Draw the background
-            EditorGUI.DrawTextureTransparent(outerRect, null, ScaleMode.ScaleToFit, outer.width / outer.height);
-
-            // Draw the Image
-            GUI.color = color;
-
-            Rect paddedTexArea = new Rect(
-                outerRect.x + outerRect.width * padding.x,
-                outerRect.y + outerRect.height * padding.w,
-                outerRect.width - (outerRect.width * (padding.z + padding.x)),
-                outerRect.height - (outerRect.height * (padding.w + padding.y))
-            );
-
-            if (mat == null)
-            {
-                GUI.DrawTextureWithTexCoords(paddedTexArea, tex, uv, true);
-            }
-            else
-            {
-                // NOTE: There is an issue in Unity that prevents it from clipping the drawn preview
-                // using BeginGroup/EndGroup, and there is no way to specify a UV rect...
-                EditorGUI.DrawPreviewTexture(paddedTexArea, tex, mat);
-            }
-
-            // Draw the border indicator lines
-            GUI.BeginGroup(outerRect);
-            {
-                tex = contrastTexture;
-                GUI.color = Color.white;
-
-                if (inner.xMin != outer.xMin)
-                {
-                    float x = (inner.xMin - outer.xMin) / outer.width * outerRect.width - 1;
-                    DrawTiledTexture(new Rect(x, 0f, 1f, outerRect.height), tex);
-                }
-
-                if (inner.xMax != outer.xMax)
-                {
-                    float x = (inner.xMax - outer.xMin) / outer.width * outerRect.width - 1;
-                    DrawTiledTexture(new Rect(x, 0f, 1f, outerRect.height), tex);
-                }
-
-                if (inner.yMin != outer.yMin)
-                {
-                    // GUI.DrawTexture is top-left based rather than bottom-left
-                    float y = (inner.yMin - outer.yMin) / outer.height * outerRect.height - 1;
-                    DrawTiledTexture(new Rect(0f, outerRect.height - y, outerRect.width, 1f), tex);
-                }
-
-                if (inner.yMax != outer.yMax)
-                {
-                    float y = (inner.yMax - outer.yMin) / outer.height * outerRect.height - 1;
-                    DrawTiledTexture(new Rect(0f, outerRect.height - y, outerRect.width, 1f), tex);
-                }
-            }
-
-            GUI.EndGroup();
-        }
-    }
-}
+(location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2)
+    com.unity.2d.aseprite@1.1.1 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.2d.aseprite@1.1.1)
+    com.unity.2d.common@8.0.2 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.2d.common@8.0.2)
+    com.unity.mathematics@1.2.6 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.mathematics@1.2.6)
+    com.unity.collections@1.2.4 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.collections@1.2.4)
+    com.unity.burst@1.8.12 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.burst@1.8.12)
+  Built-in packages:
+    com.unity.feature.2d@2.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.feature.2d@2.0.0)
+    com.unity.ugui@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.ugui@1.0.0)
+    com.unity.modules.ai@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.ai@1.0.0)
+    com.unity.modules.androidjni@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.androidjni@1.0.0)
+    com.unity.modules.animation@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.animation@1.0.0)
+    com.unity.modules.assetbundle@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.assetbundle@1.0.0)
+    com.unity.modules.audio@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.audio@1.0.0)
+    com.unity.modules.cloth@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.cloth@1.0.0)
+    com.unity.modules.director@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.director@1.0.0)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.imageconversion@1.0.0)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.imgui@1.0.0)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.particlesystem@1.0.0)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.physics@1.0.0)
+    com.unity.modules.physics2d@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.physics2d@1.0.0)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.screencapture@1.0.0)
+    com.unity.modules.terrain@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.terrain@1.0.0)
+    com.unity.modules.terrainphysics@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0)
+    com.unity.modules.tilemap@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.tilemap@1.0.0)
+    com.unity.modules.ui@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.ui@1.0.0)
+    com.unity.modules.uielements@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.uielements@1.0.0)
+    com.unity.modules.umbra@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.umbra@1.0.0)
+    com.unity.modules.unityanalytics@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0)
+    com.unity.modules.unitywebrequest@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0)
+    com.unity.modules.unitywebrequestassetbundle@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0)
+    com.unity.modules.unitywebrequestaudio@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0)
+    com.unity.modules.unitywebrequesttexture@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0)
+    com.unity.modules.unitywebrequestwww@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0)
+    com.unity.modules.vehicles@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.vehicles@1.0.0)
+    com.unity.modules.video@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.video@1.0.0)
+    com.unity.modules.vr@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.vr@1.0.0)
+    com.unity.modules.wind@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.wind@1.0.0)
+    com.unity.modules.xr@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.xr@1.0.0)
+    com.unity.modules.subsystems@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.modules.subsystems@1.0.0)
+    com.unity.2d.sprite@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.2d.sprite@1.0.0)
+    com.unity.2d.tilemap@1.0.0 (location: C:\Users\Etec\Documents\UNITY\Escola\Library\PackageCache\com.unity.2d.tilemap@1.0.0)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.01 seconds
+[API Updater] Processing imported assemblies took 59 ms (0/0 assembly(ies)).
+Assembly Updater Post Process Assets time: 0.061782s
+[ScriptCompilation] Requested script compilation because: Assetdatabase observed changes in script compilation related files
+AssetDatabase: script compilation time: 0.000513s
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'gRPC - /UnityILPP.PostProcessing/Ping'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/Ping application/grpc - - 200 - application/grpc 0.2685ms
+Starting: C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Data\bee_backend.exe --dont-print-to-structured-log --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/Etec/Documents/UNITY/Escola
+ExitCode: 4 Duration: 0s244ms
+Rebuilding DAG because FileSignature timestamp changed: Library/Bee/1900b0aE-inputdata.json
+[354/623    0s] MovedFromExtractor Library/Bee/artifacts/mvdfrm/Unity.Plastic.Newtonsoft.Json.dll_2AAE32905E8C08CA.mvfrm
+##### CommandLine
+"C:\Program F

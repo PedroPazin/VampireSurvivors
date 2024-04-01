@@ -1,1 +1,100 @@
-oxugV~fp{_‹y“_‡tkqoŒu^mf“il€jg\^f•‰–o‘†z‰‹mY…|}en˜|`yŒ–rwi~cbw†“y„„‰{v~sy–ƒ][v„wrF>lnOOw”‰zyzW€ipsyll‹h^izy|X‚^`~\_€w’e€R™Šo„eUk‡x…n‘erv€~‚\NsPn{m•“}N…\m˜’g_‡Uš‹ˆec€wsnw’_s}‹eŠWpldknuƒt±ux‡Qf›‹{‡xTAypƒ=tu[s_`€k„ˆ`—c~qh~v”lt_‰w†|np¤ˆvc€j¿pSmbev“zcrmˆc‡>W­i˜u“ˆ…Rv^pœvWfes™ms¶m€WŒfJscht~œdxnxˆ‚wnZlDhŠ¡sjxsfAaƒˆb†pQQ•`‚vsP“cJ‚{fy`}ˆ”>he¥cej€†C…’a{v{eGƒw`n}‘K¢‰šeopg£~bl’{\w]‹vOtu~j¨iyN—PK–~i«DŠji˜[pf†yc“nlERJ•pŒnˆ‘vÃfdsÂf‹w…†mk…´ƒwœ„m­€ƒ”mpkzŒrWvZ\ƒ™K¨w’†G‡y^ª|„¦TŒhTvnU}}\t>†q•d{j‘d¦^H_xgiFPyms~\nv†Z^tRRzYloˆfsrst‹X‰eP‘…‹<k¢~€}y{‘mbƒsev˜J¾g¦zŒyŠV t@}jRqww[|‡r¡lŒ‹Œ†œg†‹7kypšh”h¨„yyeA]–zKs{n˜«xjŒx[\hfv }¡SKPi…¦o¤_~€lVa{R{[–`ŠvyNh†s}Jƒœ6Ÿ­}l‚ˆI—vye†“{j‰`pu/syv]}ˆikrUˆg_ˆ‰|‹E‰afDKr_N[{‡ˆ•n~uu‚ Rp5€{YƒfvPCZ—|T€~yL4‹thq€Cjb{Œ\u w¡I€rª0[Tqœ`€\ck}‚cwjs^ˆ€~€’ZQlŠ­•„}¿¥QT§œ„xrapªb¦€‚…lW Š†{iflƒˆeyWE„³T•~ov‚~€«v?mtyurxo^•|˜¢t…z¤ds†ƒŠ‘“flU‹‚‡qcrhu¬ˆCty~”•€LIy~oaZš€qe¤[‹qi}—l‹]…šyw‹k€“tuqdZt…]‚k‚†~‰~w~ˆ|yg‹bWvsXoŠhvn†‡’I†gV`ˆ—riŠe€lrb‹kx˜g|xnsU‡˜•t…²„xvu…zqsp…pja„mclŒjk~epl_ˆ•_x‹[m{Y}Œ†}shˆy¦‡ˆ]i|’‰€„”s†c‘crur‹„Xc­yˆsŠ‚l›mn}|…‚^]u{|xVyWms©u™saodcuk~ƒ|izss\wŸ¯•p‡r^yn‹|Œezq~Ftƒ’YYUœk†ˆ™tuƒ{zlš}jgayk•–‚„nz^ow†~a—fq\h`g_zq€Wmvpr”Hƒpp{nk}yƒkuo€gzn{lptudb‘ry{³}ˆ‰€dptYozvƒvŠyuu•f~‡€zm|œ†~dxt‚‰…^w‹„`xtx‚…ysˆ‚ˆˆ…ps†’mc}m‰{`Š€‡v|i^c{mŒ’lvŠrzjuq‰†[iˆ{\ƒ•‘vrud¡|`|Š•dsjl‚qu‹‡¢x’fŒlz‰oŠwnrz{z{jp“‰u…cZ[jcz’am‹“zs‚vgn‚~k|Œlyh‡„Šszc\vo†oq{ocqdj†X‘wusƒe’fy[{ˆ]ƒk‹Œ¥nz“…rw‚‡dtj€iysvbjrj–|x‡rE€mnlpS`ukh‹qc`y§wgZF„‡‡U†thupv…|ƒ˜—¥u\w~W}¡i•}¤Umš„tp€zs[pZ€”¦‘]kxy“G’f‚€¡anlisƒŸ‰}}tErnsgŒ]krv~„‰]‘ysdŠˆutq”X|w^Scmor€‘‡hsoiw‰€~{ts†w‚_lt…‰X›uussu’‰‰knŠxlkˆ„tismh|ˆchzgm‹`wda|p‡c…t||štŒ{vxlƒbqzf€ƒ‡‰]„“n’z”‚”rgPdWmœŠ”€tp}Ša|—h‚‚co€j\“`kYuwr]bYvzda„…jznw†l\«‚rh…ac‰š£“r}d†Œo¬ƒtvdfx˜fV[Œc‚k`ˆ{‡rhgmyps}kŠj‹‚^X‡š]©uvˆ‡ƒeŠ™‚Ms…l b]iŠ}{jn?N‹~j\«}jd†rˆFš„†‘G˜…‹`‡adiƒ¨Hw‰…pxt†œwY|~ql_Vesly­qrj®OnB¤U‡s‚wL„lZ~hQI„š‹}mšn“pI}]zngZb`n…†•b3w[ttƒ|tx~u_~^f…sfV€m„w•wq«fPv•my‘dtX_zox=‚œ˜—eƒ®wˆwQRmYM|}Šz³ƒ~}r˜ror™n}H|€sYr{i€]R±j‰x„}|o~²¨e[qm}ns‹^u’dhBœz{vswrfy‰mqŒU|na°„b©™FŒ|ˆ€ƒVm¶•y†Nugk„L‰«wk—m€ndd¨S›’€ydhoƒ‚Kti~LŠ„~WuhV†{|garš^¼i€„i„˜vnnJ~Œ[f`sxauŒgI„†ˆ‹tQv ª¦]™x›‡“|s~y‰²zweˆ«iqkn…¬‡‚€?T|h}pr§^ƒš„r¦f^Š‰`[†‰‡zy‚trq“mgLjrpz«zq‘|hšlb\rp„y•t†ˆwnY‡jˆvrsn€bjŒtpr~hd}jK†b•Gxu]‰iutR=h¤w…€c‚P´{n|˜}Y„‡eeˆU~z™rmš„z¯‚˜šzX€w|h‡’Œ}ƒ’z xnZww’vgw}’Œ‹wer|hdLz~zˆyi‡[‰_Uq_†”‹˜~UvŠkbxoh‹”gƒVgMsf~Ty†„q“šs‰…fƒl“…\VM‚yl“t‰ptƒƒmg˜™c’bV„|n}]wzx[†„_”xZbuqn}rfllB†uib]œ‰w_gpw‚d}¢{yoWvyrd{’h`pzx|{kly^q‹gy„iPz]uf~cˆqovs~‚}ŠD‚‹‹lkzt™x]g|h¢wgbg`dsu‹t€^f€Œ‡go’hrsœaZm&s{ugn‚i“ljc—‰fy^~k›‘yqœˆm†`N}ƒYŠƒz«enl†yyr\†u¬|„ecšwx›YG…š~cwa…jƒ‚¨ypx~~–wr€s§ed¡Ÿe‚{kkiaxcrw“p‘–uatˆas}€Š{‚tƒq‹o“q|kdtŠl]Pl[tgu€†}ƒy‚a`ˆpv‚plq}ƒrƒed{Qmamj“wcUJt–›bb‰eŸ‚vœ“v„‘•w–\5buh|‡}ˆ\tx•d‚}x}y©rj€‚ua~ˆœybŠz®g~:ƒ”€™Zvl²†sg›Q†fƒƒXgWs—Q›—Pyg†’™yyW”‡s`vl_u„¦jep^[}Rlƒ†rhq]„u¢\€‹Štl|Ywo‹dj—‚omgšy`SpaX´U˜ˆ“MbŒ’^…^_R•j•iO‘esˆ‰a—fyw„)[Y€€”‹Šx›’†‡Ÿ•}†e‡pN…”fšPa{zmo{ptVd€±d€jz~…klx{mirr`j˜}™škpŠŒ«{ptŸ¢‚SdShwii_‘YbYrwwpa®\~ˆlfslƒUy‘ymo{HQ–tŠP”]Š‚m‡‚`pm–{ek{py}’„†ˆwpbmYGvTzbiŒa›iœQ|quxw{rhˆ‹qn“t‘{q‰jŒj~ie‰ƒg†|eŠ’|y•‡ix|kv|Ws–z}ed‚wclpsŒz{kxlkj…|m`‡‰‹ˆa{Z„Œoz•†n~s“\€jqƒu\kwOn}Tƒ‡‡^q‰sŒ|c•‘€‚py}Œƒs€z‡m†|•
+using System;
+using UnityEditor;
+using UnityEngine;
+
+namespace Unity.VisualScripting
+{
+    public abstract class LudiqEditorWindow : EditorWindow, ISerializationCallbackReceiver, IHasCustomMenu
+    {
+        [SerializeField, DoNotSerialize] // Serialize with Unity, but not with FullSerializer.
+        protected SerializationData _data;
+
+        void ISerializationCallbackReceiver.OnBeforeSerialize()
+        {
+            // Ignore the FullSerializer callback, but still catch the Unity callback
+            if (Serialization.isCustomSerializing)
+            {
+                return;
+            }
+
+            Serialization.isUnitySerializing = true;
+
+            // Starting in Unity 2018.3.0b7 apparently, the editor window tries to serialize
+            // its title content and along the way, its image, which becomes an invalid reference.
+            // But instead of setting it to actual null, it sets it to an invalid Unity Object,
+            // which the UnityObjectConverter complains about and can't reliably detect off
+            // the main thread.
+            var titleImage = titleContent.image;
+            titleContent.image = null;
+
+            try
+            {
+                OnBeforeSerialize();
+                _data = this.Serialize(true);
+            }
+            catch (Exception ex)
+            {
+                // Don't abort the whole serialization thread because this one object failed
+                Debug.LogError($"Failed to serialize editor window.\n{ex}", this);
+            }
+
+            titleContent.image = titleImage;
+
+            Serialization.isUnitySerializing = false;
+        }
+
+        void ISerializationCallbackReceiver.OnAfterDeserialize()
+        {
+            // Ignore the FullSerializer callback, but still catch the Unity callback
+            if (Serialization.isCustomSerializing)
+            {
+                return;
+            }
+
+            Serialization.isUnitySerializing = true;
+
+            try
+            {
+                object @this = this;
+                _data.DeserializeInto(ref @this, true);
+                OnAfterDeserialize();
+            }
+            catch (Exception ex)
+            {
+                // Don't abort the whole deserialization thread because this one object failed
+                Debug.LogError($"Failed to deserialize editor window.\n{ex}", this);
+            }
+
+            Serialization.isUnitySerializing = false;
+        }
+
+        protected virtual void OnBeforeSerialize() { }
+
+        protected virtual void OnAfterDeserialize() { }
+
+        protected virtual void Update()
+        {
+            // Position isn't reliable in GUI calls due to layouting, so cache it here
+            reliablePosition = position;
+        }
+
+        protected virtual void OnGUI()
+        {
+        }
+
+        public Rect reliablePosition { get; private set; }
+
+        public void AddItemsToMenu(GenericMenu menu)
+        {
+            if (_data.json != null && _data.objectReferences != null)
+                menu.AddItem(new GUIContent("Show Data..."), false, () => { _data.ShowString(ToString()); });
+            else
+                menu.AddDisabledItem(new GUIContent("Show Data..."), false);
+        }
+
+        public override string ToString()
+        {
+            return this.ToSafeString();
+        }
+    }
+}

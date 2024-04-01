@@ -1,270 +1,41 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using UnityEngine;
-using UnityEngine.Profiling;
-using UnityEngine.EventSystems;
-
-namespace UnityEditor.Events
-{
-    [CustomPreview(typeof(GameObject))]
-    /// <summary>
-    ///   Custom preview drawing that will draw the intercepted events of a given object.
-    /// </summary>
-    class InterceptedEventsPreview : ObjectPreview
-    {
-        protected class ComponentInterceptedEvents
-        {
-            public GUIContent componentName;
-            public int[] interceptedEvents;
-        }
-
-        class Styles
-        {
-            public GUIStyle labelStyle = new GUIStyle(EditorStyles.label);
-            public GUIStyle componentName = new GUIStyle(EditorStyles.boldLabel);
-
-            public Styles()
-            {
-                Color fontColor = new Color(0.7f, 0.7f, 0.7f);
-                labelStyle.padding.right += 20;
-                labelStyle.normal.textColor    = fontColor;
-                labelStyle.active.textColor    = fontColor;
-                labelStyle.focused.textColor   = fontColor;
-                labelStyle.hover.textColor     = fontColor;
-                labelStyle.onNormal.textColor  = fontColor;
-                labelStyle.onActive.textColor  = fontColor;
-                labelStyle.onFocused.textColor = fontColor;
-                labelStyle.onHover.textColor   = fontColor;
-
-                componentName.normal.textColor = fontColor;
-                componentName.active.textColor = fontColor;
-                componentName.focused.textColor = fontColor;
-                componentName.hover.textColor = fontColor;
-                componentName.onNormal.textColor = fontColor;
-                componentName.onActive.textColor = fontColor;
-                componentName.onFocused.textColor = fontColor;
-                componentName.onHover.textColor = fontColor;
-            }
-        }
-
-        private Dictionary<GameObject, List<ComponentInterceptedEvents>> m_TargetEvents;
-        private bool m_InterceptsAnyEvent = false;
-        private GUIContent m_Title;
-        private Styles m_Styles;
-
-        public override void Initialize(UnityEngine.Object[] targets)
-        {
-            Profiler.BeginSample("ComponentInterceptedEvents.Initialize");
-
-            base.Initialize(targets);
-            m_TargetEvents = new Dictionary<GameObject, List<ComponentInterceptedEvents>>(targets.Length);
-            m_InterceptsAnyEvent = false;
-            for (int i = 0; i < targets.Length; ++i)
-            {
-                GameObject go = targets[i] as GameObject;
-                List<ComponentInterceptedEvents> interceptedEvents = GetEventsInfo(go);
-                m_TargetEvents.Add(go, interceptedEvents);
-                if (interceptedEvents.Any())
-                    m_InterceptsAnyEvent = true;
-            }
-            Profiler.EndSample();
-        }
-
-        public override GUIContent GetPreviewTitle()
-        {
-            if (m_Title == null)
-            {
-                m_Title = EditorGUIUtility.TrTextContent("Intercepted Events");
-            }
-            return m_Title;
-        }
-
-        public override bool HasPreviewGUI()
-        {
-            return m_TargetEvents != null && m_InterceptsAnyEvent;
-        }
-
-        public override void OnPreviewGUI(Rect r, GUIStyle background)
-        {
-            if (Event.current.type != EventType.Repaint)
-                return;
-            Profiler.BeginSample("InterceptedEventsPreview.OnPreviewGUI");
-
-
-            if (m_Styles == null)
-                m_Styles = new Styles();
-
-            Vector2 maxEventLabelSize = Vector2.zero;
-            int totalInterceptedEvents = 0;
-
-            List<ComponentInterceptedEvents> componentIncerceptedEvents = m_TargetEvents[target as GameObject];
-
-            // Find out the maximum size needed for any given label.
-            foreach (ComponentInterceptedEvents componentInterceptedEvents in componentIncerceptedEvents)
-            {
-                foreach (int eventIndex in componentInterceptedEvents.interceptedEvents)
-                {
-                    GUIContent eventContent = s_PossibleEvents[eventIndex];
-                    ++totalInterceptedEvents;
-                    Vector2 labelSize = m_Styles.labelStyle.CalcSize(eventContent);
-                    if (maxEventLabelSize.x < labelSize.x)
-                    {
-                        maxEventLabelSize.x = labelSize.x;
-                    }
-                    if (maxEventLabelSize.y < labelSize.y)
-                    {
-                        maxEventLabelSize.y = labelSize.y;
-                    }
-                }
-            }
-
-            // Apply padding
-            RectOffset previewPadding = new RectOffset(-5, -5, -5, -5);
-            r = previewPadding.Add(r);
-
-            // Figure out how many rows and columns we can/should have
-            int columns = Mathf.Max(Mathf.FloorToInt(r.width / maxEventLabelSize.x), 1);
-            int rows = Mathf.Max(totalInterceptedEvents / columns, 1) + componentIncerceptedEvents.Count;
-
-            // Centering
-            float initialX = r.x + Mathf.Max(0, (r.width - (maxEventLabelSize.x * columns)) / 2);
-            float initialY = r.y + Mathf.Max(0, (r.height - (maxEventLabelSize.y * rows)) / 2);
-
-            Rect labelRect = new Rect(initialX, initialY, maxEventLabelSize.x, maxEventLabelSize.y);
-            int currentColumn = 0;
-            foreach (ComponentInterceptedEvents componentInterceptedEvents in componentIncerceptedEvents)
-            {
-                GUI.Label(labelRect, componentInterceptedEvents.componentName, m_Styles.componentName);
-                labelRect.y += labelRect.height;
-                labelRect.x = initialX;
-                foreach (int eventIndex in componentInterceptedEvents.interceptedEvents)
-                {
-                    GUIContent eventContent = s_PossibleEvents[eventIndex];
-                    GUI.Label(labelRect, eventContent, m_Styles.labelStyle);
-                    if (currentColumn < columns - 1)
-                    {
-                        labelRect.x += labelRect.width;
-                    }
-                    else
-                    {
-                        labelRect.y += labelRect.height;
-                        labelRect.x = initialX;
-                    }
-
-                    currentColumn = (currentColumn + 1) % columns;
-                }
-
-                if (labelRect.x != initialX)
-                {
-                    labelRect.y += labelRect.height;
-                    labelRect.x = initialX;
-                }
-            }
-            Profiler.EndSample();
-        }
-
-        //Lookup cache to avoid recalculating which types uses which events:
-        //Caches all interfaces that inherit from IEventSystemHandler
-        static List<Type> s_EventSystemInterfaces = null;
-        //Caches all GUIContents in a single list to avoid creating too much GUIContent and strings.
-        private static List<GUIContent> s_PossibleEvents = null;
-        //Caches all events used by each interface
-        static Dictionary<Type, List<int>> s_InterfaceEventSystemEvents = null;
-        //Caches each concrete type and it's events
-        static readonly Dictionary<Type, ComponentInterceptedEvents> s_ComponentEvents2 = new Dictionary<Type, ComponentInterceptedEvents>();
-
-
-        protected static List<ComponentInterceptedEvents> GetEventsInfo(GameObject gameObject)
-        {
-            InitializeEvetnsInterfaceCacheIfNeeded();
-
-            List<ComponentInterceptedEvents> componentEvents = new List<ComponentInterceptedEvents>();
-
-            MonoBehaviour[] mbs = gameObject.GetComponents<MonoBehaviour>();
-
-            for (int i = 0, imax = mbs.Length; i < imax; ++i)
-            {
-                ComponentInterceptedEvents componentEvent = null;
-
-                MonoBehaviour mb = mbs[i];
-                if (mb == null)
-                    continue;
-
-                Type type = mb.GetType();
-
-                if (!s_ComponentEvents2.ContainsKey(type))
-                {
-                    List<int> events = null;
-                    Profiler.BeginSample("ComponentInterceptedEvents.GetEventsInfo.NewType");
-                    if (typeof(IEventSystemHandler).IsAssignableFrom(type))
-                    {
-                        for (int index = 0; index < s_EventSystemInterfaces.Count; index++)
-                        {
-                            var eventInterface = s_EventSystemInterfaces[index];
-                            if (!eventInterface.IsAssignableFrom(type))
-                                continue;
-
-                            if (events == null)
-                                events = new List<int>();
-
-                            events.AddRange(s_InterfaceEventSystemEvents[eventInterface]);
-                        }
-                    }
-
-                    if (events != null)
-                    {
-                        componentEvent = new ComponentInterceptedEvents();
-                        componentEvent.componentName = new GUIContent(type.Name);
-                        componentEvent.interceptedEvents = events.OrderBy(index => s_PossibleEvents[index].text).ToArray();
-                    }
-                    s_ComponentEvents2.Add(type, componentEvent);
-
-                    Profiler.EndSample();
-                }
-                else
-                {
-                    componentEvent = s_ComponentEvents2[type];
-                }
-
-
-                if (componentEvent != null)
-                {
-                    componentEvents.Add(componentEvent);
-                }
-            }
-
-            return componentEvents;
-        }
-
-        private static void InitializeEvetnsInterfaceCacheIfNeeded()
-        {
-            if (s_EventSystemInterfaces != null)
-                return;
-
-            s_EventSystemInterfaces = new List<Type>();
-            s_PossibleEvents = new List<GUIContent>();
-            s_InterfaceEventSystemEvents = new Dictionary<Type, List<int>>();
-
-            TypeCache.TypeCollection types = TypeCache.GetTypesDerivedFrom<IEventSystemHandler>();
-            foreach (var type in types)
-            {
-                if (!type.IsInterface)
-                    continue;
-
-                s_EventSystemInterfaces.Add(type);
-                List<int> eventIndexList = new List<int>();
-
-                MethodInfo[] methodInfos = type.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
-                for (int mi = 0; mi < methodInfos.Length; mi++)
-                {
-                    MethodInfo methodInfo = methodInfos[mi];
-                    eventIndexList.Add(s_PossibleEvents.Count);
-                    s_PossibleEvents.Add(new GUIContent(methodInfo.Name));
-                }
-                s_InterfaceEventSystemEvents.Add(type, eventIndexList);
-            }
-        }
-    }
-}
+6bcfa6b165c90288) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8df1b717dd64724f4a06965747f5b5a3') in 0.001821 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Gluon/UpdateReport/UpdateReportListHeaderState.cs using Guid(f40a58028b39d3f4bbebe1f6cf919271) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '3f7f4b927ce9ab8cf88d13aa3eed7023') in 0.002079 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/PendingChanges/FilesFilterPatternsMenuBuilder.cs using Guid(05d31e83a4093e448b45616d62a12790) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '4cdbd9013969045eb1958948573b8e89') in 0.002019 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/PendingChanges/PendingChangesTab_Operations.cs using Guid(05b4d56bb0dca1b458c2e10c2548663b) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '7e56212541121a9be4494268af3811f3') in 0.001931 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/PendingChanges/Changelists/ChangelistMenu.cs using Guid(1505aa96e5fd82940aacd76e6431e79d) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'cde9c46692075caf64272e047eea60b5') in 0.001992 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/Diff/ChangeCategoryTreeViewItem.cs using Guid(156e16594aa6bd54cb77aa3f8eae5c82) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'c3d530f95d21b118128757dfb676346c') in 0.001902 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/CloseWindowIfOpened.cs using Guid(25e3b426e5be4f64db3f9184fd625379) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '309404cc63872d25333e893e5a5418cc') in 0.001853 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/PendingChanges/Dialogs/FilterRulesConfirmationDialog.cs using Guid(45d03e5c984da3448b417289e95e4291) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ba4bf5e21eb24ba2cb69a7ff63cb2511') in 0.001871 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/GetPlasticShortcut.cs using Guid(65c9d93f86da86b41a712d92e8f03dc2) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '356e19d84f3726f1a70069e3fd01d351') in 0.002010 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/CooldownWindowDelayer.cs using Guid(75e502da07ff345528edbecd094b5cb5) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '44cf7efcb324af0edabd028b29398243') in 0.001817 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Configuration/CloudEdition/Welcome/SignInWithEmailPanel.cs using Guid(85f4628ae66f0eb439e59db66adbc696) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '6b897e9e9cd3237ad88333514e5de541') in 0.001863 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/History/HistorySelection.cs using Guid(9553f392d0be2a24daf3cad457d2c612) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '76c84ad78f9eebdf6ed9cbe05356e320') in 0.002042 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/AssetOverlays/Cache/LockStatusCache.cs using Guid(953c29d2e0dece647a64940343c91547) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ae33cb7a3279964566cf811251b5225b') in 0.001972 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/IncomingChanges/Developer/UnityIncomingChangesTree.cs using Guid(b57672168ae882a4b8483a000638c433) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '36b57300510b84e29df984c80b5aafdd') in 0.001821 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/PendingChanges/Dialogs/DependenciesDialog.cs using Guid(c584c584ba20f4daea226141b9e55bd0) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '189824ae3909b5e688715e9f4518fbd0') in 0.002541 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Gluon/UpdateReport/UpdateReportListView.cs using Guid(c5d431e8131b1d74897c1a18b5e76932) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '566892cfb7c66992b91b63ceeb0c04f1') in 0.002207 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/AssetsUtils/Processor/AssetModificationProcessor.cs using Guid(c53c624438663f74ab67fbdf8869ae18) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '50917173d8bf24673286a38628582f02') in 0.002031 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/Tree/GetChangesOverlayIcon.cs using Guid(d5366deaa0659eb44aa77a86d8bdc01a) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '498eb6dad031fad5f563eefc4fa28075') in 0.002074 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/WebApi/WebRestApiClient.cs using Guid(e57a1c5d3e1c8844eb3893fed51c9727) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '9a25e7dd05eeeda5c7577ad89fb62671') in 0.001971 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/PendingChanges/PendingChangesTreeHeaderState.cs using Guid(e57affb3c41ab402e86f99747be972a2) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'dc6552306a124d06fffa6e3fd5ef4cc0') in 0.001885 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/FileSystemOperation.cs using Guid(f5eff45d4f0cc5e478e6724c378098eb) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ba8a86cdb266b5c3bb647d4f18c14b1d') in 0.002062 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/AssetOverlays/AssetStatus.cs using Guid(062535eac3e5dd1409b6a50b0d043e2c) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '3a6892f0cc1de3cd0fd7552d05cef414') in 0.001857 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/Changesets/ChangesetsTab_Operations.cs using Guid(06e8f2c592322e640ae99a833427b552) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '85a7d20d9fbb243ab85dab18ce520500') in 0.002021 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/AssetMenu/AssetsSelection.cs using Guid(1686ac2e1d109ed43bf2dec74fed784f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '7d7ff5924dacd989c6dd4debe1107125') in 0.001851 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/WebApi/CurrentUserAdminCheckResponse.cs using Guid(363c1190d7979084c84a0421cedb3a51) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '19029585bd2ff48848aae670124b9d0c') in 0.001959 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/UIElements/LoadingSpinner.cs using Guid(4664c2d6dd034f04eb60d4190ee2ffb7) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '2d5c5778269bd7c7ff56ac7e7c2ccc8d') in 0.001970 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Hub/CommandLineArguments.cs using Guid(4675673a75b20a14da0806d155b5680c) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ef89aeb5c0085e2ca70d1f804c8adf11') in 0.001891 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/PlasticProjectSettingsProvider.cs using Guid(4646098fa06b7764b843d936862b4d71) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'daf8eb1d533db742fa800c47574c5466') in 0.002158 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/PendingChanges/Changelists/MoveToChangelistMenuBuilder.cs using Guid(466ebd71b4a48b541be6d119d8140603) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '6b6f33bcdfb51a35db492a9b26a00bb0') in 0.001956 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/PlasticWindow.cs using Guid(6629f1bb292b749a18b5fff7994c8b19) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'abeb70dfe1f1b65ae66e34b75183b65b') in 0.001929 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Help/HelpLink.cs using Guid(7613946404a945a43bd9b5142a436f21) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'fe937901dbdb05e83e9e5bae4483de2e') in 0.001849 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Tool/LaunchTool.cs using Guid(a6d05b29e607e62478df26227566e1b9) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a938196aa5ee2263604a8234b64aff7d') in 0.001787 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/UnityConstants.cs using Guid(c60feb8f0f5f57c4393eae9a43529616) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '946375d692ae5db14d7af33e64b5839e') in 0.002171 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/IncomingChanges/Developer/IsResolved.cs using Guid(d6db53f93de967c489902da57a7290a1) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '3be05802fa2e9c03ff44f4523a9e0824') in 0.002112 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Hub/ParseArguments.cs using Guid(f6b5d170f39144847822c10b478f25e5) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1dda614348346e41580f42de69161fa2') in 0.001970 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/CheckWorkspaceTreeNodeStatus.cs using Guid(f6aa8eca9e9e84840b73620eb177ea9e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '3d48f184cb79e23cbb60be58cb92ed9f') in 0.001856 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Configuration/CloudEdition/Welcome/WaitingSignInPanel.cs using Guid(077387e98bf29fb4a97bccfb592cfaf7) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '31c907bf23a0426f480f782aa1a284bc') in 0.001853 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/UI/TabButton.cs using Guid(076df9ed85621764881a4d81dbd08046) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '6bcae5a855e267f84d527fd52e282abf') in 0.001956 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/Changesets/ChangesetsTab.cs using Guid(471badd5c87fb154885f11cdf1b49a00) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'be69963ee897e36a19ec9c6872febb6e') in 0.001955 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/AssetMenu/Dialogs/CheckinDialog.cs using Guid(678db227e4ffec949980d309c0532b08) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '56e482fdb281620aa6a9ebc1d40afdb3') in 0.001907 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/CollabMigration/MigrationProgressRender.cs using Guid(b793dc79f36144740a175a3cba53845d) Importer(-1,00000000000000000000000000000000)  -> (arti

@@ -1152,128 +1152,4 @@ namespace Burst.Compiler.IL.Tests
         private struct DefaultVeryGenericImpl<T>: IDefaultGeneric<T>
         {
             public T A() => default;
-
-            (U, T) IDefaultGeneric<T>.B<U>() => (default, default);
-        }
-
-        private interface IBumper
-        {
-            void Bump();
-        }
-
-        private struct SelfMutator : IDefaultSelfCall, IBumper
-        {
-            public int X;
-
-            public void Bump()
-            {
-                X = (X << 1) | 1;
-            }
-
-            public int A()
-            {
-                var x = X;
-                Bump();
-                return x;
-            }
-        }
-
-        [TestCompiler]
-#if BURST_TESTS_ONLY
-        [TestHash]
-#endif
-        public static int TestDefaultInterfaceMethod()
-        {
-            return UseDefaultInterfaceMethodsHelper(new DefaultBasic());
-        }
-
-        [TestCompiler]
-#if BURST_TESTS_ONLY
-        [TestHash]
-#endif
-        public static int TestImplementedDefaultInterfaceMethod()
-        {
-            return UseDefaultInterfaceMethodsHelper(new DefaultImpl());
-        }
-
-        private static int UseDefaultInterfaceMethodsHelper<T>(T t)
-            where T: IDefault
-        {
-            return t.B();
-        }
-
-        [TestCompiler]
-#if BURST_TESTS_ONLY
-        [TestHash]
-#endif
-        public static int TestSelfCallingDefaultInterfaceMethod()
-        {
-            return UseSelfCallingDefaultInterfaceMethod(new SelfCallDefault(), new SelfCallImpl());
-        }
-
-        private static int UseSelfCallingDefaultInterfaceMethod<T, U>(T t, U u)
-            where T : IDefaultSelfCall
-            where U : IDefaultSelfCall
-        {
-            return t.B() + u.B();
-        }
-
-        [TestCompiler]
-#if BURST_TESTS_ONLY
-        [TestHash]
-#endif
-        public static int TestGenericDefaultInterfaceMethod()
-        {
-            return UseGenericDefaultInterfaceMethod(new DefaultGenericBasic(), new DefaultGenericImpl());
-        }
-
-        private static int UseGenericDefaultInterfaceMethod<T, U>(T t, U u)
-            where T : IDefaultGeneric<int>
-            where U : IDefaultGeneric<int>
-        {
-            var (x, y) = t.B<int>();
-            var (z, w) = u.B<int>();
-            return (x + y) * (z + w);
-        }
-
-        [TestCompiler]
-#if BURST_TESTS_ONLY
-        [TestHash]
-#endif
-        public static int TestVeryGenericDefaultInterfaceMethod()
-        {
-            var ((x, y), (z, w)) = UseVeryGenericDefaultInterfaceMethod<DefaultVeryGenericBasic<int>, DefaultVeryGenericImpl<int>, int, int, long>(new DefaultVeryGenericBasic<int>(), new DefaultVeryGenericImpl<int>());
-            return (int)(x + y + z + w);
-        }
-
-        private static ((W, V), (X, V)) UseVeryGenericDefaultInterfaceMethod<T, U, V, W, X>(T t, U u)
-            where T : IDefaultGeneric<V>
-            where U : IDefaultGeneric<V>
-        {
-            return (t.B<W>(), u.B<X>());
-        }
-
-        private static int UseSelfMutator<T>(ref T x) where T : IDefaultSelfCall, IBumper
-        {
-            x.Bump();
-            var r = x.B();
-            x.Bump();
-            return r;
-        }
-
-        [TestCompiler]
-#if BURST_TESTS_ONLY
-        [TestHash]
-#endif
-        public static int TestSelfMutator()
-        {
-            var x = new SelfMutator();
-            x.Bump();
-            var ret = UseSelfMutator(ref x);
-            x.Bump();
-            return (x.X << 16) | ret;
-        }
-
-#endif
-    }
-}
+Ø      ˆ    ~†     €ÔZ   ÍXyÚ € €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - E S ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . c a t       Ø      ˆ    ~†    Ø€ÔZ   ÍXyÚ  €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - E S ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . c a t       Ø      ˆ    ~†    °ÔZ   ÍXyÚ €          €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - E S ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . m u m       Ø      ˆ    ~†    ˆ‚ÔZ   ÍXyÚ € €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - E S ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . m u m       Ø      ˆ    ~†    `ƒÔZ   ÍXyÚ  €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - E S ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . m u m       Ø      ˆ    ~†    8„ÔZ   ÍXyÚ €          €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - M X ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . c a t       Ø      ˆ    ~†    …ÔZ   ÍXyÚ € €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - M X ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . c a t       Ø      ˆ    ~†    è…ÔZ   ÍXyÚ  €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - M X ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . c a t       Ø      ˆ    ~†    À†ÔZ   ÍXyÚ €          €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - M X ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . m u m       Ø      ˆ    ~†    ˜‡ÔZ   ÍXyÚ € €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - M X ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . m u m       Ø      ˆ    ~†    pˆÔZ   ÍXyÚ  €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e s - M X ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . m u m       Ø      'ˆ    ~†    H‰ÔZ   ÍXyÚ €          €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e t - E E ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . c a t       Ø      'ˆ    ~†     ŠÔZ   ÍXyÚ € €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e t - E E ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . c a t       Ø      'ˆ    ~†    øŠÔZ   ÍXyÚ  €        €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e t - E E ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . c a t       Ø      &ˆ    ~†    Ð‹ÔZ   ÍXyÚ €          €   – < W i n P E - S e t u p - P a c k a g e - W r a p p e r ~ 3 1 b f 3 8 5 6 a d 3 6 4 e 3 5 ~ a m d 6 4 ~ e t - E E ~ 1 0 . 0 . 1 8 3 6 2 . 4 1 8 . m u m       Ø      &ˆ    ~†    ¨ŒÔZ   ÍXyÚ € €        €   –

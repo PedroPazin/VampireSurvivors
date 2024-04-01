@@ -1,1 +1,32 @@
-js•†QCt‡}X:•Šzƒk}q}Zq†f|sf‰qJ€^~dY‚wUfpv…S{P”xfeif…Lk}kb‡b}oz]„‡a\z†–d}\‚tƒvtV–M‹†ytnjvhVXf’yDrXŒ‚Z—ƒˆQYfe~uTUŽv…Zvn™˜ylewzo^ž€^gŽmN—qddhªn\œ‚“–€˜v„›aigƒf†Žmqiˆal[jj”‡e\ngdr^a“{w‰n]•‡‚”nŽq]’‘†~‡‡zˆy‰†~¥“”¤”y‡c_~Z‡nˆzg’gl~uim†ftpmnze¨š‹ˆ“tZa˜~’hpkw”reN~nsvb‰_“ivnocgvxnfhg‡€txgOy_‚sy€¦‚£R{yiwvc™†tx‰nw^hŠi{W‚^‚m†wg‡†z ~”ygta€ix€w€g¨€}€s|°uwT“ƒ{Yh…Ÿ…ªƒhvZ’‚^ssz]Œi†œzUxm€ Ux…qŽ…g“Sszy¡ŠULtdv‘oˆ\ˆS›d¬ƒržd‰s„sm‚Yˆkrc‡c‘Zƒ‰Lz}ouyS|“Yt­¢€j„<€lj{zMšcy}u¯‚‹tC–¶nz}S‘tŒeg‰w…Zw…_psY~[ynwƒ‚`pzK„Šx—›amywaiu€}‹x‚ht€oY{opfƒ„a‰xzn¢j‡p…eekuˆ|vexw]l~u€¥w`yjk…vŠ_”d’gn}«Šƒjy|–t{‡‘`¨’š|g€TŠZ|Šw†ZmXP—lž˜Y‹‚Œgƒa€MojŽ„mtO¨ª•‡™|nˆqw[›Um„ƒf‹inf|u°pxiys~tŠV‚6re€w™d”p”q“]‡oi‹t|“qT‡Œ{PƒY
+using UnityEditor;
+using UnityEngine;
+
+namespace Unity.VisualScripting
+{
+    public interface ICanvasWindow
+    {
+        GraphReference reference { get; set; }
+
+        bool maximized { get; set; }
+
+        bool graphInspectorEnabled { get; set; }
+
+        bool variablesInspectorEnabled { get; set; }
+
+
+        void AddCursorRect(Rect rect, MouseCursor cursor);
+    }
+
+    public static class XCanvasWindow
+    {
+        public static bool IsFocused(this ICanvasWindow window)
+        {
+            return EditorWindow.focusedWindow == (EditorWindow)window;
+        }
+
+        public static void Focus(this ICanvasWindow window)
+        {
+            ((EditorWindow)window).Focus();
+        }
+    }
+}

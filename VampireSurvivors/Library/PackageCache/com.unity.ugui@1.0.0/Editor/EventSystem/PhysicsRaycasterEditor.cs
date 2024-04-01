@@ -1,20 +1,3 @@
-using UnityEngine.EventSystems;
-
-namespace UnityEditor.EventSystems
-{
-    [CustomEditor(typeof(PhysicsRaycaster), true)]
-    /// <summary>
-    /// Custom Editor for the EventSystem Component.
-    /// Extend this class to write a custom editor for a component derived from EventSystem.
-    /// </summary>
-    public class PhysicsRaycasterEditor : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-#if !PACKAGE_PHYSICS
-            EditorGUILayout.HelpBox("Physics module is not present. This Raycaster will have no effect", MessageType.Warning);
-#endif
-        }
-    }
-}
+flame8/images/pshik_00012.png using Guid(805bf2c3628021d47aec9a4b230ad158) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '04e24e16d7822e0cf19a3d77be9f4d47') in 0.014808 seconds
+Start importing Assets/Sprites/flame10/PNG/23.png using Guid(800edb3c7c050684dbb7410bb2c853ca) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'e4bbcd32edbd4a6282524370a904f73d') in 0.086430 seconds
+Start importing Assets/Sprites/flame8/png/png_16.png using Guid(90b33cf3bf7baf94d95f417bd3862016) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1678de4398752858d2df106ff40df18f') in 0.048616 s

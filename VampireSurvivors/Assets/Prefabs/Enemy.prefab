@@ -525,6 +525,7 @@ MonoBehaviour:
   projectileLifeSpan: 0
   exp: 20
   level: 1
+  text: Apenas do player
   criticalChance: 0
   pierce: 0
   expMult: 0

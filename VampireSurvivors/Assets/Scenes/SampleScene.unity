@@ -5391,6 +5391,7 @@ MonoBehaviour:
   projectileLifeSpan: 1
   exp: 0
   level: 1
+  text: Apenas do player
   criticalChance: 0
   pierce: 1
   expMult: 300
@@ -6490,6 +6491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e106d422f53e71458fe546d8f26569b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 7985587606014500632, guid: 66841dbd598d36349969fd0455a616ff, type: 3}
+  spawnManager: {fileID: 445165591}
 --- !u!1 &1992522632
 GameObject:
   m_ObjectHideFlags: 0

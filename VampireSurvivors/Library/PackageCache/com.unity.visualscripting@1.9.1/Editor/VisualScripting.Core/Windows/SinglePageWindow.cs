@@ -1,1 +1,79 @@
-ãî_w|xábwgéÜk~khstùÜÉtäz^uíepYcxìuÉÜYêÇoÑ`~ÅSZÄêäôöÉtòuqáWtgáÇÅjñhk\vÄßpdpÑêhíyt{s\íägbêQ~nQaq@uUh^eòuúÉZãí}èÖZèÜ{}oeÄÖèprx]f]Öë{pÄr|Ç^utèñyèÇÑêì\nsiãÜéZsöw]ÑVÅzÑ}g[isóc{]zÖuá†j_x^x|`sdy}mïÖV^hãwvmgqØe^w`éáeÜwÄfÅâbpj_æzkf`}Ækê}¢qdas[dít1eWvXäeQ{gfZfmçÖÄägidXCxãïÑaçwàxSÉ[ye}åv¢[ò|¶°jcãqôfõfnÉn\ÇqtÄvàimå†Ü~igÉöç`àiäáX~sdÅjot^•xÜks{sÅzì[ÇsLwãílàõ}KWpkgC]õÅ¨~©fUtU]vîoìmÖïåmtxNáovryesvr~QScåzgKZsRlÉpiì}çory}êw{c}ÇZssdTfxÖ{àålZZèQ]`ntfûåum]ÇeÉhfpó~êncwßofcRtÅàvgìàlmlujkä†pÄ{oÑkJ^êùdgÅlèiaäy_†hüâhjÑxlùu{òcç}pÇÜo£e®ggSxÅÉbÄ|ds[pbkºKn|Ébzëì^ãgnñf{y\ÅnüzOeñbZòüwk`RPirxphòÉàmÅktnèy´¥Uxláu]tÅâ\å•qêt`vlr`~õynDàVÉVr]Uxm.lpgÉfûm]RâücbZ6xëuäf§mÑÄtkjwîÖziãà_u^Éöàw|âÇq}tboüs_qkilÖqlsoåÅhYîùåxUlmaáèwyotuÖ`ÖäãZÉ{jÅùhÉ_ktslÉàãpv|lp=jxédmrwjàwÇeÖTbÆzçásuX|Çbz\}{ä]mQSpzÜcÖtåkedÜi{áÉæëáwtZz~m~ftërOàÄsÅì{Ä°{venímÅ}rñYâgÜfê`lsêv{éjLj_Äóyuq}]`q†|}èmuÄhl|àÇìIñÖÄnètUág{êáÜÅgmoó]{VçjÖëmW{Ç{`k_c}sçáÑóéslrxÇ~owqåur|uåyswÅ}{~_Xös|ëäîu~eXÖú}téñxyrôÅZpdhõoxukÜwãcõTqìöë©_qŒcTl}Qéxõ±Z∑bkwkaÄçÉ~reNyghÉ_wGã]áô~}xi°n_WÑzìuyYòdZ[{?çúõR{hÄvábjwuZÑZfTqx`Z^sU∞viÇoàüëñuyj|íôu^tnùhtÅñ~jçosí{âctVlQÅ|Wá[sly_úyiögkëâÑ™yxGcÉÅSèÄr¶RNáEhïDìíSîo{Ö§åsö≤pí}fo|°Ç{eq|ùuazêxñ}[|íyne]ZîIu¢ãöarØ9î£òOûÉvQz}îgFÉ|l§ösñâïUó^c^{mã¢bAuoymúpåáåk|dqxëéSçÄoòÄùfVhÉmmÉÑôùv|uÜjòÑq£fk^ùoascníYuãëF9{lyo|{tpeàÅÇn\âfúñ†V†aYêçìn{kZÅ}≈âstjfnëa©ur}[]oM\ììõòxD†W_níÅ´vÇãhrtPÅ¡fÖas`àùåj§ÜgBêÖ†è\nôqsóà{v]kxR£~lTKtäezgrtwsuáÖwxfwzd™ºöï=~fëxjsaN~ànzáêécîëH{[\jwYÑRgákXfëÇtäçälWíîQêxfox7Ñé}iRbtÑìâ{`WïãÉîtÖSejátÄetJR{rHöÆYDÇíïg^nÅváçWx∏uy™q}kSWèq•cãfzlYèÅàìqTw§jíâpéÇbíFÑSÅãú~í]ogoÇÉeUåcñbëidmÖ?Ä|{ü;ÄütäjåjpQT°zÉmà`mquÜâÖì|wéê~rïåìm>päbÜÉróqtÜsqoãoxwuq®òlÅsläÄ~qjÖvàZo\ucåÅÄâtkuu~vpj}|êm||Å{|l`kuá}ÑljvõXcmsx}|ftzéeanVzÅìÅáaSsáQjr}îÅÑçdïsm~â~àåvÉÖÅww{ytéìwu~~nrÜî}åhnji}k{utuàÇãqy~ouÅvp{n{zm|wò]åyydfjzokputóqvwÉ}qá
+using UnityEngine;
+
+namespace Unity.VisualScripting
+{
+    public abstract class SinglePageWindow<TPage> : EditorWindowWrapper where TPage : Page
+    {
+        protected SinglePageWindow() { }
+
+        private TPage _page;
+
+        public TPage page
+        {
+            get
+            {
+                if (_page == null)
+                {
+                    _page = CreatePage();
+
+                    if (_page == null)
+                    {
+                        throw new InvalidImplementationException();
+                    }
+
+                    _page.onComplete = Close;
+                }
+
+                return _page;
+            }
+        }
+
+        protected abstract TPage CreatePage();
+
+        protected override void ConfigureWindow()
+        {
+            window.titleContent = new GUIContent(page.title, page.icon?[IconSize.Small]);
+        }
+
+        public override void OnShow()
+        {
+            page.Show();
+        }
+
+        public override void Update()
+        {
+            if (page.CompleteSwitch())
+            {
+                return;
+            }
+
+            page.Update();
+        }
+
+        public override void OnClose()
+        {
+            page.Close();
+        }
+
+        public override void OnFocus()
+        {
+            page.OnFocus();
+        }
+
+        public override void OnLostFocus()
+        {
+            page.OnLostFocus();
+        }
+
+        public override void OnGUI()
+        {
+            LudiqGUI.BeginVertical();
+            page.DrawHeader();
+            // GUILayout.Box(GUIContent.none, LudiqStyles.horizontalSeparator);
+            GUILayout.BeginHorizontal(GUILayout.ExpandHeight(true));
+            page.DrawContent();
+            LudiqGUI.EndHorizontal();
+            LudiqGUI.EndVertical();
+        }
+    }
+}

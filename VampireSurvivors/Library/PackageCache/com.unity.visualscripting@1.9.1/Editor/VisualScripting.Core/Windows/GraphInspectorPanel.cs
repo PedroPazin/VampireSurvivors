@@ -1,1 +1,135 @@
-„rjy]c§vr3ƒqa–‰mmi{bŠe˜nqwp tyk‚›cr{”umZCu›yW‘}}_|X†|¡t‚“inXfœdwXM|Ys}xwUptl{^xg‘jc–uˆŠsoƒhpXyŒ{”­c}†‚r„ƒvkšw\lrxšrxxhtkŠˆˆbnŠew\sµyaŒds€”•v‡†y–w\\Œ§ }frpShfešwnT~T¯agQwU†ˆ¢ˆ\‚†Ux|‡^Sngy^^xy‡…†‰u‰wˆ˜˜~dy†de‰i|_l‹ghfwHnj˜xa‡j€tni`‰s„xyO†•oob€gvysqt{‹uŸ}da‹uo‹q—ˆk‡Pjx„“p˜•{|r™t@]z`l{eUl|x[~j˜fXXwƒmsDq|exƒ¦†|·Rcyyoƒohx jˆ›uTyJr;‚xr~Œ–} i‚z—•j‰¤’I‡oŠotW|bdƒ¤k†un–b˜^1}ˆjŸ‹‹t{ev{‹{wuŒmx‘t_fac•’_~z‹Ÿy:x}‰`p“c™siuuu:”€ƒid™g{‚‡u’Oh‹ne‚Zahv…ŠvŠmˆ‚kj“lut—„e”‹Xgj‚n“‹NtgNpsssK˜‰y”r¹ˆT^ˆeoyR|˜WhfUywu|QŒ‚’vy|r–J„o‰mj‘odŒ‰kxm}ii}k™RuZgºxl}„b^l]xk‚^ƒ”ˆoor‡p^m}nvvsv†‡†Zr€]z~ˆF¡Xi”S|o‡ŒŠr’J6p„‹fy‰„vi`…~m^rj}wzƒniE~|~ced}oyŒzVz\yk††tuX‰kp–Lq’˜†~hWœˆwt„qjyd”dqMwn{–O„n„Œ~c‰o’X…8˜Š`er˜V—u¸‡njtMo‚Ÿ…“[aka€R£Zz…—vjuhpx|nzo•£–od—€e•Dd…jrœIŒN‡`ˆqv‰§m¥xzr¨…„cšv_vŠlq‰r——ifiywjdn|~‡w h£ƒ¡Œur||Ÿx‰ug†•Ub‹yvX›x‘ltx^­vne?vZzV|‘bg‘}t]…ˆzrn‰hkOm}Šp`}|g´·Ÿ•mlI`srddc‰‹ª\Dvo|9‰sU‚nono€m€‚rˆ«…boqVg˜“woi’s¸Ht}€¥ƒkƒgOƒJxlm™ƒƒZz‹r]qu„[€y—TZ¤|OI”‹d¦~”uwgo~¨}©‰oRj¨ni•ƒO¯TŠtg°KrpkcNiYZff\m€rU•p€rZ¥Œ_›¯}~” |­‹ag’±w|y~bµu‡uyyj€K¬\¥†W…>|†z„ˆ‡¬•bˆQm”Mk}¥’˜‘|iwWsŒ{‡S»jX˜fOxˆ˜eP{9’hš‡i’†ag…wR‹•Irp±qZ~Rk‚C|Š‡t”j`M[ªO`Y‚^{prp^}–t†phW—gq•ŠymYx~enxi‹hzwpvf‡|Ÿkgot¨w}oP‘z|‹|Yric^{zŠ[œƒe[iaq•\š˜…^pv…‘ofrvzx‡`dp{Nmt“XsXj[wivRƒwwti‰qjo†tNv•lf}os‹€€}r—Pp“‹h›{m‡ˆstpOzysnkm…fp_‚„–‹ƒsWcj†€}aX~Œfdsv†et]`w‚q~‹lƒHqjsSc€{“q{}nkXma`Lvs~“Wg’{jwvx‡l‚c‘oƒ\]µ]msŠˆe}Zg^„g‹chgy‘qz’…‹lmvbluygbr›wz†caowpkv‹hoglsu{ˆ‡y}€kzkd‚ŠuŒgz}yp—lmŒ˜QŠohr‡rmoZV|z‚i’~Ÿwl€axƒ}uŠymmy„`tn|qopovˆ}[qp†zye~lstUgYfn\x…{Wv‡\T^ˆi€…ƒh|nX‡“rTortm†Oouœy€jv}o—l]¡”}rkŠbhSˆ‡ewQ„`mySu¾{bGWp…xrakzlxPr@nX‚{nttˆs˜zofp…Y›hxvn‰ˆŠIpKƒœvPmvr„”‡uƒ”g™¤j’vjH¢TygO|nUŠqƒ€³tl•rc`w…p‰‚›S“vu te’wX^£}¬]|x‘™–vz†VfYWWb‹or‚€“x—yN•ocŒ‰u˜h|‹‘W]2Œ‰l~zy~W|ƒvFnosZs_Æb¢wvŸ”¦‡s„puƒ†’qOk_b•b€“…sjZ~vƒy’hœaym“pir}…qcx…i”vlkºs‰qˆ—Šqn“Jœby‡wy”•v|\yƒS§dƒq{Qvmj€eŒjLdoaŠ†Œshiyfr†§h†hwŠD\}p‘~gN‘’‡|dwxnxs“m}…w{€ˆ`ˆ`’…[sd‰jp˜zxnxŒq|n~tm”‰~i—_šfzjd„p–ˆ€d‘x„{Q´^pnwavz`ˆ–f{PxvgiŒOz‡fwqc‡plq€sjgyrqu~?hˆ|§[G~ƒ–{“Pbwb[f{d‰\]•²_‚i~qƒbuq…~d{•iŒ__tZˆY€‡Œ‘~ht‹nšˆ…M……ƒh~znrxxxh†y€zpwrx|‡nˆŠ}wdd{•}Z„ru…›~kxxs€`“xrtazixzˆœ^‰orgyouokŒ|q¥_spp|J`t|ˆq‹xcfˆIlquWcf‰p„lSyuL‰t•Slcwy‚œrkƒK„gW‘ewÎ˜|VVhrn]‹€lh™_™Uk}…{s€f‘llˆgŠ¦‹yZnXqo~{ƒi‰¡qet|ƒvsuwX~hh„†zlvg‰{2~mƒuPƒmz}q…jp†®j`rmˆ•qg^bg€X^OjlV¢^eu…|y‚Œ˜fyrr}™{z|\j•tl›‹ivenyQs‡qZz™}Z‚~vR¤•x}—`dŒ{Œw{mnM…v}e†n`ƒƒmVv˜z[_Œk˜z’“}r‚TNi™mŠWswŠof‚dx}…‰wyJu…r—f]lo’®‰ˆ‹~zrk‰t‹_„]‡‚s”jO‹˜[pŒŠ†nlb¤fu€Uˆe‚”…lqfqŠe˜u›}qrr{bocy|–`‚b—^—†r^ƒqiymjZo„rn‡•‡Šgmz•c|cXH|~nt¥€QZk‰‡{–r}_~–j‰“`Y~pgjn‚sP‚Xamw}ƒCfRrnho‡‚hU]jw^Z‘‚‰U”„‘¨t]sufV~†€_d[†\ons{j’Š€ŒMrT}]ƒœ€t}ºz…„yUj„}if‚yyxx[€Wt~Œ}c„gpqdv­}iqk€x]qr„’a‹hr`sHƒ„‰W¡‹ra€n‰§|ond›Y‰Z~Efhm„d}e–’qvl{fm|†‘dz|v†kblq{‚€Wy|dˆ`tksƒh‚yl‘‰¡qy|kuwwMyˆ¡fd‹i`pj`d^Œlrl‰|}–Uf¦’„mx‚}~wc]s}™‡}l\n|xhmx†kowZw}vZ‘z`ln€xpW‡…qoovg‚•’V|unw—uU\‚•Us“y†Swdbo“v|{‚lcjf›N€d{~•¥„†pl–{¥o˜ˆmui‹‡|`lvXVzs¢˜Šnf…x^ ~h~]‡‚o‰Y¨_bƒcw‡‘‚­\0~Œv•“tlvirƒ…ba]‹xŸil{ghŒznj‰Œ^S†df‰u‹u‘‡zšyxdhay}¾~£t€„`b‹™[_—’f~gHkW£hj[Œ‘kwg“ed_¡‚z}ˆzfˆp‘r~vly}‡—ƒnzr‡ ‹Œ}‡s€‡…•P}jŠ†‡ƒv‚ƒ¯‚lpS•š|]z’Ÿbƒˆyxiu‰`Kƒ[~ujqPm”ŒWqO\Ukk~c|xqk‡ym’y’zzjr]c|X\zƒ{[v†bŠvza]l‚l~tzxytu„yh{s—er_szŸ b‘huNnŒVu{qoˆsƒurv„ctfrŸ_hwœS{_d<XtZxsup†‚sgd_|yfx|Tk‡€†sg}i}x`pqwdnx‡l}„ii}„fllswh‚…‡t_ƒndƒt€w_jˆfo{ahok[rgŠl†|x€„[‡z~v}^zfk{v|}gvou´z_}`¡Œ^€e”wWˆtŒ‹Zi”p‰dpfUm|c‘‰†…‹Kh{zmz‚lŒrqqŠwˆ~aiQ[u{ros|qx€yrj‚‚ˆt†^‡j˜‚V{dƒjdZ‰i\^Uu]yj–}rjxrphw~hWvg{ t‚‹œˆŒ[yqL…l…}u‡Ÿ‹qoˆkin‚y€zr€gvbij©}¨\UPjwyvgZrmxrv}¤Te_[…{wQq‚‘v\’ms]xl{ˆypup{YQd†yŒcWT}Z{‘Uax“C†}}Wošq{hq{nnnDjmVWo‰}^k€ŒŠ{X{~x‹‡»™upH‡Š—‰‘Š‹FŠ“Dgt††ƒ–aef[s‰¥n`k”zj€jŠ\€ƒr{‰w”xbzrˆZe‰zf“ne©WvT†SOx\¢•‡pn\Š_”“y~xq}[u„kndrb‡ggvavlasi”a‚€]‡hv‚fVsš:Z…^{t’r›Š€Z~wxrlys\woƒvo‰t—…”±x’gdj=aTy_xgt‚idysn”k—{}Hs’†ƒt[sonf|w‹a<]W|†yMK€“z”“…bu‚†ƒƒP°¦Šz†`f|n†insW`}khkpx‡o’nzP|”‚|Sb‹qQr|«oTmM|ppy†l’fGtw`ds‚§}w_}Z]{yw?z”‡Cm’l„y~n¤_p‰ˆ“…as_‹{x™cmˆœšxqnˆmy~xŒtcpuŒŠ_sq’†{i_mT‰‡tu|Š’gjœ€JŠœj`šxBˆUsaŠbcv‡„us–x‰y™jmŠ~ˆ\kWˆ`~}Z‚r„W\†”d\‡‰yg[Uvp†yˆ•[€xc|wš}†n}q~n†•‚•vlp‰ˆŠ}“’fl\_pˆ`„gX|U€t{mŠ„tmL_†f{_nj{ub’TqxLj]v{r…MpzpKqZ|}nx“7pµs¢x˜–ƒ~†Œwˆf­¬ŠmlˆK–rwbzgŠ‹f^t_Œ}ˆep:lX‡¼
+using UnityEditor;
+using UnityEngine;
+
+namespace Unity.VisualScripting
+{
+    public sealed class GraphInspectorPanel : ISidebarPanelContent
+    {
+        public IGraphContext context { get; }
+
+        public object sidebarControlHint => typeof(GraphInspectorPanel);
+
+        public GUIContent titleContent { get; }
+
+        public Vector2 minSize => new Vector2(275, 200);
+
+        public GraphInspectorPanel(IGraphContext context)
+        {
+            this.context = context;
+
+            titleContent = new GUIContent("Graph Inspector", BoltCore.Icons.inspectorWindow?[IconSize.Small]);
+        }
+
+        public void OnGUI(Rect position)
+        {
+            var y = position.y;
+
+            EditorGUIUtility.hierarchyMode = true; // For the label width to be correct, like in the inspector
+
+            if (context != null)
+            {
+                context.BeginEdit();
+
+                var selectionSize = context.selection.Count;
+
+                if (selectionSize == 0)
+                {
+                    var graphPanelPosition = position.VerticalSection(ref y, GetGraphPanelHeight(position.width));
+
+                    LudiqGUI.Editor(context.graphMetadata, graphPanelPosition);
+                }
+                else if (selectionSize == 1)
+                {
+                    var selectionPanelPosition = position.VerticalSection(ref y, GetSelectionPanelHeight(position.width));
+
+                    LudiqGUI.Editor(context.selectionMetadata, selectionPanelPosition);
+                }
+                else if (selectionSize > 1)
+                {
+                    var noMultiEditPosition = new Rect
+                        (
+                        position.x,
+                        y,
+                        position.width,
+                        GetNoMultiEditHeight(position.width)
+                        );
+
+                    EditorGUI.HelpBox(noMultiEditPosition, NoMultiEditMessage, MessageType.Info);
+                }
+
+                context.EndEdit();
+            }
+            else
+            {
+                var noGraphSelectedPosition = new Rect
+                    (
+                    position.x,
+                    y,
+                    position.width,
+                    GetNoGraphSelectedHeight(position.width)
+                    );
+
+                EditorGUI.HelpBox(noGraphSelectedPosition, NoGraphSelectedMessage, MessageType.Info);
+            }
+        }
+
+        public float GetHeight(float width)
+        {
+            EditorGUIUtility.hierarchyMode = true; // For the label width to be correct, like in the inspector
+
+            var height = 0f;
+
+            if (context != null)
+            {
+                context.BeginEdit();
+
+                var selectionSize = context.selection.Count;
+
+                if (selectionSize == 0)
+                {
+                    height += GetGraphPanelHeight(width);
+                }
+                else if (selectionSize == 1)
+                {
+                    height += GetSelectionPanelHeight(width);
+                }
+                else if (selectionSize > 1)
+                {
+                    height += GetNoMultiEditHeight(width);
+                }
+
+                context.EndEdit();
+            }
+            else
+            {
+                height += GetNoGraphSelectedHeight(width);
+            }
+
+            return height;
+        }
+
+        private float GetGraphPanelHeight(float width)
+        {
+            return LudiqGUI.GetEditorHeight(null, context.graphMetadata, width);
+        }
+
+        private float GetSelectionPanelHeight(float width)
+        {
+            return LudiqGUI.GetEditorHeight(null, context.selectionMetadata, width);
+        }
+
+        private float GetNoMultiEditHeight(float width)
+        {
+            return LudiqGUIUtility.GetHelpBoxHeight(NoMultiEditMessage, MessageType.Info, width);
+        }
+
+        private float GetNoGraphSelectedHeight(float width)
+        {
+            return LudiqGUIUtility.GetHelpBoxHeight(NoGraphSelectedMessage, MessageType.Info, width);
+        }
+
+        private const string NoGraphSelectedMessage = "No graph selected.";
+
+        private const string NoMultiEditMessage = "Multi-element editing is not supported.";
+    }
+}

@@ -68,6 +68,7 @@ public class SpawnManager : MonoBehaviour
     {
         if(cooldown_ <= 0)
         {
+            print($"spawned {cooldown}");
             canSpawn = true;
             cooldown_ = cooldown;
         }

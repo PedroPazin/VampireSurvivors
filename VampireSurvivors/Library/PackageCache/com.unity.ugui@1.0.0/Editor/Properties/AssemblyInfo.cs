@@ -1,38 +1,8 @@
-using System.Reflection;
-using System.Runtime.InteropServices;
-using UnityEngine;
-
-
-// General Information about an assembly is controlled through the following
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("UnityEditor.UI")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Unity Technologies")]
-[assembly: AssemblyProduct("com.unity.ugui")]
-[assembly: AssemblyCopyright("Copyright © Unity Technologies 2018")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: AssemblyIsEditorAssembly]
-
-// Setting ComVisible to false makes the types in this assembly not visible
-// to COM components.  If you need to access a type in this assembly from
-// COM, set the ComVisible attribute to true on that type.
-[assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ad7418c3-5d25-4670-b468-8e7196596d42")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Build and Revision Numbers
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+0000000000)  -> (artifact id: '0b391b7beebf0d3474ea56448f3fbaa8') in 0.001931 seconds
+Start importing Assets/Sprites/flame7/png1 using Guid(f9f652c7969bfd3468609ce12ef3b3d7) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '6f1d70a43cfa5764103750d923b9168c') in 0.001884 seconds
+Start importing Assets/Sprites/flame7/png4 using Guid(f9da75ad92ad1884494ac603d867045e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a727ab6ea1c8c4455efd6dabb137513c') in 0.002062 seconds
+Start importing Assets/Sprites/flame10/images using Guid(6a48a43a502f3fa48b445722d50740b1) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ad1a9e6027187fa2c1d04b6dee951514') in 0.002259 seconds
+Start importing Assets/Sprites/flame10/SPINE using Guid(ea8bea9f082152f4985a3eac0ec4c338) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '0b8701fe5d0bbd0f63cb4229abb67487') in 0.001887 seconds
+Start importing Assets/Sprites/flame7/IMAGES1 using Guid(6b4e41a41a417c84bb396cf5f0543c1d) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '100f748814603d9bc54229ca9f5356c2') in 0.001930 seconds
+Start importing Assets/Sprites/flame6/png using Guid(bb20dbcbe6f57254297e44d62e21020b) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '92b5367dd8b5456578d9e207468b4248') in 0.001936 seconds
+Start importing Assets/Sprites/flame3/spine using Guid(0c1d0c767bc02e04391feed26b45e3e1) Importer(-1,0

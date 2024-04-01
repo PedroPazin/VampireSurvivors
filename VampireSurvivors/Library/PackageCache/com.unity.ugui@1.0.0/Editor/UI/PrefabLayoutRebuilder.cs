@@ -1,24 +1,3 @@
-using UnityEngine;
-using UnityEngine.UI;
-
-namespace UnityEditor.UI
-{
-    [InitializeOnLoad]
-    internal class PrefabLayoutRebuilder
-    {
-        static PrefabLayoutRebuilder()
-        {
-            PrefabUtility.prefabInstanceUpdated += OnPrefabInstanceUpdates;
-        }
-
-        static void OnPrefabInstanceUpdates(GameObject instance)
-        {
-            if (instance)
-            {
-                RectTransform rect = instance.transform as RectTransform;
-                if (rect)
-                    LayoutRebuilder.MarkLayoutForRebuild(rect);
-            }
-        }
-    }
-}
+3e567b01c747b4726ef429e31ea) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '9a362d486b3f0c21d12dee9d53a147eb') in 0.001930 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/IncomingChanges/Developer/DirectoryConflicts/DrawDirectoryResolutionPanel.cs using Guid(a9881fce7e445b84bbbd53752db30fe9) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8f2b97362daa53dacbe3d87c33b2f5b2') in 0.001874 seconds
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Views/PendingChanges/ChangeTreeViewItem.cs using Guid(a

@@ -1,131 +1,20 @@
-using UnityEditor.SceneManagement;
-using UnityEngine;
-using UnityEngine.Tilemaps;
-
-namespace UnityEditor.Tilemaps
-{
-    internal class TilemapFocusModeUtility
-    {
-        internal enum TilemapFocusMode
-        {
-            None = 0,
-            Tilemap = 1,
-            Grid = 2
-        }
-        private static readonly string k_TilemapFocusModeEditorPref = "TilemapFocusMode";
-
-        internal static TilemapFocusMode focusMode
-        {
-            get
-            {
-                return (TilemapFocusMode)EditorPrefs.GetInt(k_TilemapFocusModeEditorPref, (int)TilemapFocusMode.None);
-            }
-            set
-            {
-                EditorPrefs.SetInt(k_TilemapFocusModeEditorPref, (int)value);
-            }
-        }
-
-        internal static void OnSceneViewGUI(SceneView sceneView)
-        {
-            if ((GridPaintingState.defaultBrush == null || GridPaintingState.scenePaintTarget == null) && focusMode != TilemapFocusMode.None)
-            {
-                // case 946284: Disable Focus if focus mode is set but there is nothing to focus on
-                DisableFocus();
-                focusMode = TilemapFocusMode.None;
-            }
-        }
-
-        internal static void OnScenePaintTargetChanged(GameObject scenePaintTarget)
-        {
-            DisableFocus();
-            EnableFocus();
-            SceneView.RepaintAll();
-        }
-
-        internal static void OnBrushChanged(GridBrushBase brush)
-        {
-            DisableFocus();
-            if (brush is GridBrush)
-                EnableFocus();
-            SceneView.RepaintAll();
-        }
-
-        internal static void SetFocusMode(TilemapFocusMode tilemapFocusMode)
-        {
-            if (tilemapFocusMode != focusMode)
-            {
-                DisableFocus();
-                focusMode = tilemapFocusMode;
-                EnableFocus();
-            }
-        }
-
-        private static void EnableFocus()
-        {
-            if (GridPaintingState.scenePaintTarget == null)
-                return;
-
-            switch (focusMode)
-            {
-                case TilemapFocusMode.Tilemap:
-                {
-                    FilterSingleSceneObjectInScene(GridPaintingState.scenePaintTarget.GetInstanceID());
-                    break;
-                }
-                case TilemapFocusMode.Grid:
-                {
-                    Tilemap tilemap = GridPaintingState.scenePaintTarget.GetComponent<Tilemap>();
-                    if (tilemap != null && tilemap.layoutGrid != null)
-                    {
-                        FilterSingleSceneObjectInScene(tilemap.layoutGrid.gameObject.GetInstanceID());
-                    }
-                    break;
-                }
-            }
-        }
-
-        private static void DisableFocus()
-        {
-            if (focusMode == TilemapFocusMode.None)
-                return;
-
-            StageHandle currentStageHandle = StageUtility.GetCurrentStageHandle();
-            if (currentStageHandle.IsValid() && !currentStageHandle.isMainStage)
-            {
-                HierarchyProperty.ClearSceneObjectsFilterInScene(new[] { currentStageHandle.customScene });
-            }
-            else
-            {
-                HierarchyProperty.ClearSceneObjectsFilter();
-            }
-
-            if (SceneView.lastActiveSceneView != null)
-            {
-                SceneView.lastActiveSceneView.SetSceneViewFiltering(false);
-                SceneView.lastActiveSceneView.Repaint();
-            }
-        }
-
-        private static void FilterSingleSceneObjectInScene(int instanceID)
-        {
-            if (SceneView.lastActiveSceneView != null)
-                SceneView.lastActiveSceneView.SetSceneViewFiltering(true);
-
-            StageHandle currentStageHandle = StageUtility.GetCurrentStageHandle();
-            if (currentStageHandle.IsValid() && !currentStageHandle.isMainStage)
-            {
-                HierarchyProperty.FilterSingleSceneObjectInScene(instanceID
-                    , false
-                    , new[] { currentStageHandle.customScene });
-            }
-            else
-            {
-                HierarchyProperty.FilterSingleSceneObject(instanceID, false);
-            }
-
-            if (SceneView.lastActiveSceneView != null)
-                SceneView.lastActiveSceneView.Repaint();
-        }
-    }
-}
+0.png using Guid(94e3cdc4a3938574ab846172e868cfd2) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '53139399492085ace7d67a097caebfa5') in 0.146638 seconds
+Start importing Assets/Sprites/flame7/png2/2_00024.png using Guid(9409fb88b977a604789ef325dd30a99d) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '07a68a0060284962c6625e49ee52ee4b') in 0.040783 seconds
+Start importing Assets/Sprites/flame4/image/2Me_VFX0044.png using Guid(940c3afa67507d14f88e03ecd334f722) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'da8628898e81279c8da261485d34e082') in 0.019079 seconds
+Start importing Assets/Sprites/flame5/png/png_76.png using Guid(946d6ccbc2eb3e54e9ed8e4343f2b1b6) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '79d321a313ea419623686812cb0052f3') in 0.023017 seconds
+Start importing Assets/Sprites/flame4/image/2Me_VFX0013.png using Guid(948ff45404378dc4c94c3246a4077abf) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '68d01b3b6ab88587046b978e3a60412d') in 0.015268 seconds
+Start importing Assets/Sprites/flame8/images/pshik_00020.png using Guid(a40d75017d7f038488a607fb15cf32bb) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '28b8a1036857da92bd655c7fa4bf6896') in 0.018976 seconds
+Start importing Assets/Sprites/flame4/image/Me_VFX0024.png using Guid(b4593a8702d9c14429b34cd9d40100ef) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '9afe20cee231b7ec45d2d2f6ba307a14') in 0.012021 seconds
+Start importing Assets/Sprites/flame8/images/pshik_00029.png using Guid(b4a9df2f4c6ed32458767188361cf91c) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'e337976a15726c240bf3e91709e023cd') in 0.015294 seconds
+Start importing Assets/Sprites/flame5/png/png_48.png using Guid(c4815e61af892d84e8d549cb83a775d7) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '564626ad5f54aeae2cdae2a5a2e33c3a') in 0.023779 seconds
+Start importing Assets/Sprites/flame1/png/17.png using Guid(e4800d43245e15d4bb1de55f717ed2b5) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'c3af13d3bb13f3db4d110d8a435c402d') in 0.022072 seconds
+Start importing Assets/Sprites/flame7/png2/2_00013.png using Guid(e4d2ec58fb697e043b4e46d570a57295) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '705a8c8f452523352e35a49bf2a3dbd0') in 0.040469 seconds
+Start importing Assets/Sprites/flame5/png/png_51.png using Guid(e47e6024ff030a745a0c9f45658114f7) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '170734b1cd392306a8213b6751e6f18c') in 0.024069 seconds
+Start importing Assets/Sprites/flame5/image/Me_VFX0056.png using Guid(e4bfdc91527583f428480a0a27ab6b80) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '4a72c9cb3c59c82676c904a92bbc5513') in 0.014548 seconds
+Start importing Assets/Sprites/flame7/png4/png_36.png using Guid(f460b6dbfcdb52a4e97696d810117c77) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '70ea3cbedd6ee1f0cd1414831f8e7265') in 0.084772 seconds
+Start importing Assets/Sprites/flame4/image/2Me_VFX0002.png using Guid(f4838441f4d212941b69e4581cc00762) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '3e0d3e72ca7fc14164cf6310cd777f51') in 0.017283 seconds
+Start importing Assets/Sprites/flame7/png3/3_00011.png using Guid(f4b82e5fd99c05944951b610aaadcefd) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '3f01102d1819ea0cf8fb120b435fc5f8') in 0.038312 seconds
+Start importing Assets/Sprites/flame2/images/l4.png using Guid(f43a190949e320d46a04889676d6765d) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'bfa5ae3acebd007790e537e4eba2a96c') in 0.017244 seconds
+Start importing Assets/Sprites/flame4/image/2Me_VFX0015.png using Guid(f4ba76546cad6e84b9ca15c0153d522a) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '252edb33eeeef12c2c900e22b87dfe9c') in 0.019190 seconds
+Start importing Assets/Sprites/flame5/image/Me_VFX0009.png using Guid(f4dd91daf724b504b80900190669252e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'd41a90c782a05136a49e7fc2d93082a5') in 0.009655 seconds
+Start importing Assets/Sprites/flame7/IMAGES2/SEK2_00022.png using Guid(0581e25728a9d7a418dfbc7571602115) Importer(-1,00000000000000000

@@ -1,215 +1,40 @@
-using System.Linq;
-using UnityEditor.AnimatedValues;
-using UnityEngine;
-using UnityEngine.UI;
-
-namespace UnityEditor.UI
-{
-    /// <summary>
-    /// Editor class used to edit UI Graphics.
-    /// Extend this class to write your own graphic editor.
-    /// </summary>
-
-    [CustomEditor(typeof(MaskableGraphic), false)]
-    [CanEditMultipleObjects]
-    public class GraphicEditor : Editor
-    {
-        protected SerializedProperty m_Script;
-        protected SerializedProperty m_Color;
-        protected SerializedProperty m_Material;
-        protected SerializedProperty m_RaycastTarget;
-        protected SerializedProperty m_RaycastPadding;
-        protected SerializedProperty m_Maskable;
-
-        private GUIContent m_CorrectButtonContent;
-        protected AnimBool m_ShowNativeSize;
-
-        GUIContent m_PaddingContent;
-        GUIContent m_LeftContent;
-        GUIContent m_RightContent;
-        GUIContent m_TopContent;
-        GUIContent m_BottomContent;
-        static private bool m_ShowPadding = false;
-
-        protected virtual void OnDisable()
-        {
-            Tools.hidden = false;
-            m_ShowNativeSize.valueChanged.RemoveListener(Repaint);
-            SceneView.duringSceneGui -= DrawAnchorsOnSceneView;
-        }
-
-        protected virtual void OnEnable()
-        {
-            m_CorrectButtonContent = EditorGUIUtility.TrTextContent("Set Native Size", "Sets the size to match the content.");
-            m_PaddingContent = EditorGUIUtility.TrTextContent("Raycast Padding");
-            m_LeftContent = EditorGUIUtility.TrTextContent("Left");
-            m_RightContent = EditorGUIUtility.TrTextContent("Right");
-            m_TopContent = EditorGUIUtility.TrTextContent("Top");
-            m_BottomContent = EditorGUIUtility.TrTextContent("Bottom");
-
-            m_Script = serializedObject.FindProperty("m_Script");
-            m_Color = serializedObject.FindProperty("m_Color");
-            m_Material = serializedObject.FindProperty("m_Material");
-            m_RaycastTarget = serializedObject.FindProperty("m_RaycastTarget");
-            m_RaycastPadding = serializedObject.FindProperty("m_RaycastPadding");
-            m_Maskable = serializedObject.FindProperty("m_Maskable");
-
-            m_ShowNativeSize = new AnimBool(false);
-            m_ShowNativeSize.valueChanged.AddListener(Repaint);
-
-            SceneView.duringSceneGui += DrawAnchorsOnSceneView;
-        }
-
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-            EditorGUILayout.PropertyField(m_Script);
-            AppearanceControlsGUI();
-            RaycastControlsGUI();
-            MaskableControlsGUI();
-            serializedObject.ApplyModifiedProperties();
-        }
-
-        void DrawAnchorsOnSceneView(SceneView sceneView)
-        {
-            if (!target || targets.Length > 1)
-                return;
-
-            if (!sceneView.drawGizmos || !EditorGUIUtility.IsGizmosAllowedForObject(target))
-                return;
-
-            Graphic graphic = target as Graphic;
-
-            RectTransform gui = graphic.rectTransform;
-            Transform ownSpace = gui.transform;
-            Rect rectInOwnSpace = gui.rect;
-
-            Handles.color = Handles.UIColliderHandleColor;
-            DrawRect(rectInOwnSpace, ownSpace, graphic.raycastPadding);
-        }
-
-        void DrawRect(Rect rect, Transform space, Vector4 offset)
-        {
-            Vector3 p0 = space.TransformPoint(new Vector2(rect.x + offset.x, rect.y + offset.y));
-            Vector3 p1 = space.TransformPoint(new Vector2(rect.x + offset.x, rect.yMax - offset.w));
-            Vector3 p2 = space.TransformPoint(new Vector2(rect.xMax - offset.z, rect.yMax - offset.w));
-            Vector3 p3 = space.TransformPoint(new Vector2(rect.xMax - offset.z, rect.y + offset.y));
-
-            Handles.DrawLine(p0, p1);
-            Handles.DrawLine(p1, p2);
-            Handles.DrawLine(p2, p3);
-            Handles.DrawLine(p3, p0);
-        }
-
-        /// <summary>
-        /// Set if the 'Set Native Size' button should be visible for this editor.
-        /// </summary>
-        /// <param name="show">Are we showing or hiding the AnimBool for the size.</param>
-        /// <param name="instant">Should the size AnimBool change instantly.</param>
-        protected void SetShowNativeSize(bool show, bool instant)
-        {
-            if (instant)
-                m_ShowNativeSize.value = show;
-            else
-                m_ShowNativeSize.target = show;
-        }
-
-        /// <summary>
-        /// GUI for showing a button that sets the size of the RectTransform to the native size for this Graphic.
-        /// </summary>
-        protected void NativeSizeButtonGUI()
-        {
-            if (EditorGUILayout.BeginFadeGroup(m_ShowNativeSize.faded))
-            {
-                EditorGUILayout.BeginHorizontal();
-                {
-                    GUILayout.Space(EditorGUIUtility.labelWidth);
-                    if (GUILayout.Button(m_CorrectButtonContent, EditorStyles.miniButton))
-                    {
-                        foreach (Graphic graphic in targets.Select(obj => obj as Graphic))
-                        {
-                            Undo.RecordObject(graphic.rectTransform, "Set Native Size");
-                            graphic.SetNativeSize();
-                            EditorUtility.SetDirty(graphic);
-                        }
-                    }
-                }
-                EditorGUILayout.EndHorizontal();
-            }
-            EditorGUILayout.EndFadeGroup();
-        }
-
-        protected void MaskableControlsGUI()
-        {
-            EditorGUILayout.PropertyField(m_Maskable);
-        }
-
-        /// <summary>
-        /// GUI related to the appearance of the Graphic. Color and Material properties appear here.
-        /// </summary>
-        protected void AppearanceControlsGUI()
-        {
-            EditorGUILayout.PropertyField(m_Color);
-            EditorGUILayout.PropertyField(m_Material);
-        }
-
-        /// <summary>
-        /// GUI related to the Raycasting settings for the graphic.
-        /// </summary>
-        protected void RaycastControlsGUI()
-        {
-            EditorGUI.BeginChangeCheck();
-            EditorGUILayout.PropertyField(m_RaycastTarget);
-            if (EditorGUI.EndChangeCheck() && target is Graphic graphic)
-            {
-                graphic.SetRaycastDirty();
-            }
-
-            float height = EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-            if (m_ShowPadding)
-                height += (EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing) * 4;
-
-            var rect = EditorGUILayout.GetControlRect(true, height);
-            EditorGUI.BeginProperty(rect, m_PaddingContent, m_RaycastPadding);
-            rect.height = EditorGUIUtility.singleLineHeight;
-
-            using (var check = new EditorGUI.ChangeCheckScope())
-            {
-                m_ShowPadding = EditorGUI.Foldout(rect, m_ShowPadding, m_PaddingContent, true);
-                if (check.changed)
-                {
-                    SceneView.RepaintAll();
-                }
-            }
-
-            if (m_ShowPadding)
-            {
-                using (var check = new EditorGUI.ChangeCheckScope())
-                {
-                    EditorGUI.indentLevel++;
-                    Vector4 newPadding = m_RaycastPadding.vector4Value;
-
-                    rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-                    newPadding.x = EditorGUI.FloatField(rect, m_LeftContent, newPadding.x);
-
-                    rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-                    newPadding.y = EditorGUI.FloatField(rect, m_BottomContent, newPadding.y);
-
-                    rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-                    newPadding.z = EditorGUI.FloatField(rect, m_RightContent, newPadding.z);
-
-                    rect.y += EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-                    newPadding.w = EditorGUI.FloatField(rect, m_TopContent, newPadding.w);
-
-                    if (check.changed)
-                    {
-                        m_RaycastPadding.vector4Value = newPadding;
-                    }
-                    EditorGUI.indentLevel--;
-                }
-            }
-
-            EditorGUI.EndProperty();
-        }
-    }
-}
+b3b2f') in 0.035270 seconds
+Start importing Assets/Sprites/flame4/image/Me_VFX0036.png using Guid(82039b79504e5364e81517dcd7bd710f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'b975a645afef47b92c73c88ed0f1223e') in 0.011451 seconds
+Start importing Assets/Sprites/flame3/image/fire_00029.png using Guid(82f7493ea6ea55b449486e6e5051e4de) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '6382704767c2170c15eb1f9413c356ec') in 0.011830 seconds
+Start importing Assets/Sprites/flame9/spine/flame92.png using Guid(8279dc6b3e585714aabcdbc4b6445844) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'ee41ce49779f7f6334e29ce2f3bdd868') in 0.161533 seconds
+Start importing Assets/Sprites/flame5/png/png_36.png using Guid(92a01c3f429079148a4386c1c21b9598) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '6e5806e6a2f8f9c3e15986f550824e01') in 0.023847 seconds
+Start importing Assets/Sprites/flame4/png/26.png using Guid(9271cc39f043ecd4ebb74bff31e7fbad) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'aeec2808a385a2f21aef63a5cfe3216c') in 0.016718 seconds
+Start importing Assets/Sprites/flame4/image/2Me_VFX0037.png using Guid(92f42cde8d0e7bb40a62d185960390f9) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'be326e47c23587461647babdcb2da93f') in 0.014451 seconds
+Start importing Assets/Sprites/flame5/image/Me_VFX0053.png using Guid(9228f4713f3eb464fa2f54afeb0a5885) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '3a8a7e55b85298fc2832d5894ce0e46d') in 0.014578 seconds
+Start importing Assets/Sprites/flame10/images/vjuh_00018.png using Guid(9228cdf5fbf4e7f419287f4b24178682) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '5222a6f758a3512aec663368f0bc3a89') in 0.037884 seconds
+Start importing Assets/Sprites/flame7/png4/png_37.png using Guid(92da5686f4bc74a40a4d13920a27e99d) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '0587bd3ae8a28c45c0ff2d99d78316c6') in 0.083849 seconds
+Start importing Assets/Sprites/flame5/image/Me_VFX0040.png using Guid(928e7f0b6c8357546855ed353389920f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '336cd89f005f19de017f2fa72cbd5771') in 0.018291 seconds
+Start importing Assets/Sprites/flame4/spine/flame42.png using Guid(a2203643ce4e9fd43ab1204ccf07d201) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8d88139988028c9aed380bbce344d306') in 0.224779 seconds
+Start importing Assets/Sprites/flame4/image/Me_VFX0012.png using Guid(a28219e4850948e47b67eb52b6158f57) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '7e22221a9c24c1cfab1ce025b465249d') in 0.011055 seconds
+Start importing Assets/Sprites/flame4/png/27.png using Guid(a206883822fdaa64a89be12a70075e6d) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'e2519fdeedfb1178064613cf9f225108') in 0.016727 seconds
+Start importing Assets/Sprites/flame10/images/vjuh_00010.png using Guid(a2f8ab29a9a8f8245b37b724bbe58154) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'bf9df6ab6eeb655cbb480cb5dab56644') in 0.033090 seconds
+Start importing Assets/Sprites/flame5/png/png_29.png using Guid(a2899bef9a0245b45b70d939bfe31c67) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'bb7bdfd32f0cc102a151685bf2c3b2eb') in 0.023107 seconds
+Start importing Assets/Sprites/flame3/png/flame_31.png using Guid(a2f993845c1d6d5439153e9a6bd161ef) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '5e056bdbfb24153779f690cded0351b3') in 0.035293 seconds
+Start importing Assets/Sprites/flame3/image/4_00033.png using Guid(a28c733bcb10aaa428101350085a95db) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '076afe67ed1713d79a9577d281eb74ca') in 0.016491 seconds
+Start importing Assets/Sprites/flame5/png/png_52.png using Guid(b2a165eb113cc1c4b8f644159cfd4ee5) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '362bd44988610588a202622c967fa7b6') in 0.024747 seconds
+Start importing Assets/Sprites/flame5/png/png_46.png using Guid(b2e32fb5192a9df4aa5aa7882a0c90ae) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '06737bbb5b1894c153439cdaf2b7f59d') in 0.025058 seconds
+Start importing Assets/Sprites/flame4/image/2Me_VFX0023.png using Guid(b2686acda304fb749a26ca21a94f588e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'be769413d16246382a7c7e824bbb2a91') in 0.021133 seconds
+Start importing Assets/Sprites/flame5/png/png_68.png using Guid(b24ab1bb4b1be3d47a67ad4cd7f70c90) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'b1a761e155d4e0d17998c16af8e60fe1') in 0.025495 seconds
+Start importing Assets/Sprites/flame4/png/01.png using Guid(c2771989409073f4e8a2280be7953993) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '402c6421e6c20a199b1876cb0a8c0fd3') in 0.019100 seconds
+Start importing Assets/Sprites/flame9/images/6(1).png using Guid(c2b83e6fd9cbaf44c9686c2c9214baa7) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'c603ae1a7278f818ba5ea88d35a82536') in 0.035892 seconds
+Start importing Assets/Sprites/flame4/png/16.png using Guid(c27bbb41d89c2484c9b1287890eb7674) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '62e6cedf5cebe613b9b7ae15763a08b1') in 0.017727 seconds
+Start importing Assets/Sprites/flame4/image/Me_VFX0011.png using Guid(c21c1363e7455d241905307b147e0ddd) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1f87a3eb092ed035b4c19fd24d171845') in 0.012141 seconds
+Start importing Assets/Sprites/flame3/image/fire_00020.png using Guid(c27fa7a1c4caa99488af8d53d0ed2828) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'f3d61cd9db5b98662f33e09bd4f9cd02') in 0.011591 seconds
+Start importing Assets/Sprites/flame3/png/flame_01.png using Guid(d21a80e5a76db3c4ba59fbf1202019e5) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '1caec6a1041dba450ffccac4196647a0') in 0.034537 seconds
+Start importing Assets/Sprites/flame3/image/4_00024.png using Guid(d27f827b226515d499789ce809203a69) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '89cf0b173d0d6cbb0eefb5e7528a6e0c') in 0.012952 seconds
+Start importing Assets/Sprites/flame7/png2/2_00020.png using Guid(e2e34c56437e72240b1d40ae87a12380) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '04ece250fb4058a223d385949f36b42b') in 0.039498 seconds
+Start importing Assets/Sprites/flame8/images/pshik_00019.png using Guid(e2069ab56bf025048a85047a13572446) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a0b6be9f7e04e5b5ee608e2498958e11') in 0.018125 seconds
+Start importing Assets/Sprites/flame3/png/flame_13.png using Guid(e21c7bed0f877344fb158ee6455b3f77) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '8e4dbce3b94c9adf7ab974a6676f1566') in 0.036429 seconds
+Start importing Assets/Sprites/flame5/png/png_03.png using Guid(e26c14a7184f67445993ec2004c7fca0) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '18e1eb61cd1fd271fd8f1ff91573e7df') in 0.021611 seconds
+Start importing Assets/Sprites/flame10/PNG/25.png using Guid(f2800dfe8821fb04fb16e2385cb3c7c7) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '18025c4c95e0a4e7070dfcf94b2cca76') in 0.084076 seconds
+Start importing Assets/Sprites/flame8/images/pshik_00023.png using Guid(f256eb884d87d0f4b8e772b9f2826e8f) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '4d80a5510ea4f0585d059c0845cf5ed7') in 0.014788 seconds
+Start importing Assets/Sprites/flame2/images/light2.png using Guid(f23b4f6a00409134c9e1a8695f769809) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '0341eba9c3a3bbd903f84b513268df92') in 0.057249 seconds
+Start importing Assets/Sprites/flame3/gif demo.gif using Guid(03155c25e7aeb3e42a69e0ad6b017bd9) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '9ecaced5af322b6d967a19606f054461') in 0.034428 seconds
+Start importing Assets/Sprites/flame7/IMAGES1/SEK1_00003.png using Guid(03991d1adee9c054dbaeabff7bd40429) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '2137faa2e9a540d4650452433515e882') in 0.027114 seconds
+Start importing Assets/Sprites/flame7/png1/1_00010.png using Guid(1370976e3cdd85b4ba13e3a2c40d6287) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'f88a12ddcea7f143d259f1c7a1c8023d') in 0.049344 seconds
+Start importing Assets/Sprites/flame3/png/flame_09.png us

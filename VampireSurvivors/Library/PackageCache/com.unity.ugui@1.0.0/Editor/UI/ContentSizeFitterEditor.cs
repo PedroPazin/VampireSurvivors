@@ -1,33 +1,6 @@
-using UnityEngine;
-using UnityEngine.UI;
-
-namespace UnityEditor.UI
-{
-    [CustomEditor(typeof(ContentSizeFitter), true)]
-    [CanEditMultipleObjects]
-    /// <summary>
-    /// Custom Editor for the ContentSizeFitter Component.
-    /// Extend this class to write a custom editor for a component derived from ContentSizeFitter.
-    /// </summary>
-    public class ContentSizeFitterEditor : SelfControllerEditor
-    {
-        SerializedProperty m_HorizontalFit;
-        SerializedProperty m_VerticalFit;
-
-        protected virtual void OnEnable()
-        {
-            m_HorizontalFit = serializedObject.FindProperty("m_HorizontalFit");
-            m_VerticalFit = serializedObject.FindProperty("m_VerticalFit");
-        }
-
-        public override void OnInspectorGUI()
-        {
-            serializedObject.Update();
-            EditorGUILayout.PropertyField(m_HorizontalFit, true);
-            EditorGUILayout.PropertyField(m_VerticalFit, true);
-            serializedObject.ApplyModifiedProperties();
-
-            base.OnInspectorGUI();
-        }
-    }
-}
+ seconds
+Start importing Assets/Sprites/flame6/png/png_09.png using Guid(9302abf1406f3d0479011d5c00713f4c) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '9c5b7ac51b3d9e0ab633328e18d6a9b4') in 0.024706 seconds
+Start importing Assets/Sprites/flame5/image/Me_VFX0007.png using Guid(93138d2dbc4f20a4fbf51cd2fbbbbc73) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '584d775720dc3e69ee11840c5f9373a0') in 0.009297 seconds
+Start importing Assets/Sprites/flame7/png4/png_27.png using Guid(93f7e71aea1128a43a1a5eaf85632b0e) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '966c487c3c1b71e2637cd7fd2b4085cf') in 0.093356 seconds
+Start importing Assets/Sprites/flame10/images/vjuh_00013.png using Guid(9328d1a4d8ad835449f62e4e985599a5) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '64ed10a82f0e3b48f3599848284de113') in 0.034327 seconds
+Start importing Assets/Sprites/flame4/image/Me_VFX0022.png using Guid(a3a00fb7a7bc04d4f8cc850deff53b83) Importer(-1,00000000000000000000000000000000)  -> (

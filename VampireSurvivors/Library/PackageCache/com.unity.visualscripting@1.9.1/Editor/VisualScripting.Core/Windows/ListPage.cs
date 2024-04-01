@@ -1,1 +1,100 @@
-‹h‰utb–Œ•™™Udi…fkf|}pšuŒ~]‚†a_{’bfz‚Zmv~|\fdkŠŒZczs“Šm[bƒ‘|o…˜zmŒƒQz{eœe³„i€of…p”„†–gtorz•[””mqV•qmx€ypˆƒ™p“Œˆtekd‚€yybt‹v‰ofzq„||‰p…|zpw‚’j€bxI|¢„’jRw‡®n}€‹}¥}YY{\zf\†{…ulVyn|‰„k†s~~…ƒ{„vty}oWoty€ŒeqipmM{psdz[™‚€—tUƒp\p~uaz…cvŒcp|W[‹Œ˜~^€nyƒ€b€{r[q|nqXug“Q—y­njŠ`q|‘ƒqpulze„‚u{lj{]x}nUkdtsƒlr~‰hmnoy}„s…†…`“lo„{}ƒ”ws’coeluQuupVr]Œvvrƒy‹ˆ}ftazutp|ieX‘v„p……ˆ|q…\xŠm~„„f{€“…‹ryxr~yŒvip}wy~~~zO‰dbmYv‡s]Vlmy…]ent…”iw‚gey€~ycek˜kh\jwh„nyV…~opgf„qtk’v^[~_vm’q¥t†…pn^l~{ryŒw€]z€ˆjŸ^~˜uƒ€ŒlfWyŸq–M|]¦Drg[t•vYo[P–hv|xglg‚‰usRƒ’rbojv‡‹§sy‹Ÿ§upTpš]m€tx{†ni™^k˜tP~s‚U­qt|–|`o_›‹‡vui‹S£’}r¡lr\nw~z´…¡m‰¾—f‘Gyv}tl’Âz„l‚~zZj{p—wi’TpcaTs„]yU’~bj{myŒ†yVe]~pn l¨˜—pcHfpztV…l˜dvrviI|xVe_tkp•w„…U^}|‚|†‡V•“g„lwsJpty|vwVkdqQb_v…wrX‹}‡awl|nfo|xnuc—gƒ‰rulfsn…˜‹|sXf•{Xˆsg}Œr[VˆGX¨‚Š‚Ÿ’~kY`Mˆnhse~¢z‡d‡zlŒk‰c‘W†dœ‘[€qtv˜‡‹dpjŠ‘f”„f}ho}hyr|{€bˆq}{n´v^_kLynbšv…t”‚‰wykPd†^zvn\€lcŠO_{wrƒd‹rYT}Œ^ba~rk‚‚„rLiX`Z…vp{‘Z n`‚jiŒ€v‚€rt\j‚himrsg|ƒwh[Puo~~›hrx‡i~We~«n‹‡ji|xggoŠnhŒo›itdXnvl‘†€‰„Šv…Mb~…wx`mj‹~rD¦sff@txr’O…_j{¢mTu{s{zˆ^_ˆ“XeM[j‚S|‘v•YrƒpgF’“eomkh‚mdO†A\¡FdBjtYR|azƒšnŠ…•uQƒpO”r‰uvfu[{{X…hyT^me‚–n^€IŒšt„vf^enTi…`ƒ‰u‡x‹y†€lxdmt­†„D…d}~‚j–L•‡l…m_{[wkTqŒvjeˆpY\ˆ[U…po€O‹†~‚*G|€‰‚n’|j XKT¥uŒ|}Z€~ktvgb—…]‹›c]}‚y|iŒ™‹nr…{‡¢¬cdzvcrOYgcweNo¢€l¥_|]„G„–{~†—{Jb¦q’–~bhty}ƒ¡‡¦haœƒqƒX`|r…‚x‡bqt‡—jxgti|dicpŒq‚m|]pfvgq€X‡hwŠvs~_g‹’vkBy‡sands’ap€ƒb€uwlsQ£uiyuˆ{nrvxpff€„•IŠ‰g€n••—u€ŠW^Vmmkhª†mmq]jx˜a†„okQmj¤yQ†‡‚‡qhoˆ¢zo…seu”’lmV¯„†a„p—¨Uc{‰s“}||kˆ©zMŒ}“™ˆx_„Rut}mltdsvz‡ir|yo…pt–~nrvau^„ka¢ˆrƒ…wgmc¶h¨t”ˆ€ˆ—’ˆƒ„akv”‡Hfvsl^špslxolvngdjsb‡x”mcš„[ª}”m_€‡z}hˆgv}§–}P˜€‚l\kh„c`T‘fŒwb‡uo[~„vs„rlƒk‚„q‹[GnhlŒoc‡ixI…Ogu‚ƒz…tObg¥dfg_†~qwri²pr™jmj~~{y“V‚bc€scc„zo‹”d‰\|zƒomv„‹vaŒW‹{‡„r‚{v|foqo‰q†‰‹eŒ‚v|:xkrb€›b{Vvg‰snƒ<oqqX”q{tYptŒ¨‹…W\de†gS‹}†¤…\’_wwu†lmn†Vu‹ggyœfz„xgup‰`“tsm`ezsZ‚Dp†kq‹€d’ƒ™~€–xYƒzrtx•v‚~xnsevvƒWrl{nggzo”„u{]›Š\zƒ{gj`nTZ‘ˆ„mwv[O‚ysg^i|sq™‹¦oi”†ŠjiƒŠi<w}škf{]Bˆt|”o_bgmoWªo‘¡{g‡fj–g}jqš|º~N^wtzbƒc€‘‡‚e£‘qldrsnˆpvw„‘sˆqeq”la|…vtawyjY]k^}‡}ŠoŠRŠkw”}nl\etz†wh…|ˆŠqk€NjrgŒješ‚wg„„qxi„_X‘cVt~z„[g—kdznbiˆr„`vMbn|~‹zk¦ˆŒa†zqe€„pMxjw|ŠnX›‰}‰jw‘c„y‡x}…‰}ˆ‚u„_YŠjNwp€ka„‚”|hU•p¡toy‡xg‡‚f‹quV…vpmszb_[l“…nj^|‰QjwWp”ƒz‚€h}wls`vuikcs~i]tm|•Msƒ‰XiXnz{}…vxyŠ„|_sbS‰…•f–ƒx|ƒb{T’€„^X”Xps‚w€‡ruf–ty€€’ptv…xfkƒjƒ_ˆŒm|dfh}ml•pk‚\lƒœstje|rˆqpnn~hˆ‡w~q||ja~Y†[yl^‘–gpgsTqn}u}b€vpgp}qsp‡‰›mŠx‰wUqvqj…pxŠxsjnsnkƒrsvco„y„iYhpz„s‡lzso€ukeyy˜teoxœT}qxm†~rdmzˆˆh•xd€h†
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+namespace Unity.VisualScripting
+{
+    public class ListPage : Page
+    {
+        public ListPage() : base()
+        {
+            pages = new List<Page>();
+            pageOptions = new List<ListOption>();
+        }
+
+        private Vector2 listScroll;
+        private Page _currentPage;
+
+        public List<Page> pages { get; }
+
+        public Page currentPage
+        {
+            get
+            {
+                return _currentPage;
+            }
+            set
+            {
+                currentPage?.Close();
+
+                _currentPage = value;
+
+                currentPage?.Show();
+            }
+        }
+
+        private List<ListOption> pageOptions { get; }
+
+        public void UpdateOptions()
+        {
+            pageOptions.Clear();
+            pageOptions.AddRange(pages.Select(page => new ListOption(page, new GUIContent(page.shortTitle, null, page.subtitle))));
+            currentPage = pages.FirstOrDefault();
+        }
+
+        protected override void OnShow()
+        {
+            base.OnShow();
+
+            listScroll = Vector2.zero;
+
+            UpdateOptions();
+        }
+
+        public override void Update()
+        {
+            if (currentPage.CompleteSwitch())
+            {
+                return;
+            }
+
+            currentPage?.Update();
+        }
+
+        protected virtual void OnEmptyGUI()
+        {
+            GUILayout.BeginVertical(Styles.emptyBackground);
+            LudiqGUI.FlexibleSpace();
+            GUILayout.Label("No item found.", LudiqStyles.centeredLabel);
+            LudiqGUI.FlexibleSpace();
+            LudiqGUI.EndVertical();
+        }
+
+        protected override void OnContentGUI()
+        {
+            if (pages.Count == 0)
+            {
+                OnEmptyGUI();
+            }
+            else
+            {
+                LudiqGUI.BeginHorizontal();
+                listScroll = LudiqGUI.List(listScroll, pageOptions, currentPage, newPage => currentPage = (Page)newPage);
+                GUILayout.Box(GUIContent.none, LudiqStyles.verticalSeparator);
+                currentPage?.DrawContent();
+                LudiqGUI.EndHorizontal();
+            }
+        }
+
+        public static class Styles
+        {
+            static Styles()
+            {
+                emptyBackground = ColorPalette.unityBackgroundMid.CreateBackground();
+                emptyBackground.padding = new RectOffset(10, 10, 10, 10);
+            }
+
+            public static readonly GUIStyle emptyBackground;
+        }
+    }
+}

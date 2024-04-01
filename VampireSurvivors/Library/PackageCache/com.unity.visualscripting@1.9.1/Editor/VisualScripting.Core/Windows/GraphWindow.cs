@@ -1,4 +1,148 @@
-–|‰mškxŽƒ€•˜Ž¡–‘–‘˜¦…}Šx’”}e°o|Œ{€‹pŠ}s}‡|†yxŒœuˆy–œ~›”}}re’‚ƒˆ„“l~–m†¢ƒig‰~s…i£¤‡ˆŒ~€wyrƒ¬…‰p‘‹›‹ltzˆ‡…{{…ƒ•w¤‡}Wg¢‚„„{‘‚ƒ‡…y~‰}†‚“Žœgz„”k‡¬}x›š™|Š}‰ƒ”‚„wj±€‡wy†žw€mŒ”wuYyq‡—nŽŠ€s€‘—‘ƒ€Šy”¢t‰˜ƒ’“yxƒsšn‹{•€vrr~”¸……†Œ€¿|™}‚q…yƒpŽ|w›r †y…ˆx’‰‚ŸŒz‹ˆ‘‰v…†~~Œ„ƒ||”¢w|¢‰…’”€|s„‚’o†—sŽzšª§‘™t‰w†‡”^k“—x†‚mf„‘wª|‹z}‰‰ix }ˆy‚ei{|~—x‹~{¢v”v‚’‡‡–—nxr‡³ª¡šˆŒ{€„k‰‰œ’v~•z†‡q„Š‘ˆ{†m€Œ˜~„„‰}ƒ„ƒ”ƒ†qŠv q›„~w†xqq|“vv‹ƒzŒ‰„¥ihkzsps‹‚asŽy…‹€‡q”ƒ‡l“q|†“~ˆy‹›–e†šysz‰‹v†…~„„Ž~’Œ’‡ˆ}†s†n‚Y‹qvvŽŒ|xš“‹·I†…i†“ˆ‚q”•‹ƒ‚xsx“‘ŠŠ›ŠŒ£¤–†Œ™{dr €w”—gyŒŽ™xˆz§r€ˆƒ}p‹eŠ™~dt°‰Œœpwyz‹{ŒŠŽ…£xx£‰—¡­e˜›~„p`jqq©€xVˆ•®¥\|M~‹duw|€ƒsy€u†›žywŸ……{º‰Ÿ“„rq€\dCjŸ‚v¢` uVt¯„zƒx¡{Œ•~_du|’‹…^n„™q‹jª¢go~r_jš³[¢•}Å–ft~‹}l”±œO”y¦š}—{x‘·N’‘ˆkš©ŠqiP‡†Šgƒ­ŒPŒ¤—“¥Š¨¸cwn”mO“¨­Wˆ›[—S™rv”W]ŠHUžŽ˜e œ‡—•‚i“iL‡–”‚ua‚hˆwŒ¶„ŽšfŠŒ¢r…o›~v˜¡‘’©xX[–ew†¦ª_zmv[‹sŠ^k§’›N‚p‘[žf¡OeŸ`¡q–h}wŠ{–`¥–hto†‡™‹¢`dÏ¥‚¢tœ‹p¦FY“[³°¬}z`…{}h|—z¬ypŸw²v¢…¡–”¯eƒmu}]©Œ]Ž£|hpƒ‰Œn}Š‰z‡†²xl½‘_ŸŸ_]vx¢„u^”¡¥}wD®†pžƒ”“{g¾\¼‡‹„—ž‰}ˆn‚_™–••q†ŒŽ‚z›v®}g‰¤„˜ŽsŽw³Ÿ‰†z‘‡Ÿk¡‚˜šl›¡¬[ptŒ‡a~¹`kQzµ€CZ| ‰¨¢f¦_¨•˜‚•Ãµžj©†„³‚ŠqZ®Ïm‚°p† u…„y{a…p]”xŽ~’ƒo©vxvƒ†™Š|†}{Ÿsˆ‰|”ˆŒŸ±•‡–´ž¦\cpl™|Y‘®…ž‚nŠºƒŸÁquƒ›ol‹cik£œ‹q‡]‹}˜k{ž¦ƒxƒy„‹žŽixjx”jmz—žwl’c~Œ`}x„–hzc¦S|nŽ‚‚|‰kds~ƒw˜}iUv›e“z|‡Šz„v[°‹}tvOYxeO˜“©e}†dxˆuŠm„]Ÿ}ji Š‡ƒrNc`šªˆvÄªnËy†^a€„šIm›Ÿ¥‰ˆ‚Š’ww{•{‹¸•¬ s¿œ~£k¿t™^l•m‚‘z]Y¬Œ­w€‰¢u©zš“’£‘thÒ’e¢—mbi”}Y„e‰‰/mª‡¦m…‡WŠ[y¹ow‡½‰´ƒ^˜~qX¯Nwl’•b‘t²ƒ‚r‰˜‚l¨„€¦ƒ†fv£ž™¡TŽ¦•†O‡¥~˜«ˆz{Ä’ŽšÀ}l‘ƒ˜lo}…lª–p…„Ìl‚Švo…ª¡wx`mqªœˆ|€‚b±Œ…nªˆw ™“ƒsŒš”m–¤’”Œ]>³¥mp˜Æ”|}´‹Ž}H~z‘MswŽsz£¡”¡ ¦™f}khsˆ°”Xƒtmja©¬›‰‹…š¡†tŸdd}n‡r™a‡zž‡p‚zf–[p™Š{…¦C„t…¢žœ™ƒ¸œp•t¾™b€ŸnS†½˜¢Žyqžw”¡nƒ‰´—t›lk•r•g—s‚•”£q\¢fowoŒt‚ˆ‚—Ž˜„Ëš¢opƒywi¨I‰wlvx’~˜ƒ£’]T]kU‚rtb†„Šj€ysYv¥Je„Ž”“{nmb†Œ~—¦|r‡su†€†Nfo“m‚nl®œ™”|wo‰’s€jƒ •{|\”•¢™q‰€™[g‰…Œ”š”r”ˆp‚‚—„‹’|t{jwš—­y“p†p„‘„]p~vZ•Žˆxw~„|…™„¢p€—œ”rŒip\sv‹kxmxetb”~…{€…}O’sPx®kqr~fZyˆa–Ÿ…ŠŽl—k—yˆ„kku“p¸sn‰¡xwku‰pr‚«u‚¥jjX£˜„ex…‚Qs‡‡ŒŠHœŒ•Šaksš“aª£’V{€qƒq~††sŽ„jOŽp`osƒŸ‚†v¡’m~Ž†§rJw‹nˆtš³`|j†›†y]‹‡—˜ƒ›•†„‘—}‹uvr~–Ž„Ÿˆ~„}¬ŒŒ„€v…t‡zo…p]žq|rš”£’mEqKp}x˜†‚f•kavˆ¦ziN…‡­tzcr‹‰tŽªyf[Š{}Žvhsd‡{xn—\o“Švn™zsŒ‰€l”‘‚y|•§r¢„£‡Œ˜‡Œ‚…™~‡ŠevweŒˆ…˜vs‰‚_lŒ¤sƒv{i¦Œu€[ƒU~ˆ‰ƒh·rnq\ad‚€·‚qƒ}“r ™‘|{h’trˆy“~ypln‘~W„z‘`ˆmeVyr˜”¹›py„˜r‘kŠ€¸9d”|uxª ˜{`vƒxd€ˆ†Ÿv˜|vƒƒ‚di{’mEŠiEq~¨j™ž…ji•vu–ŠŽeNm†F‡©™”XŽ¼y’cŠr†I‘w„‚–’khˆQ^”Šy|…jr†Œn‚£[om®s‡œp–q‘“Š”—yaŽ„š~bn–a_u‰‘’{o¬wy˜©™š„t{¯™lŠe‚euqr€^rum‹„…|pvvvqzlvy~ˆdŒlj~}‘€Zn†‚p~r~J›„˜j¤qoŽb‘wyª‚xqŠr‹x§_–mjgluƒ«‘h™~„zxl‹„Y_˜vw‘ˆ|o­}ju~ˆ¦‰z\ivˆ‘t _…ojY‚ŠŒŒ†ŒtwƒŽkŒ~ƒ’…VƒoxŽƒŠ…™pvjm\ŸkŠv‘ƒog~§£™‰ƒœ…››¡Ÿwsscsf›µœƒˆx``j…w‡›“ƒ¶”v‰„§•†~“ŠrZ‘”®€{qmi^‘‚†’«Š~—s¡\’—ŽMm¥p–†q|q†}i–hwq’€z‹³T–”sv|u”o~…ˆjdx“[–`’y“_|^€•W…’‘•~¥’›œ§€aykx~’unzq¥~„~ƒ˜{—heaa…u–ƒ•{xXd„Šn–…~eŸŽ‘u‚‚h|W…œyc¿štdi“‡Œ…b´uƒ~“yˆ“iq¨ZmZt—„e]‡uz“€v¡|„„’œ•uauz†e§™•z{}lnËyx†ost•—r“[ Y»witzš|c‡š~i‘ŠŸ”‰q…”}’K~žvƒl‹ƒŒ‹k” ’‡`u…eŠŠ~~žŠmupŠ{q{zusŽ’—^xst‰f„—ƒ[ƒv„Gy„€f Œ¦z‰}}zŠ`€}ˆ¨ƒ”“s™{{€ƒ_ˆˆq”€…o„hj‚”¡„t|„›tr›ELwvª‰u†ŽpN‡…Ž†•ˆ`P]€t‚‰‡œ™‡t|†~ˆgf²…|ª”ƒŒ‚Ygo}‡–†Ž{š—†|—|yŽg›w|š‚|d¤“j^·‘‡¦•‡ˆuxv}„”€–†‚_Ÿtob†¦§{e†˜~–’•–ŒŒŒšƒfŠ¿‚m{ˆ‹Žoe’€tŠ‚“¡xu£yŽ‚|ˆ¢“e‡ŸŽˆ­y†u‡|fŽˆxi‰…}”qzŠ‹w•«ˆ‰˜yt–„š„n•s‰{j‚‚|”˜Œk…œ±‹–„|w¡©”v™Š™‚q–„„ƒŽ…€”§‰‘zvƒŠn€t|w‰¤“v‰ƒjŠ€—|¡rPlŠ—Œv{’Œug–e¦‚x“{‡•†‚}‘€ˆ{pni”r”{~¶™žf´§‚rpy†˜—„€ni†—zŠ‰~¬v‡Œ`„ŽŠtu‹’ˆ€ˆ¨x®d~®®[Ž…X–}‚¨‡€šŠŸsŽ€Œ—Žq–Š„††¦‚»‹¿ƒqz…ˆ’q{rln‰q‡‰{‘u™_•|†—‚ ‡}h¨ty•¢}‹°x›t…‹}•‹_iu£ly™hŽ|Œ~|}v}u€ª…–Ÿƒ”–t{qkl‘~ytyqwr‡£ ‹˜p˜”‰šˆ‰‹q`„ˆ—Œ€—”\{­vŸ…š|—‡–•{ lu‰xne‘pp†ƒx”m™o`•s¦rz•Œuq€`˜ƒ¥‘||h{†„Šfƒ…ŠŠÅŸpx~“…£„†šzŠp€m}”‚fY„Wzy~ƒ—ªz„s‹x€–|…rƒu‘q†”‚ƒ“jŠzk|”ª¡ˆ”’¢—‘zŽ«—~€z‘ˆs¢ Œ{o€xIy«xgsvˆ–gzlœ“iŒo††{‡Š^~Š‘Œol} –ž–ˆ•¬„fzguvi}¥fƒ‡n‚}¨–„¤~¤“€w~œ‹„•|ox‚Š…˜…­xk±e„l‚Tœ‚Šv¡Œ–v“˜”en~ŒŒšŽ“›‚’rƒ¡„œŒqk‚•‚‡|~±x —p‚N•ˆV³Å’yYw˜c¢t}o—oŠvyn~a”QŠ„s«šŠ—q¿}x†€§x©]y›qž‚ˆ’qq{‚Ž€{yŒpœg–—›t›llŒ˜›‰Š’Ž“…rd{€€{—wlž~l‰xƒ™{aŠe{ys‹‚¤W‚z‡…ˆ}”mz™‹–y‹“zŠš‚Šš‰Œž†p†Œ}œ€˜tšeœ‚†ª‚‘›n–txe“‚€Å†’›“‘€ª‡‹ i˜\o{’•ŽŽt”“oˆŠ’ž~ƒ„rq‘r‹v…y‹]kt‚†¤•tŽ—€¦e€‰ˆlŠ•‚yl®—x{Š†ž~‹{‚sŠ‚wObject)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting.Analytics;
+using UnityEditor;
+using UnityEditorInternal;
+using UnityEngine;
+using GUIEvent = UnityEngine.Event;
+using Object = UnityEngine.Object;
+
+namespace Unity.VisualScripting
+{
+    public sealed class GraphWindow : LudiqEditorWindow, ICanvasWindow
+    {
+        private static readonly string defaultTitle = "Visual Scripting Graph";
+
+        private GUIEvent e => GUIEvent.current;
+
+
+        public static void OpenTab()
+        {
+            var tab = CreateInstance<GraphWindow>();
+            tab.Show();
+        }
+
+        public static void OpenTab(GraphReference reference)
+        {
+            var tab = CreateInstance<GraphWindow>();
+            tab.reference = reference;
+            tab.Show();
+        }
+
+        public static void OpenActive(GraphReference reference)
+        {
+            VSUsageUtility.isVisualScriptingUsed = true;
+            if (active == null)
+            {
+                active = GetWindow<GraphWindow>();
+                active.reference = reference;
+                active.Show();
+            }
+            else
+            {
+                active.reference = reference;
+                active.Focus();
+            }
+        }
+
+        #region Context
+
+        [Serialize]
+        public bool locked { get; set; }
+
+        [Serialize]
+        public bool graphInspectorEnabled { get; set; } = true;
+
+        [Serialize]
+        public bool variablesInspectorEnabled { get; set; } = true;
+
+        [DoNotSerialize]
+        public IGraphContext context { get; private set; }
+
+        [Serialize]
+        private GraphPointerData referenceData;
+
+        [DoNotSerialize]
+        private GraphReference _reference;
+
+        // TODO When in C#8 mark the set accessor as Obsolete and use SetReference instead.
+        [DoNotSerialize]
+        public GraphReference reference
+        {
+            get => _reference;
+            set => SetReference(value, true);
+        }
+
+        void SetReference(GraphReference value, bool exitGUI)
+        {
+            if (value == reference)
+            {
+                return;
+            }
+
+            value?.EnsureValid();
+
+            context?.canvas.Close();
+
+            _reference = value;
+
+            // Reference can be null (If there's no graph yet)
+            if (_reference != null)
+            {
+                // Removing each action first in order to ensure that we don't add our handler twice
+                // Removing it when it's not there is perfectly valid
+                _reference.graph.elements.ItemAdded -= _onItemAddedAction;
+                _reference.graph.elements.ItemAdded += _onItemAddedAction;
+                _reference.graph.elements.ItemRemoved -= _onItemRemovedAction;
+                _reference.graph.elements.ItemRemoved += _onItemRemovedAction;
+            }
+
+            // Only preserve the last valid reference
+            // This is needed because the window revalidates before exiting playmode
+            referenceData = GraphPointerData.FromPointer(reference) ?? referenceData;
+
+            context = reference?.Context();
+
+            context?.canvas.Open();
+
+            OnContextChange();
+
+            CheckForActiveContextChange();
+
+            if (exitGUI && isActive && LudiqGUIUtility.isWithinGUI && e.type == EventType.Repaint)
+            {
+                GUIUtility.ExitGUI();
+            }
+        }
+
+        public void Validate()
+        {
+            if (reference != null && !reference.isValid)
+            {
+                reference = reference.Revalidate(false);
+            }
+        }
+
+        public void Clear()
+        {
+            reference = null;
+        }
+
+        public void MatchSelection(bool IsOnHierarchyChange = false)
+        {
+            if (locked)
+            {
+                return;
+            }
+
+            var potentialRootObjects = Enumerable.Empty<Object>();
+
+            if (Selection.objects.Length == 1)
+            {
+                var selection = Selection.activeObject;
+
+                if (selection is GameObject)
                 {
                     potentialRootObjects = ((GameObject)selection).GetComponents<Component>();
                 }

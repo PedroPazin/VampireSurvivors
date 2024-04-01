@@ -1,21 +1,21 @@
-# Image
-
-The **Image** control displays a non-interactive image to the user. You can use this for purposes such as decorations or icons, and you can change the image from a script to reflect changes in other controls. The control is similar to the [Raw Image](script-RawImage.md) control, but offers more options for animating the image and accurately filling the control rectangle. However, the Image control requires its Texture to be a [Sprite](https://docs.unity3d.com/Manual/class-TextureImporter.html), while the Raw Image can accept any Texture.
-
-![An Image control](images/ImageCtrlExample.png)
-
-## Properties
-
-![](images/UI_ImageInspector.png)
-
-|**Property:** |**Function:** |
-|:---|:---|
-|**Source Image** | The Texture that represents the image to display (which must be imported as a [Sprite](https://docs.unity3d.com/Manual/class-TextureImporter.html)). |
-|**Color** | The color to apply to the image. |
-|**Material** | The [Material](https://docs.unity3d.com/Manual/class-Material.html) to use for rendering the image. |
-|**Raycast Target** | Enable **Raycast Target** if you want Unity to consider the image a target for raycasting. |
-|**Preserve Aspect** | Ensure the image retains its existing dimension.  |
-|**Set Native Size** |  Set the dimensions of the image box to the original pixel size of the Texture. |
-
-
-You must import the image to display as a [Sprite](https://docs.unity3d.com/Manual/class-TextureImporter.html) to work with the Image control.
+ssing/PostProcessAssembly'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly application/grpc - - 200 - application/grpc 5.7274ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.dll, with 117 defines and 226 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/2 POST http://ilpp/UnityILPP.PostProcessing/PostProcessAssembly application/grpc -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'gRPC - /UnityILPP.PostProcessing/PostProcessAssembly'
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      Processing assembly Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Aseprite.Common.dll, with 117 defines and 228 references
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+info: Unity.ILPP.Runner.PostProcessingPipeline[0]
+      running zzzUnity.B

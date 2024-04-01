@@ -6,34 +6,57 @@ public class MakeItDifficult : MonoBehaviour
 {
     Timer timer;
 
-    GameObject[] enemies;
+    public GameObject enemy;
+
+    EntityStats enemyStats;
+
+    public SpawnManager spawnManager;
 
     // Start is called before the first frame update
     void Start()
     {
         timer = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Timer>();
+
+        InvokeRepeating("FuncMakeItDifficult", 5f , 5f);
+
+        enemyStats = enemy.GetComponent<EntityStats>();
+
+        enemyStats.EnemyDefaultLevelZero();
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        Invoke("UpEnemiesStats(enemies)", 5);
+
     }
 
-    void UpEnemiesStats(GameObject[] enemiesToUp)
+    //Funcao que vai chamar todas as outras funcões que precisam de tempo
+    void FuncMakeItDifficult()
     {
-        if(((int)(timer.timeValue / 5)) > 0)
+        UpEnemiesStats();
+        SpawnFaster();
+    }
+
+    //LevelUP dos inimigos
+    void UpEnemiesStats()
+    {
+        print("levelUP");
+        
+        enemyStats.EnemyDefaultLevelUp(1);
+        
+    }
+
+    //Aumentar velocidade de spawn dos inimigos
+    void SpawnFaster()
+    {
+        print("spawn faster");
+        
+        spawnManager.cooldown -= 0.1f;
+        if(spawnManager.cooldown <= 0.5f)
         {
-            foreach(GameObject enemy in enemiesToUp)
-            {
-                EntityStats enemyStats = enemy.GetComponent<EntityStats>();
-
-                //Stats a serem aumentados dos inimigos em geral
-
-                enemyStats.EnemyLevelUp(1);
-            }
+            spawnManager.cooldown = 0.5f;
         }
+
     }
 
 }

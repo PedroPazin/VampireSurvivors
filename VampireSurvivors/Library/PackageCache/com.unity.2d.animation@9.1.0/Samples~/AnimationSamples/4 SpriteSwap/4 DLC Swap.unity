@@ -9674,26 +9674,4 @@ MonoBehaviour:
     - {fileID: 1052594113}
     m_DefaultLocalRotations:
     - {x: -0, y: -0, z: -0.746123, w: 0.6658082}
-    - {x: -0, y: -0, z: 0.75641936, w: 0.65408695}
-    - {x: 0, y: 0, z: 0, w: 1}
-    m_StoredLocalRotations:
-    - {x: 0, y: 0, z: 0, w: 0}
-    - {x: 0, y: 0, z: 0, w: 0}
-    - {x: 0, y: 0, z: 0, w: 0}
-  m_Flip: 1
---- !u!4 &2130416100
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130416098}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3301, y: -1.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 664209222}
-  m_Father: {fileID: 542216148}
-  m_RootOrder: 25
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+    - {x: -0, y: -0, z: 0.à      p»    #ù     ‡,[   £¿™Xy⁄ Ä            H < E d i t o r G U I U t i l i t y . G e t B u i l t i n S k i n . h t m l     p      r»    ∏≈    à‡,[   £¿™Xy⁄               2 < L I C E N S E . c h o o s e a l i c e n s e . m d   p      s»    #ù    ¯‡,[   £¿™Xy⁄               . < G U I U t i l i t y . E x i t G U I . h t m l       p      r»    ∏≈    h·,[   £¿™Xy⁄              2 < L I C E N S E . c h o o s e a l i c e n s e . m d   p      r»    ∏≈    ÿ·,[   £¿™Xy⁄ Ä            2 < L I C E N S E . c h o o s e a l i c e n s e . m d   p      s»    #ù    H‚,[   ˇˆ¿™Xy⁄              . < G U I U t i l i t y . E x i t G U I

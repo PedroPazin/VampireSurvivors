@@ -1,31 +1,5 @@
-using UnityEngine.UI;
-
-namespace UnityEditor.UI
-{
-    [CustomEditor(typeof(Button), true)]
-    [CanEditMultipleObjects]
-    /// <summary>
-    ///   Custom Editor for the Button Component.
-    ///   Extend this class to write a custom editor for a component derived from Button.
-    /// </summary>
-    public class ButtonEditor : SelectableEditor
-    {
-        SerializedProperty m_OnClickProperty;
-
-        protected override void OnEnable()
-        {
-            base.OnEnable();
-            m_OnClickProperty = serializedObject.FindProperty("m_OnClick");
-        }
-
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-            EditorGUILayout.Space();
-
-            serializedObject.Update();
-            EditorGUILayout.PropertyField(m_OnClickProperty);
-            serializedObject.ApplyModifiedProperties();
-        }
-    }
-}
+e5572008c2adc89a3106786fd00acb0') in 0.086026 seconds
+Start importing Assets/Sprites/flame7/IMAGES2/SEK3_00007.png using Guid(f1243d0a6bb39bf46af25e94664091e3) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'f00d191c6ff54487f96ef683d0d3b2d1') in 0.012691 seconds
+Start importing Assets/Sprites/flame4/image/Me_VFX0002.png using Guid(f16518dbf6bf8b6468686191d12d587c) Importer(-1,00000000000000000000000000000000)  -> (artifact id: '6af2034a9d3db48947e6e28f3058f610') in 0.011378 seconds
+Start importing Assets/Sprites/flame8/png/png_26.png using Guid(0260e51d330b81545b71e82a4b6f6d21) Importer(-1,00000000000000000000000000000000)  -> (artifact id: 'a797fa267630ea1ddc86ad021aff144a') in 0.046822 seconds
+Start importing Assets/Sprites/flame8/images/pshik_00021.png using Guid(0244db29ec019c64aa5070f474bdb9c9) Importer(-1,0000000000000000000000000000

@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        print(timeValue);
+
     }
 
     private void DecreaseTime()

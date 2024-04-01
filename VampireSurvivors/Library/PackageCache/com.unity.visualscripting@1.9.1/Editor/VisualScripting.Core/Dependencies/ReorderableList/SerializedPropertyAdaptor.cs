@@ -1,1 +1,177 @@
-t]s¢ölì_ëè_qqêWcbk~w\äzâg{o{zdìváôZZéîpfé_Onicwh~ooÜázuânJÜ|soóìoÄcojW~h{dbvdhméÜÖtÄkÑçz~vpÉâàkqé¶w†DelJpÆÇ_swï|ÑÅhhpyrårÇÅqÇäÄÜÜçqzÅtmpÄqåì}tiuÅxcÉ~tseÇté]tgÇÄrv{tssv~uÇaÅp`Ç}|xÅâixô}çlvÅÑóxqÄôñwioÅnÄmu^\zqs}wst{áorwÖÇwÜvá~~YÜ{|txhlVoyq{wâéwrhNqmkÑuv|JréinÜpl}~ià{tÄåîlrÅxÇêfÄpãål}ÉzxÑ{lqvjxlÑn{Ñmro}à~}ni~zÖc|}tfêygznÄjôÑêrÑc]hoëWáñmê{}loxyÉgÑ~êlmxÖïw~pgáäòtënàp|dwááwséáw{qci{àâOoóéyjo|hïåÅjwÇqmzkZdqz|zë}gtd^smÇ~vîr_qeÜaÇâuÄ{y#Çs|{eqzusôxnxtwfÖjizìjnS6áëmòç|ÇweDÇhr}x£teåLá]ås|çzÉoÑáäqãqÑzçÜqîÄd~{hî~âyttjÜ©lÜéÖhW®ùXJpùwhoÑ`Zmydfñëâï™zûvc£_ÅÜÉpo{Äsgoirt|Kgìû[πgOe}UaöéxáãvgnÜdg{PErer≠âmôophY~ïódè¶záòpâ°KÑZczâqà^_Å{eotãsuUØaTjâoçlzxx{ÉÄrqë]Üb[DîuhalVY≤Y|xÑìUÇ^k~óénû~èneå]áà_ábåarrm}¢ãt`åíÑöVkzgÉfÄäåwyw~óèowrÑkd•Zgà_]jÖêPñoxeqÇ~fhîÑlávu|oUônfw`järQRkéêtrtäz_ÉâGVÉÉfaãib^s´Å|yfmxusQy_`}eàv|ê{huáà|hqPhztFs§xâ{rekwfqÇ£ÄçsuÉ]ÑfwâVjÇtÄdÉìmjÖÇ¢Vf}nrj{|wÇrtçjywqí®åw{Tjda|c[ê|ç{ÇnX¶oo^êrupÅjdéwàuï|ùÅggzVî}cpw[nè>áeé}àE|lØoUb°]nrpinV}lúÜU†xwÖzûzWâc|{aêÑÅjr]oo±pspïáx~típcuèw9ÜÉìÑQoitKNÖTâhÑ{wÖùz~Äòêiëjj^tzT~lg~bÄ^ìzunàjxrvåstéhWaÖÅ_=dwIb~hmáu~à}õügèaÖéz§ñkuïáyhàè^~qàå_[pÑ{íÖciíqîiöÄÄqPskçá~zdÖuÅsÖéVsè]zMãjîÑÑâwlãP|òkóqs}kÜwmõÅvvöúcrZ_ÅàjoàêÄxÑêñYXgZí|âÜiîånYiù~gÉjÇh{^ã`iâÄÉÜxoóLz|fÇpèuqfÅtåÜü}l~ÅÇdàxërÄ{ÖxñîÉhÖx\oÜtZ}}íåge`WÅÑwjmvò\[Åâ^ãv_ex©x|óuuäbàtMc}xpTl{|{oheÖâèzïrÜ~_äqäÅâvyál|~vtÇd|}Y~ÜwxÖvê[rD}lwha={ÆàZ|oèovdÜt|Ö]rZàsxojoéÜUäôwhyÅaòêêzcáÑÑçÖ:~'{nígkduXv£hÅwxcÜWubqÄiésDâew]vxhxOçÉKsÅçôsm}çXãÉj}År_t\tÇféxëoÑÄëw}wãÇìÑìT~q9i]äØswaju{ÄRàvfoãâ`zrqxÜvcan`d|vÄáâXQsèduîóeíäâtomwåàOãtNcñÑ\^qù\|árÄub\ZxRcêïyíylÑÇo°åGã~c¢gÇqÇ^q§ìyr|uïÄírouhjYVÖ{ÄiWiHíwëïüyÅâYxwák^ytÄytZÑZmiTy{ÉvçcjéãyQçöçáKÑôyvê_k}îkÉ[uùllåSoõãÖâ|||kÖvrpvzaÖyü|f}zäÑÉé`jqvbsälà}ÑxêÅï_iìoaíyÄÖ|WctzltRíkwxsåû|ÉÇã~v}|~{ÉojÅkwmc]ypi|}hâ{ÇôhZÖÑuÄyÇ}osàÅgqãkw^soyoÇwêsjrktråäã}íÜvÉxqèÅ|}ä{|o|q}uu~ÅfzÉox}ÉfjÖckyiâpâ~eXstsÇäsn]zvÑÜ}|fShrwrvÖÉ|äjÅykS|cmoìsmáx{rÇórJwmshlzxdÜ`ozÑvcy]rnaÉülyur≤duÉáyrÖåunx{uë{ÅybàräÇRegÇÑfÇÅâÇÄyyöÑob}|ÜnäyÇômdaÅVv`rtl`}qgå}Ääåwq~{thpïv`p{Çf}~{mÄtÅáÇmvtxxåhÜfníOÖáÅwttkfkQMÑy`txèxêãuwxîsy{~èmÄãSè[}vp{ÖsRiojn{o{Çåjyëslw∏wiyÄ||nrÇzy{lâçwì|ehrcÅjTxrtrîh\z{ztçyzdZorÄéëqjczêäs®pnâäÇú`á|ryvêZjttídmuí}iq~jáz_`lz|Åxsqxti_w}rwtysÇgzÖilèkÄ`Ülzêîu~~zkÜh{ÄyryèbY~nÄÄÅÄç{ù[{í~zâoÖÑ~rêjmnu\{z[joÖtãxfosDgàliàw~WiüquxÉñq_`RoYÄåmÄïlktòZpmçp^ÑfVgâtÖnjÅhmÅçwôyâñaâôq`gr_Cyê}{mé|çnpiâ|bssÜÜoÅ@Ç{gmû\Çlé~pg~yÇ\ì_äb[ëv}öZkêãfÇ§~uoskjllkyìbäw{\jî]ycsbüÉåepfaáeyfÄÇû|åÇphïÜWyrûÑaäuéUtÖumäÜékz[nÅnèäzåa{iÄÄS|}oëaÜ|wÇÉghm}òvncÇÄsy}we~hàrcàbtã_p|w{h}ÄäÅèÇzlpq{~|{yno{Éoirr|mYçn]Çxgwnstwnpr}rsvÇoeÅjfmÖue{fÄre}nl[whÇì}jày[_swokwàÄtktsSùvxmåÑÅ|ÄsÇhp~á~jVkoàzäWziyéÄñ{ãnxÅàTpuåtc|hxuoâÉVomcmáphÄ{ÅÄ~ÉÑrwílû{haÖÇríqlt|kêyÇöÄzyetsu|És†~~u~ciÅvvëc[wscÄx~vhpetqnvh|Äresuî}afYÇíxÜ}xtobÉb\{ëÅÉjä`tqxohjq`nÇ|]Ç~`âerâmkÇàÇéYqZéwyoÄ¢åÄÜ}|f}dqrzísunxxupÉè{ápuãrkpÖëxeä®Ä~ymirgsèzgi~lzÄé_åtxUb{πò}´m}juïVElsÇw]áâyrì]kt`twîÜÉèrwçm¢arÇÄfs{õwyzÑWr|if|wnÄàràÉãq|[`ésLyj}Kyxlrâm~rttYçÖnZzéÇíØshezr|vÄÉltlMhwáö{~yfìènj{Ç~kxmuhfÄÄvêr|päöw[}b{smn[umÖÜül}Wv^ëmp~rùçòzÜïÄnm|tv}x^u`~qéysÜÅÜòÜupz|dãoxcäkjS\xiqÇu|^`nÅÖiÖÖÑÖqw_Ñvâàtu]åomsItzzptvX}~qÅxzypfg|åì~qdÅ]hsxïa^zyÜç™Åpcz{prmo´xsuÖlÄ~kâpy{kzÖre~~ejs§öõÇWÇjzèâvÜispÉ~xªowlh^twXxÄoÑnÜCéxzocÅÉêÜzáw|]çáÇvffwvÅrmÄ}q}}ñr|ujk[}àyèêlxxÄheázX}k}ÇpàBlk]yîëNuÄfàgÜpé~t]izÖeáÅwg[hxvÉ^lv}|åuÑ^åedà^Tás†e{ctkzárcwfb}iÉ}qáow|ìuÉjwÑÄUÅÄÉ\ãÜfÄngsöaÑ[vÄ|Åëe~avxÇà|cxÖízÖumfqeizw|êÄ[zÜÄÄ†ràÅPminâubÄpqãÉ]òÜ|sC^sokëRâg~qkfayíkhqïpjµylçÑ†yyágknÇ{~qgñhkÅcmqmÉyÜ|ÖÑhiñ`ÅkÑxâVäÄÅÉru}§ò?çh}glrhwåìSÅfx}Ål]ÄôwÖtbolÄÜÇÇwufÅl|Ñw~Y£wàÅe|ãpÖoréå{ìgî}gÅulÉek{É•àÄmc|òru{pmN´UkpêáÑög{ãz†opåpWcn|tyuaröámyÖÜêtuâÜiochäiz{}{àlÇqhnnf~rÉca|tZgTÄgÜôëEpv|êw{u\eâíxOxp}svwë[iil~Ñ}oÑYpwÇoêuöéh^ëwÖ}f\sîvr{ÑåÇ™hh^ÇsvÅhkÅìd{WâÑâràwsRÇov]cãÄeçÉl©°zãrjc~ìioÉÉqtÇ{uáhêhíyuìõ°lc^xe|êàsìz|iclÑ]}XunnÅ¥}ëq¢ïã[frÄãÜ{m|äÅyó|tk[lqbaZähÉÅùípÄÅàwlôvozÅncvwvÜzájpeÑUányÄáswüytÉoiÅÅÑts{nçÑSv{rÅpÉ~ÇÑju~`dÄr^msÖsÑçZtqpÅyÉÜÜ^l}}á´TÑOoêvyyxÇsWyxrÉ°áÉtâöÜÇsÑsô{ywÄÜs|uä{znNmas|zsmsTqsb{ÅqÑbêosrpsZivwÅÅfu~yNÉ{Åvsl~vsb^vàqoÄt¶nÅVfäy{xyãtWpcszRmÅvmjÑXà`}UtéårhxUäHS>£îÖÉr|opÅ_[}gåVvågÜ~óÄVkpYÇ\ÜztpkÄv}otçOkävmop|xá~pçm§Xi©àÖks{}sdÇÉiÄVTqräkÇsvx´Ç}t_uVoÖéãnFÜvÖÅsU|qvl`jbt~É}êswÖràmckÄèrÖzÅáÅ8äLùÉiêr{ÉjÄvmikvevnÇfÅvläzlvxPÑíÉfnoVñtígìjzzì_~nÅöÉìtrãrwãlyv|Ñü]kiuï|ÜaqkÖÑrÅOåléúvtdkn_Üìv[x~ãùt`{cmpn`ìjÇioNâ7pljspk£x~}cãéjÜ\xìêdgÉY~mÑ]rïÜjpÅrölÉ_cmãêwÄ|ëx{ÉqmYMburkûZawÜàb^y•nçFâåbmZmrrhV|måéÅisN]|ÑYÄlcÄèájäáf\ÄÄzevgáΩxrÑÉhoyUW~pbì~äëÉcàíoôÄusjM£s}ÇrÜÇåòm†YWqãb^©wsùZgåwmêÉämnÑåßàj8ç\ûr=gÑtmÅxsWv}Üvwà™ÄúzmäxâZpqêGíÇá§gâX}`~Äüå{gÅãxåîjkrsÇg≥*åk{yÉvõu|ayé{wÄëqàd}YuàÖnÉxê´voÅÖt¶cwáèy≠AêëÖ{bÇz\â|m{éteÅèeäÅsz{Äã{âwjlÄz||gcgàu\mzoÇk{ÅmnéUm{Ñxy}uÇftvvfâáesÇkÉb|àâuâzzmÑÇÇ≤táá}wyÅxhrvxwÇçnyÇ_w~zb}qq}Évcä~iìm}ÅotÅàaOáOzwoN}qrtiêÉ}hsmårTqtÜv|ye{r~zvuvydgÜltàÑxjì}{ÄÄtxptfs|bkhnZMpxomáj~ÄobsvÜiqaxoés`tgvï{x~{~}plu^oëo\qohi}vvmãTunÉXisnbfroÅnëbâvêfÜ|bhuÅcuàlm}yo6uë{o¨âÇàwnynyúã`bÉRnëoÜwÖÉ`sãwjuÉÄYqxtèí{ve{UÉj~ÅuphÑyì{èlKpV{gmpnoÇeof^swqÜõ_XhobhàWv]mx}ãÜzLÑwêxnoPoÇtzif^sgbèxÑv¢~ôáuáeïwjdt~óÇdbj|nedqjbzìdRUàjdytZbaféÄO^¨fàadãazÄÅ≤|wÉs~Xwö{ÄHWjrTÑÖôVçvp¥éjKc|äúmáÄÉJijje§ex{}[gàéå{iöpnÑ\l_úíiÆOvrhWi]ÖÅsfvYfÄ~_kçcÖ~ãkâçw_}f°iÅrxzÄ~fr~èãåÄwo`rÑãúR|ñqÄínvàà`éw±fkVÜft[xxaâfirHvísräëqÅ|I|Ñ{xxuÉc{†|K}äsÄbpxï~cóÄxvx^ñåZmzRàzñ\à^Uw}à{Änb{éZåÜmÉÑìjíqG_VwÉVwjz9¢hljâè™åzålhmRqÑÉê≤sv[gSÜãnV™rö}_YmÜqdà£ìçmãèôZîrgxzfíZêgvÜevåÖ~Ç}lëtÖqfx}Wâzàrù\áÄéczziéhâ{Åoa£~ltëñIxVPgÜ^gj|è\èÄJÇavUÜzu|àXÜá}dNw|áÅç{irvfXÄeàsre}oqvnÅ~oÄlïÑ|bÖ{ÜÄ~Ä~ÑiatÄäkelrâqizsoq`gpeiãvz~ÉaärîMqn]ÉÖPqujsyókÅysÑi~Å`läóràêQvxSÄSwnánsôàQhIy{{}{hoÖ\ìp}`ÜrÄÅÅupsoÑå_lálv]ïÅjåyv~oaq}eÅÜ}kfèPéìjäñuåkuÉét^às[lisdzfyWeivT\injíùiáÉZysyX>ázw_t\z~lbàÖjiÇkqé`3râ{}áápeêz1êàwó|ZÄuså]pù~{x{tòaçá}u^uefâóÄñÑ_ûs´çèT†nååéuÄosôSÇ_yÅ^uFR~ncïzés~|kvPáÑhónïbY\cTu@Åcp^uÉwâkkÄtçadÑ|tixnï|X}ww•Çf`É£áqmhqxìo~Ç`qlÅäuâúärgìiápcÖoâc}Usnnpê{~Énhåhf{Äõàlk§xvwpÜ
+// Copyright (c) Rotorz Limited. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root.
+
+using System;
+using UnityEditor;
+using UnityEngine;
+
+namespace Unity.VisualScripting.ReorderableList
+{
+    /// <summary>
+    /// Reorderable list adaptor for serialized array property.
+    /// </summary>
+    /// <remarks>
+    ///     <para>
+    ///     This adaptor can be subclassed to add special logic to item height calculation.
+    ///     You may want to implement a custom adaptor class where specialised functionality
+    ///     is needed.
+    ///     </para>
+    ///     <para>
+    ///     List elements are <b>not</b> cloned using the <see cref="System.ICloneable" />
+    ///     interface when using a <see cref="UnityEditor.SerializedProperty" /> to
+    ///     manipulate lists.
+    ///     </para>
+    /// </remarks>
+    public class SerializedPropertyAdaptor : IReorderableListAdaptor
+    {
+        private SerializedProperty _arrayProperty;
+
+        /// <summary>
+        /// Fixed height of each list item.
+        /// </summary>
+        /// <remarks>
+        ///     <para>
+        ///     Non-zero value overrides property drawer height calculation
+        ///     which is more efficient.
+        ///     </para>
+        /// </remarks>
+        public float FixedItemHeight;
+
+        /// <summary>
+        /// Gets element from list.
+        /// </summary>
+        /// <param name="index">Zero-based index of element.</param>
+        /// <returns>
+        /// Serialized property wrapper for array element.
+        /// </returns>
+        public SerializedProperty this[int index] => _arrayProperty.GetArrayElementAtIndex(index);
+
+        /// <summary>
+        /// Gets the underlying serialized array property.
+        /// </summary>
+        public SerializedProperty arrayProperty => _arrayProperty;
+
+        #region Construction
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="SerializedPropertyAdaptor" />.
+        /// </summary>
+        /// <param name="arrayProperty">Serialized property for entire array.</param>
+        /// <param name="fixedItemHeight">Non-zero height overrides property drawer height calculation.</param>
+        public SerializedPropertyAdaptor(SerializedProperty arrayProperty, float fixedItemHeight)
+        {
+            if (arrayProperty == null)
+            {
+                throw new ArgumentNullException("Array property was null.");
+            }
+            if (!arrayProperty.isArray)
+            {
+                throw new InvalidOperationException("Specified serialized propery is not an array.");
+            }
+
+            _arrayProperty = arrayProperty;
+            FixedItemHeight = fixedItemHeight;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="SerializedPropertyAdaptor" />.
+        /// </summary>
+        /// <param name="arrayProperty">Serialized property for entire array.</param>
+        public SerializedPropertyAdaptor(SerializedProperty arrayProperty) : this(arrayProperty, 0f) { }
+
+        #endregion
+
+        #region IReorderableListAdaptor - Implementation
+
+        /// <inheritdoc />
+        public int Count => _arrayProperty.arraySize;
+
+        /// <inheritdoc />
+        public virtual bool CanDrag(int index)
+        {
+            return true;
+        }
+
+        /// <inheritdoc />
+        public virtual bool CanRemove(int index)
+        {
+            return true;
+        }
+
+        /// <inheritdoc />
+        public void Add()
+        {
+            var newIndex = _arrayProperty.arraySize;
+            ++_arrayProperty.arraySize;
+            Internal.SerializedPropertyUtility.ResetValue(_arrayProperty.GetArrayElementAtIndex(newIndex));
+        }
+
+        /// <inheritdoc />
+        public void Insert(int index)
+        {
+            _arrayProperty.InsertArrayElementAtIndex(index);
+            Internal.SerializedPropertyUtility.ResetValue(_arrayProperty.GetArrayElementAtIndex(index));
+        }
+
+        /// <inheritdoc />
+        public void Duplicate(int index)
+        {
+            _arrayProperty.InsertArrayElementAtIndex(index);
+        }
+
+        /// <inheritdoc />
+        public void Remove(int index)
+        {
+            // Unity doesn't remove element when it contains an object reference.
+            var elementProperty = _arrayProperty.GetArrayElementAtIndex(index);
+            if (elementProperty.propertyType == SerializedPropertyType.ObjectReference)
+            {
+                elementProperty.objectReferenceValue = null;
+            }
+
+            _arrayProperty.DeleteArrayElementAtIndex(index);
+        }
+
+        /// <inheritdoc />
+        public void Move(int sourceIndex, int destIndex)
+        {
+            if (destIndex > sourceIndex)
+            {
+                --destIndex;
+            }
+            _arrayProperty.MoveArrayElement(sourceIndex, destIndex);
+        }
+
+        /// <inheritdoc />
+        public void Clear()
+        {
+            _arrayProperty.ClearArray();
+        }
+
+        /// <inheritdoc />
+        public virtual void BeginGUI() { }
+
+        /// <inheritdoc />
+        public virtual void EndGUI() { }
+
+        /// <inheritdoc />
+        public virtual void DrawItemBackground(Rect position, int index) { }
+
+        /// <inheritdoc />
+        public virtual void DrawItem(Rect position, int index)
+        {
+            EditorGUI.PropertyField(position, this[index], GUIContent.none, false);
+        }
+
+        /// <inheritdoc />
+        public virtual float GetItemHeight(int index)
+        {
+            return FixedItemHeight != 0f
+                ? FixedItemHeight
+                : EditorGUI.GetPropertyHeight(this[index], GUIContent.none, false)
+            ;
+        }
+
+        #endregion
+    }
+}
